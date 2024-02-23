@@ -5,21 +5,22 @@ import os
 # Enhanced functionality to split long lines and remove lines with only numbers or symbols
 def split_long_lines(text):
     """
-    Split lines exceeding 25 characters at the next punctuation mark.
+    Split lines exceeding 30 characters at the next punctuation mark.
+    Only split if both parts have more than 12 characters.
     """
     punctuation_marks = ('，', '。', '？', '！', '……', '：')
     new_text = []
     for line in text.split('\n'):
-        while len(line) > 25:
+        while len(line) > 30:
             split_point = -1
             for mark in punctuation_marks:
-                split_at = line.find(mark, 25)
-                if split_at != -1:
+                split_at = line.find(mark, 30)
+                if split_at != -1 and split_at > 12 and len(line) - split_at - 1 > 12:
                     split_point = split_at + 1
                     break
             if split_point == -1:  # No punctuation mark found within the limit
-                new_text.append(line[:25])
-                line = line[25:]
+                new_text.append(line)
+                line = ""
             else:
                 new_text.append(line[:split_point])
                 line = line[split_point:]
@@ -38,6 +39,7 @@ def remove_lines_with_only_numbers_or_symbols(text):
 def merge_lines_without_punctuation(text):
     """
     Process text by merging lines without punctuation while keeping normal line breaks for those with punctuation.
+    Only split if both parts have more than 12 characters.
     """
     lines = text.split('\n')
     merged_lines = []
@@ -48,7 +50,11 @@ def merge_lines_without_punctuation(text):
     for line in lines:
         line = line.rstrip()
         if chinese_chars_and_punctuation.search(line) and not line.endswith(tuple('。，、；：？！“”‘’《》（）【】')):
-            current_line += line
+            if len(current_line) > 12 and len(line) > 12:
+                merged_lines.append(current_line)
+                current_line = line
+            else:
+                current_line += line
         else:
             if current_line:
                 merged_lines.append(current_line + line)
@@ -108,5 +114,5 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
 
     print(f"Extraction completed, saved to: {output_file_path}")
 
-html_file_path = '男主气运.html'
+html_file_path = '重生：青梅，去追寻你想要的幸福吧.html'
 extract_chinese_and_punctuation_from_html(html_file_path)
