@@ -2,6 +2,29 @@ from bs4 import BeautifulSoup
 import re
 import os
 
+def merge_short_lines(text):
+    """
+    Merge lines with less than 5 characters to the previous or next line based on their length.
+    """
+    lines = text.split('\n')
+    merged_lines = []
+    i = 0
+    while i < len(lines):
+        if len(lines[i]) < 5:
+            if i > 0 and i < len(lines) - 1:
+                if len(lines[i-1]) < len(lines[i+1]):
+                    merged_lines[-1] += lines[i]
+                else:
+                    lines[i+1] = lines[i] + lines[i+1]
+            elif i > 0:  # This is the last line
+                merged_lines[-1] += lines[i]
+            elif i < len(lines) - 1:  # This is the first line
+                lines[i+1] = lines[i] + lines[i+1]
+        else:
+            merged_lines.append(lines[i])
+        i += 1
+    return '\n'.join(merged_lines)
+
 # Enhanced functionality to split long lines and remove lines with only numbers or symbols
 def split_long_lines(text):
     """
@@ -108,11 +131,12 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
     output_text = insert_new_lines_with_condition(output_text)
     output_text = split_long_lines(output_text)
     output_text = remove_lines_with_only_numbers_or_symbols(output_text)
+    output_text = merge_short_lines(output_text)
 
     with open(output_file_path, 'w', encoding='utf-8') as output_file:
         output_file.write(output_text)
 
     print(f"Extraction completed, saved to: {output_file_path}")
 
-html_file_path = '重生后，我成全了妻子和她的真爱.html'
+html_file_path = '昭华女帝.html'
 extract_chinese_and_punctuation_from_html(html_file_path)
