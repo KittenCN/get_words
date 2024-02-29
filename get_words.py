@@ -10,7 +10,7 @@ def merge_short_lines(text):
     merged_lines = []
     i = 0
     while i < len(lines):
-        if len(lines[i]) < 5:
+        if len(lines[i]) < 10:
             if i > 0 and i < len(lines) - 1:
                 if len(lines[i-1]) < len(lines[i+1]):
                     merged_lines[-1] += lines[i]
@@ -138,5 +138,5 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
 
     print(f"Extraction completed, saved to: {output_file_path}")
 
-html_file_path = '昭华女帝.html'
+html_file_path = '穿书后被父皇听到了心声.html'
 extract_chinese_and_punctuation_from_html(html_file_path)
