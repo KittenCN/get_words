@@ -2,6 +2,16 @@ from bs4 import BeautifulSoup
 import re
 import os
 
+def replace_punctuation_with_space(text):
+    """
+    Replace all punctuation marks (except newline characters) with a space.
+    """
+    chinese_punctuation = r'[。，、；：？！“”‘’《》（）【】]'
+    english_punctuation = r'[.,;:?!""''<>()[\]{}]'
+    text = re.sub(chinese_punctuation, ' ', text)
+    text = re.sub(english_punctuation, ' ', text)
+    return text
+
 def merge_short_lines(text):
     """
     Merge lines with less than 5 characters to the previous or next line based on their length.
@@ -132,11 +142,12 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
     output_text = split_long_lines(output_text)
     output_text = remove_lines_with_only_numbers_or_symbols(output_text)
     output_text = merge_short_lines(output_text)
+    output_text = replace_punctuation_with_space(output_text)
 
     with open(output_file_path, 'w', encoding='utf-8') as output_file:
         output_file.write(output_text)
 
     print(f"Extraction completed, saved to: {output_file_path}")
 
-html_file_path = '穿书后被父皇听到了心声.html'
+html_file_path = '宁负山河不负你.html'
 extract_chinese_and_punctuation_from_html(html_file_path)
