@@ -149,5 +149,5 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
 
     print(f"Extraction completed, saved to: {output_file_path}")
 
-html_file_path = '宁负山河不负你.html'
+html_file_path = '跪着当了三年狗，如今我要当人.html'
 extract_chinese_and_punctuation_from_html(html_file_path)
