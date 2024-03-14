@@ -2,6 +2,8 @@ from bs4 import BeautifulSoup
 import re
 import os
 
+contents_path = "./contents/"
+
 def replace_punctuation_with_space(text):
     """
     Replace all punctuation marks (except newline characters) with a space.
@@ -149,5 +151,5 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
 
     print(f"Extraction completed, saved to: {output_file_path}")
 
-html_file_path = '跪着当了三年狗，如今我要当人.html'
+html_file_path = contents_path + '跪着当了三年狗，如今我要当人.html'
 extract_chinese_and_punctuation_from_html(html_file_path)
