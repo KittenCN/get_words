@@ -1,8 +1,79 @@
 from bs4 import BeautifulSoup
+from openai import OpenAI
+from tqdm import tqdm
+import httpx
 import re
 import os
 
 contents_path = "./contents/"
+ai_addr = ""
+ai_api_key = ""
+pre_prompts = "我将提供一文本话给你，请你在保持文本原有意思的情况下, 加入适当合理的润色和描写，改写这段话，最终达到原文意思不变，但是内容更加充实优秀的语句，注意字数绝对不能少于原文字数，然后不要额外添加[]这样的符号, 必须使用中文回答。"
+ai_max_length =1000
+
+if len(ai_addr) == 0 or len(ai_api_key) == 0:
+    # read config.ini file
+    with open('config.ini', 'r', encoding='utf-8') as file:
+        lines = file.readlines()
+        for line in lines:
+            if line.startswith('ai_addr'):
+                ai_addr = line.split('=')[1].strip()
+            elif line.startswith('ai_api_key'):
+                ai_api_key = line.split('=')[1].strip()
+
+def write_text_to_file(text, file_path):
+    with open(file_path, 'w', encoding='utf-8') as output_file:
+        output_file.write(text)
+    print(f"Extraction completed, saved to: {file_path}")
+
+def split_text_into_chunks(text, max_length=ai_max_length):
+    """
+    Split text into chunks with a maximum length, ensuring that splits only occur at spaces.
+    """
+    words = text.split(' ')
+    chunks = []
+    current_chunk = ''
+    for word in words:
+        if len(current_chunk + ' ' + word) <= max_length:
+            current_chunk += ' ' + word
+        else:
+            chunks.append(current_chunk)
+            current_chunk = word
+    chunks.append(current_chunk)
+    return chunks
+
+def rewrite_text_with_gpt3(text, prompt="Please rewrite this text:"):
+    chunks = split_text_into_chunks(text)
+    rewritten_text = ''
+    client = OpenAI(
+        base_url=ai_addr, 
+        api_key=ai_api_key,
+        http_client=httpx.Client(
+            base_url=ai_addr,
+            follow_redirects=True,
+        ),
+    )
+    pbar = tqdm(total=len(chunks), ncols=150)
+    for chunk in chunks:
+        response = client.chat.completions.create(
+          model="gpt-3.5-turbo",
+            messages=[
+                {
+                "role": "system",
+                "content": prompt
+                },
+                {
+                "role": "user",
+                "content": chunk
+                }
+            ],
+          temperature=0.3,
+          max_tokens=2048,
+        )
+        rewritten_text += response.choices[0].message.content.strip()
+        pbar.update(1)
+    pbar.close()
+    return rewritten_text
 
 def replace_punctuation_with_space(text):
     """
@@ -102,6 +173,8 @@ def merge_lines_without_punctuation(text):
 
     return '\n'.join(merged_lines)
 
+
+
 def insert_new_lines_with_condition(text):
     """
     Insert new lines after specified punctuation marks only if they are not
@@ -121,7 +194,7 @@ def insert_new_lines_with_condition(text):
 
 def extract_chinese_and_punctuation_from_html(html_file_path):
     base_name = os.path.splitext(html_file_path)[0]
-    output_file_path = base_name + '.txt'
+    ori__file_path = base_name + '.txt'
     
     with open(html_file_path, 'r', encoding='utf-8') as file:
         html_content = file.read()
@@ -145,11 +218,30 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
     output_text = remove_lines_with_only_numbers_or_symbols(output_text)
     output_text = merge_short_lines(output_text)
     output_text = replace_punctuation_with_space(output_text)
+    write_text_to_file(output_text, ori__file_path)
+    # with open(output_file_path, 'w', encoding='utf-8') as output_file:
+    #     output_file.write(output_text)
 
-    with open(output_file_path, 'w', encoding='utf-8') as output_file:
-        output_file.write(output_text)
+    # print(f"Extraction completed, saved to: {output_file_path}")
 
-    print(f"Extraction completed, saved to: {output_file_path}")
+html_file_path = contents_path + '重生后我选择冷眼旁观.html'
 
-html_file_path = contents_path + '跪着当了三年狗，如今我要当人.html'
 extract_chinese_and_punctuation_from_html(html_file_path)
+
+# base_name = os.path.splitext(html_file_path)[0]   
+# ori__file_path = base_name + '.txt'
+# mod_file_path = base_name + '_mod.txt'
+# # read mod file to get the text
+# output_text = ""
+# with open(ori__file_path, 'r', encoding='utf-8') as file:
+#     output_text = file.read()
+# output_text = output_text.replace('\n', '')
+# output_text = rewrite_text_with_gpt3(output_text, pre_prompts)
+# output_text = merge_lines_without_punctuation(output_text)
+# output_text = insert_new_lines_with_condition(output_text)
+# output_text = split_long_lines(output_text)
+# output_text = remove_lines_with_only_numbers_or_symbols(output_text)
+# output_text = merge_short_lines(output_text)
+# output_text = replace_punctuation_with_space(output_text)
+# write_text_to_file(output_text, mod_file_path)
+
