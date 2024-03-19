@@ -8,7 +8,7 @@ import os
 contents_path = "./contents/"
 ai_addr = ""
 ai_api_key = ""
-pre_prompts = "我将提供一文本话给你，请你在保持文本原有意思的情况下, 加入适当合理的润色和描写，改写这段话，最终达到原文意思不变，但是内容更加充实优秀的语句，注意字数绝对不能少于原文字数，然后不要额外添加[]这样的符号, 必须使用中文回答。"
+pre_prompts = "你是一个文学大师，小说家。我将提供一文本话给你，请你在保持文本原有意思的情况下, 加入适当合理的润色和描写，改写这段话，最终达到原文意思不变，但是内容更加充实优秀的语句，注意字数绝对不能少于原文字数，然后不要额外添加[]这样的符号, 除非原文是英文，否则必须使用中文回答。"
 ai_max_length =1000
 
 if len(ai_addr) == 0 or len(ai_api_key) == 0:
@@ -68,7 +68,8 @@ def rewrite_text_with_gpt3(text, prompt="Please rewrite this text:"):
                 }
             ],
           temperature=0.3,
-          max_tokens=2048,
+          max_tokens=4096,
+          stream=True,
         )
         rewritten_text += response.choices[0].message.content.strip()
         pbar.update(1)
@@ -224,24 +225,24 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
 
     # print(f"Extraction completed, saved to: {output_file_path}")
 
-html_file_path = contents_path + '重生后我选择冷眼旁观.html'
+html_file_path = contents_path + '反击绿茶校草.html'
 
-extract_chinese_and_punctuation_from_html(html_file_path)
+# extract_chinese_and_punctuation_from_html(html_file_path)
 
-# base_name = os.path.splitext(html_file_path)[0]   
-# ori__file_path = base_name + '.txt'
-# mod_file_path = base_name + '_mod.txt'
-# # read mod file to get the text
-# output_text = ""
-# with open(ori__file_path, 'r', encoding='utf-8') as file:
-#     output_text = file.read()
-# output_text = output_text.replace('\n', '')
-# output_text = rewrite_text_with_gpt3(output_text, pre_prompts)
-# output_text = merge_lines_without_punctuation(output_text)
-# output_text = insert_new_lines_with_condition(output_text)
-# output_text = split_long_lines(output_text)
-# output_text = remove_lines_with_only_numbers_or_symbols(output_text)
-# output_text = merge_short_lines(output_text)
-# output_text = replace_punctuation_with_space(output_text)
-# write_text_to_file(output_text, mod_file_path)
+base_name = os.path.splitext(html_file_path)[0]   
+ori__file_path = base_name + '.txt'
+mod_file_path = base_name + '_mod.txt'
+# read mod file to get the text
+output_text = ""
+with open(ori__file_path, 'r', encoding='utf-8') as file:
+    output_text = file.read()
+output_text = output_text.replace('\n', '')
+output_text = rewrite_text_with_gpt3(output_text, pre_prompts)
+output_text = merge_lines_without_punctuation(output_text)
+output_text = insert_new_lines_with_condition(output_text)
+output_text = split_long_lines(output_text)
+output_text = remove_lines_with_only_numbers_or_symbols(output_text)
+output_text = merge_short_lines(output_text)
+output_text = replace_punctuation_with_space(output_text)
+write_text_to_file(output_text, mod_file_path)
 
