@@ -56,7 +56,8 @@ def rewrite_text_with_gpt3(text, prompt="Please rewrite this text:"):
     pbar = tqdm(total=len(chunks), ncols=150)
     for chunk in chunks:
         response = client.chat.completions.create(
-          model="gpt-3.5-turbo",
+            # model="gpt-3.5-turbo",
+            model="gpt-4",
             messages=[
                 {
                 "role": "system",
@@ -67,11 +68,14 @@ def rewrite_text_with_gpt3(text, prompt="Please rewrite this text:"):
                 "content": chunk
                 }
             ],
-          temperature=0.3,
-          max_tokens=4096,
-          stream=True,
+            temperature=0.3,
+            max_tokens=4096,
+            stream=True,
         )
-        rewritten_text += response.choices[0].message.content.strip()
+        # rewritten_text += response.choices[0].message.content.strip()
+        for _chunk in response:
+            if _chunk.choices[0].delta.content is not None:
+                rewritten_text += _chunk.choices[0].delta.content.strip()
         pbar.update(1)
     pbar.close()
     return rewritten_text
@@ -204,7 +208,7 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
     chinese_punctuation_regex = re.compile(r'[\u4e00-\u9fff，。？！；：、“”《》（）\u0030-\u0039\uFF10-\uFF19]+')
 
     extracted_texts = []
-    for element in soup.find_all(text=True):
+    for element in soup.find_all(string=True):
         if element.parent.name not in ['script', 'style']:
             matches = chinese_punctuation_regex.findall(element)
             if matches:
@@ -225,24 +229,26 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
 
     # print(f"Extraction completed, saved to: {output_file_path}")
 
-html_file_path = contents_path + '反击绿茶校草.html'
+html_file_path = contents_path + '甜蜜的黑月光.html'
 
-# extract_chinese_and_punctuation_from_html(html_file_path)
-
-base_name = os.path.splitext(html_file_path)[0]   
-ori__file_path = base_name + '.txt'
-mod_file_path = base_name + '_mod.txt'
-# read mod file to get the text
-output_text = ""
-with open(ori__file_path, 'r', encoding='utf-8') as file:
-    output_text = file.read()
-output_text = output_text.replace('\n', '')
-output_text = rewrite_text_with_gpt3(output_text, pre_prompts)
-output_text = merge_lines_without_punctuation(output_text)
-output_text = insert_new_lines_with_condition(output_text)
-output_text = split_long_lines(output_text)
-output_text = remove_lines_with_only_numbers_or_symbols(output_text)
-output_text = merge_short_lines(output_text)
-output_text = replace_punctuation_with_space(output_text)
-write_text_to_file(output_text, mod_file_path)
+choice = input("1: pre process html file: \n2: process txt file with gpt: \n")
+if choice == '1':
+    extract_chinese_and_punctuation_from_html(html_file_path)
+elif choice == '2':
+    base_name = os.path.splitext(html_file_path)[0]   
+    ori__file_path = base_name + '.txt'
+    mod_file_path = base_name + '_mod.txt'
+    # read mod file to get the text
+    output_text = ""
+    with open(ori__file_path, 'r', encoding='utf-8') as file:
+        output_text = file.read()
+    output_text = output_text.replace('\n', '')
+    output_text = rewrite_text_with_gpt3(output_text, pre_prompts)
+    output_text = merge_lines_without_punctuation(output_text)
+    output_text = insert_new_lines_with_condition(output_text)
+    output_text = split_long_lines(output_text)
+    output_text = remove_lines_with_only_numbers_or_symbols(output_text)
+    output_text = merge_short_lines(output_text)
+    output_text = replace_punctuation_with_space(output_text)
+    write_text_to_file(output_text, mod_file_path)
 
