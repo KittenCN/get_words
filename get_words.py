@@ -80,6 +80,15 @@ def rewrite_text_with_gpt3(text, prompt="Please rewrite this text:"):
     pbar.close()
     return rewritten_text
 
+def remove_chapter_markers(text):
+    """
+    Remove all chapter markers from a string.
+    """
+    chinese_numbers = r'零一二三四五六七八九十百千万亿'
+    arabic_numbers = r'0123456789'
+    chapter_marker_regex = re.compile(f'第[{chinese_numbers}{arabic_numbers}]+章')
+    return chapter_marker_regex.sub('', text)
+
 def replace_punctuation_with_space(text):
     """
     Replace all punctuation marks (except newline characters) with a space.
@@ -217,6 +226,7 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
     output_text = ""
     for text in extracted_texts:
         output_text += text + '\n'
+    output_text = remove_chapter_markers(output_text)
     output_text = merge_lines_without_punctuation(output_text)
     output_text = insert_new_lines_with_condition(output_text)
     output_text = split_long_lines(output_text)
@@ -229,7 +239,7 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
 
     # print(f"Extraction completed, saved to: {output_file_path}")
 
-html_file_path = contents_path + '甜蜜的黑月光.html'
+html_file_path = contents_path + '求复合的前妻.html'
 
 choice = input("1: pre process html file: \n2: process txt file with gpt: \n")
 if choice == '1':
@@ -243,6 +253,7 @@ elif choice == '2':
     with open(ori__file_path, 'r', encoding='utf-8') as file:
         output_text = file.read()
     output_text = output_text.replace('\n', '')
+    output_text = remove_chapter_markers(output_text)
     output_text = rewrite_text_with_gpt3(output_text, pre_prompts)
     output_text = merge_lines_without_punctuation(output_text)
     output_text = insert_new_lines_with_condition(output_text)
