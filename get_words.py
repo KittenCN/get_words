@@ -72,7 +72,7 @@ def rewrite_text_with_gpt3(text, prompt="Please rewrite this text:"):
                 "content": chunk
                 }
             ],
-            temperature=0.3,
+            temperature=0.1,
             max_tokens=4096,
             stream=True,
         )
@@ -243,7 +243,7 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
 
     # print(f"Extraction completed, saved to: {output_file_path}")
 
-html_file_path = contents_path + '求复合的前妻.html'
+html_file_path = contents_path + '对象逃婚后我发现攻略错人.html'
 
 choice = input("1: pre process html file: \n2: process txt file with gpt: \n")
 if choice == '1':
