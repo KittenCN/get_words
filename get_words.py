@@ -32,17 +32,17 @@ def write_text_to_file(text, file_path):
 
 def split_text_into_chunks(text, max_length=ai_max_length):
     """
-    Split text into chunks with a maximum length, ensuring that splits only occur at spaces.
+    Split text into chunks with a maximum length, ensuring that splits only occur at line breaks.
     """
-    words = text.split(' ')
+    lines = text.splitlines()
     chunks = []
     current_chunk = ''
-    for word in words:
-        if len(current_chunk + ' ' + word) <= max_length:
-            current_chunk += ' ' + word
+    for line in lines:
+        if len(current_chunk + ' ' + line) <= max_length:
+            current_chunk += ' ' + line
         else:
             chunks.append(current_chunk)
-            current_chunk = word
+            current_chunk = line
     chunks.append(current_chunk)
     return chunks
 
@@ -243,7 +243,7 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
 
     # print(f"Extraction completed, saved to: {output_file_path}")
 
-html_file_path = contents_path + '对象逃婚后我发现攻略错人.html'
+html_file_path = contents_path + '逆袭.html'
 
 choice = input("1: pre process html file: \n2: process txt file with gpt: \n")
 if choice == '1':
@@ -256,7 +256,7 @@ elif choice == '2':
     output_text = ""
     with open(ori__file_path, 'r', encoding='utf-8') as file:
         output_text = file.read()
-    output_text = output_text.replace('\n', '')
+    # output_text = output_text.replace('\n', '')
     output_text = remove_chapter_markers(output_text)
     output_text = rewrite_text_with_gpt3(output_text, pre_prompts)
     output_text = merge_lines_without_punctuation(output_text)
