@@ -1,18 +1,23 @@
 from bs4 import BeautifulSoup
 from openai import OpenAI
 from tqdm import tqdm
+import google.generativeai as genai
 import httpx
 import re
 import os
 
+ai_switch = 1 # (0:gpt, 1:genmini)
+
 contents_path = "./contents/"
 ai_addr = ""
 ai_api_key = ""
+google_ai_addr=""
+google_ai_api_key=""
 pre_prompts = "你是一个文学大师，小说家。我将提供一段文本给你，请你在保持文本原有意思的情况下, \
                 以爽文小说的风格，加入适当合理的润色和描写，改写这段话，最终达到原文意思不变，\
                 但是内容更加充实优美的文字语句，修改后的字数要与原文字数相当，\
                 不要额外添加没有意义的符号, \
-                除非原文是英文，否则必须使用中文回答。"
+                除非原文是英文，否则必须使用中文回答:"
 ai_max_length =1000
 
 if len(ai_addr) == 0 or len(ai_api_key) == 0:
@@ -24,6 +29,10 @@ if len(ai_addr) == 0 or len(ai_api_key) == 0:
                 ai_addr = line.split('=')[1].strip()
             elif line.startswith('ai_api_key'):
                 ai_api_key = line.split('=')[1].strip()
+            elif line.startswith('google_ai_addr'):
+                google_ai_addr = line.split('=')[1].strip()
+            elif line.startswith('google_ai_api_key'):
+                google_ai_api_key = line.split('=')[1].strip()
 
 def write_text_to_file(text, file_path):
     with open(file_path, 'w', encoding='utf-8') as output_file:
@@ -45,6 +54,50 @@ def split_text_into_chunks(text, max_length=ai_max_length):
             current_chunk = line
     chunks.append(current_chunk)
     return chunks
+
+def rewrite_text_with_genai(text, prompt="Please rewrite this text:"):
+    chunks = split_text_into_chunks(text)
+    rewritten_text = ''
+    pbar = tqdm(total=len(chunks), ncols=150)
+    genai.configure(api_key = google_ai_api_key)
+    model = genai.GenerativeModel('gemini-pro')
+    for chunk in chunks:
+        _prompt=f"{prompt}\n{chunk}",
+        response = model.generate_content(
+            contents=_prompt, 
+            generation_config=genai.GenerationConfig(
+                temperature=0.1,
+            ),
+            stream=True,
+            safety_settings = [
+                {
+                    "category": "HARM_CATEGORY_DANGEROUS",
+                    "threshold": "BLOCK_NONE",
+                },
+                {
+                    "category": "HARM_CATEGORY_HARASSMENT",
+                    "threshold": "BLOCK_NONE",
+                },
+                {
+                    "category": "HARM_CATEGORY_HATE_SPEECH",
+                    "threshold": "BLOCK_NONE",
+                },
+                {
+                    "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                    "threshold": "BLOCK_NONE",
+                },
+                {
+                    "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                    "threshold": "BLOCK_NONE",
+                },
+            ]
+        )
+        for _chunk in response:
+            if _chunk.text is not None:
+                rewritten_text += _chunk.text.strip()
+        pbar.update(1)
+    pbar.close()
+    return rewritten_text
 
 def rewrite_text_with_gpt3(text, prompt="Please rewrite this text:"):
     chunks = split_text_into_chunks(text)
@@ -251,14 +304,20 @@ if choice == '1':
 elif choice == '2':
     base_name = os.path.splitext(html_file_path)[0]   
     ori__file_path = base_name + '.txt'
-    mod_file_path = base_name + '_mod.txt'
+    if ai_switch == 0:
+        mod_file_path = base_name + '_gpt.txt'
+    elif ai_switch == 1:
+        mod_file_path = base_name + '_gen.txt'
     # read mod file to get the text
     output_text = ""
     with open(ori__file_path, 'r', encoding='utf-8') as file:
         output_text = file.read()
     # output_text = output_text.replace('\n', '')
     output_text = remove_chapter_markers(output_text)
-    output_text = rewrite_text_with_gpt3(output_text, pre_prompts)
+    if ai_switch == 0:
+        output_text = rewrite_text_with_gpt3(output_text, pre_prompts)
+    elif ai_switch == 1:
+        output_text = rewrite_text_with_genai(output_text, pre_prompts)
     output_text = merge_lines_without_punctuation(output_text)
     output_text = insert_new_lines_with_condition(output_text)
     output_text = split_long_lines(output_text)
