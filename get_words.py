@@ -14,11 +14,14 @@ ai_api_key = ""
 google_ai_addr=""
 google_ai_api_key=""
 pre_prompts = "你是一个文学大师，小说家。我将提供一段文本给你，请你在保持文本原有意思的情况下, \
-                以爽文小说的风格，加入适当合理的润色和描写，改写这段话，最终达到原文意思不变，\
+                以小说的风格，加入适当的润色和合理的环境，心理或动作描写，改写这段话，\
+                最终达到词句与原文不同，但是意思与原文大致相同的目的，\
                 但是内容更加充实优美的文字语句，修改后的字数要与原文字数相当，\
+                如果有不能理解的词句，可以保留原文，\
                 不要额外添加没有意义的符号, \
                 除非原文是英文，否则必须使用中文回答:"
-ai_max_length =1000
+ai_max_length =2500 - len(pre_prompts) - 100
+temperature = 0.5
 
 if len(ai_addr) == 0 or len(ai_api_key) == 0:
     # read config.ini file
@@ -66,7 +69,7 @@ def rewrite_text_with_genai(text, prompt="Please rewrite this text:"):
         response = model.generate_content(
             contents=_prompt, 
             generation_config=genai.GenerationConfig(
-                temperature=0.1,
+                temperature=temperature,
             ),
             stream=True,
             safety_settings = [
@@ -95,6 +98,8 @@ def rewrite_text_with_genai(text, prompt="Please rewrite this text:"):
         for _chunk in response:
             if _chunk.text is not None:
                 rewritten_text += _chunk.text.strip()
+            else:
+                print(_chunk)
         pbar.update(1)
     pbar.close()
     return rewritten_text
@@ -125,7 +130,7 @@ def rewrite_text_with_gpt3(text, prompt="Please rewrite this text:"):
                 "content": chunk
                 }
             ],
-            temperature=0.1,
+            temperature=temperature,
             max_tokens=4096,
             stream=True,
         )
@@ -133,6 +138,8 @@ def rewrite_text_with_gpt3(text, prompt="Please rewrite this text:"):
         for _chunk in response:
             if _chunk.choices[0].delta.content is not None:
                 rewritten_text += _chunk.choices[0].delta.content.strip()
+            else:
+                print(_chunk)
         pbar.update(1)
     pbar.close()
     return rewritten_text
@@ -302,6 +309,10 @@ choice = input("1: pre process html file: \n2: process txt file with gpt: \n")
 if choice == '1':
     extract_chinese_and_punctuation_from_html(html_file_path)
 elif choice == '2':
+    ai_choice = input("Current AI is: " + ("GPT" if ai_switch == 0 else "GenMini") + "\nDo you want to switch AI? (y/n): ")
+    if ai_choice == 'y':
+        ai_switch = 1 - ai_switch
+        print("AI switched to: " + ("GPT" if ai_switch == 0 else "GenMini"))
     base_name = os.path.splitext(html_file_path)[0]   
     ori__file_path = base_name + '.txt'
     if ai_switch == 0:
