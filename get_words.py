@@ -64,11 +64,6 @@ def rewrite_text_with_genai(text, prompt="Please rewrite this text:"):
     chunks = split_text_into_chunks(text)
     rewritten_text = ''
     current_model = 'gemini-pro'
-    print("Current available models: ")
-    for m in genai.list_models():
-        if 'generateContent' in m.supported_generation_methods:
-            print(m.name)
-    print("Current model: " + current_model)
     pbar = tqdm(total=len(chunks), ncols=150)
     genai.configure(api_key = google_ai_api_key)
     model = genai.GenerativeModel(current_model)
@@ -317,18 +312,26 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
 
     # print(f"Extraction completed, saved to: {output_file_path}")
 
-html_file_path = contents_path + '结婚前夕，我把老婆踹了.html'
+content_name = "十年冤家"
 
 choice = input("1: pre process html file: \n2: process txt file with gpt: \n")
 if choice == '1':
+    html_file_path = contents_path + content_name + '.html'
+    if(not os.path.exists(html_file_path)):
+        print("File not found: " + html_file_path)
+        exit()
     extract_chinese_and_punctuation_from_html(html_file_path)
 elif choice == '2':
+    base_name = contents_path + content_name
+    ori__file_path = base_name + '.txt'
+    if(not os.path.exists(ori__file_path)):
+        print("File not found: " + ori__file_path)
+        exit()
     ai_choice = input("Current AI is: " + ("GPT" if ai_switch == 0 else "GenMini") + "\nDo you want to switch AI? (y/n): ")
     if ai_choice == 'y':
         ai_switch = 1 - ai_switch
         print("AI switched to: " + ("GPT" if ai_switch == 0 else "GenMini"))
-    base_name = os.path.splitext(html_file_path)[0]   
-    ori__file_path = base_name + '.txt'
+    # base_name = os.path.splitext(html_file_path)[0]   
     if ai_switch == 0:
         mod_file_path = base_name + '_gpt.txt'
     elif ai_switch == 1:
