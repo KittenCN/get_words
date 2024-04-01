@@ -15,12 +15,14 @@ google_ai_addr=""
 google_ai_api_key=""
 pre_prompts = "你是一个文学大师，小说家。我将提供一段文本给你，请你在保持文本原有意思的情况下, \
                 以小说的风格，加入适当的润色和合理的环境，心理或动作描写，改写这段话，\
-                最终达到词句与原文不同，但是意思与原文大致相同的目的，\
-                但是内容更加充实优美的文字语句，修改后的字数要与原文字数相当，\
-                如果有不能理解的词句，可以保留原文，\
+                如果上下文不连贯或有缺失，可以适当添加一些语句，使得整个文段更加流畅充实，\
+                最终达到词句，语言表达等与原文尽量不同，但是意思与原文大致相同的目的，\
+                但是内容更加充实优美的文字语句，修改后的字数不能少于原文字数，\
+                如果有不能理解的词语，可以保留原文，\
                 不要额外添加没有意义的符号, \
                 除非原文是英文，否则必须使用中文回答:"
-ai_max_length =2500 - len(pre_prompts) - 100
+# ai_max_length =4096 - len(pre_prompts) - 100
+ai_max_length = 1000
 temperature = 0.5
 
 if len(ai_addr) == 0 or len(ai_api_key) == 0:
@@ -61,9 +63,16 @@ def split_text_into_chunks(text, max_length=ai_max_length):
 def rewrite_text_with_genai(text, prompt="Please rewrite this text:"):
     chunks = split_text_into_chunks(text)
     rewritten_text = ''
+    current_model = 'gemini-pro'
+    print("Current available models: ")
+    for m in genai.list_models():
+        if 'generateContent' in m.supported_generation_methods:
+            print(m.name)
+    print("Current model: " + current_model)
     pbar = tqdm(total=len(chunks), ncols=150)
     genai.configure(api_key = google_ai_api_key)
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel(current_model)
+    error_text = []
     for chunk in chunks:
         _prompt=f"{prompt}\n{chunk}",
         response = model.generate_content(
@@ -99,14 +108,17 @@ def rewrite_text_with_genai(text, prompt="Please rewrite this text:"):
             if _chunk.text is not None:
                 rewritten_text += _chunk.text.strip()
             else:
-                print(_chunk)
+                error_text.append(_chunk)
         pbar.update(1)
     pbar.close()
+    for _chunk in error_text:
+        print(_chunk)
     return rewritten_text
 
 def rewrite_text_with_gpt3(text, prompt="Please rewrite this text:"):
     chunks = split_text_into_chunks(text)
     rewritten_text = ''
+    error_text = []
     client = OpenAI(
         base_url=ai_addr, 
         api_key=ai_api_key,
@@ -139,9 +151,11 @@ def rewrite_text_with_gpt3(text, prompt="Please rewrite this text:"):
             if _chunk.choices[0].delta.content is not None:
                 rewritten_text += _chunk.choices[0].delta.content.strip()
             else:
-                print(_chunk)
+                error_text.append(_chunk)
         pbar.update(1)
     pbar.close()
+    for _chunk in error_text:
+        print(_chunk)
     return rewritten_text
 
 def remove_chapter_markers(text):
@@ -303,7 +317,7 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
 
     # print(f"Extraction completed, saved to: {output_file_path}")
 
-html_file_path = contents_path + '逆袭.html'
+html_file_path = contents_path + '结婚前夕，我把老婆踹了.html'
 
 choice = input("1: pre process html file: \n2: process txt file with gpt: \n")
 if choice == '1':
