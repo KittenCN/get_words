@@ -5,6 +5,7 @@ import google.generativeai as genai
 import httpx
 import re
 import os
+import glob
 
 ai_switch = 1 # (0:gpt, 1:genmini)
 
@@ -13,12 +14,14 @@ ai_addr = ""
 ai_api_key = ""
 google_ai_addr=""
 google_ai_api_key=""
-pre_prompts = "你是一个文学大师，小说家。我将提供一段文本给你，请你在保持文本原有意思的情况下, \
-                以小说的风格，加入适当的润色和合理的环境，心理或动作描写，改写这段话，\
-                如果上下文不连贯或有缺失，可以适当添加一些语句，使得整个文段更加流畅充实，\
+pre_prompts = "你是一个文学大师，小说家。我将提供一段文本给你，请你理解这段文本，\
+                并结合上下文以及合理的想象，保持文本原有主题意思的情况下, \
+                以小说的风格，并加入适当的润色和合理的环境，心理或动作描写，改写这段话，\
+                如果上下文不连贯或有缺失，可以适当添加一些语句，甚至可以调整上下文的顺序， \
+                使得整个文段更加合理，更加流畅充实，\
                 最终达到词句，语言表达等与原文尽量不同，但是意思与原文大致相同的目的，\
                 但是内容更加充实优美的文字语句，修改后的字数不能少于原文字数，\
-                如果有不能理解的词语，可以保留原文，\
+                尽量使用与原文同一个意思，但是不同的词句用语来表述，\
                 不要额外添加没有意义的符号, \
                 除非原文是英文，否则必须使用中文回答:"
 # ai_max_length =4096 - len(pre_prompts) - 100
@@ -38,6 +41,18 @@ if len(ai_addr) == 0 or len(ai_api_key) == 0:
                 google_ai_addr = line.split('=')[1].strip()
             elif line.startswith('google_ai_api_key'):
                 google_ai_api_key = line.split('=')[1].strip()
+
+def get_latest_file_name(directory):
+    """
+    Get the name of the latest HTML file in a directory.
+    """
+    list_of_files = glob.glob(directory + '/*.html')  # get list of all HTML files
+    if not list_of_files:  # No HTML files found
+        return None
+    latest_file = max(list_of_files, key=os.path.getctime)  # get the latest file
+    base_name = os.path.basename(latest_file)  # get the file name
+    file_name, _ = os.path.splitext(base_name)  # remove the extension
+    return file_name
 
 def write_text_to_file(text, file_path):
     with open(file_path, 'w', encoding='utf-8') as output_file:
@@ -312,7 +327,13 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
 
     # print(f"Extraction completed, saved to: {output_file_path}")
 
-content_name = "十年冤家"
+# Main program
+
+content_name = get_latest_file_name(contents_path)
+input_name = input("Enter the content name (default: " + content_name + "): ")
+if len(input_name) > 0:
+    content_name = input_name
+print("Current content is: " + content_name)
 
 choice = input("1: pre process html file: \n2: process txt file with gpt: \n")
 if choice == '1':
