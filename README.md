@@ -10,16 +10,17 @@
 
 ## 使用方法
 1. 安装Python3
-    请移步[这里](https://www.runoob.com/python3/python3-install.html)查看详细步骤
+    请移步[这里](https://www.runoob.com/python3/python3-install.html)查看详细步骤  
     我这里就不赘述了，能找到这个项目的人应该都会安装Python3
-2. 下载本项目文件
+   --请务必安装3.10以上版本!__
+3. 下载本项目文件
     请点击右上角的绿色按钮，选择Download ZIP，或者使用git clone下载
-3. 安装依赖
+4. 安装依赖
     在项目文件夹下打开终端(cmd或者shell)，输入以下命令
     ```shell
     pip install -r requirements.txt
     ```
-4. 配置
+5. 配置
     - 在config.ini中配置你的GPT/Gemini参数，格式如下
         > ; 第三方GPT-3 API地址和API Key  
         > ai_addr=https://api.xxxx.xxx/v1  
@@ -28,7 +29,7 @@
         > google_ai_addr=null  
         > google_ai_api_key=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
     - 创建contents文件夹，将需要提取的小说网页(html扩展名)保存在contents文件夹下
-5. 运行
+6. 运行
     - 在项目文件夹下打开终端，输入以下命令
         ```shell
         python get_words.py
