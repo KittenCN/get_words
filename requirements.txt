@@ -1,0 +1,4 @@
+bs4
+openai
+google-generativeai
+httpx

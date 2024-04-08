@@ -318,9 +318,9 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
     output_text = merge_lines_without_punctuation(output_text)
     output_text = insert_new_lines_with_condition(output_text)
     output_text = split_long_lines(output_text)
-    output_text = remove_lines_with_only_numbers_or_symbols(output_text)
     output_text = merge_short_lines(output_text)
     output_text = replace_punctuation_with_space(output_text)
+    output_text = remove_lines_with_only_numbers_or_symbols(output_text)
     write_text_to_file(output_text, ori__file_path)
     # with open(output_file_path, 'w', encoding='utf-8') as output_file:
     #     output_file.write(output_text)
@@ -370,8 +370,8 @@ elif choice == '2':
     output_text = merge_lines_without_punctuation(output_text)
     output_text = insert_new_lines_with_condition(output_text)
     output_text = split_long_lines(output_text)
-    output_text = remove_lines_with_only_numbers_or_symbols(output_text)
     output_text = merge_short_lines(output_text)
     output_text = replace_punctuation_with_space(output_text)
+    output_text = remove_lines_with_only_numbers_or_symbols(output_text)
     write_text_to_file(output_text, mod_file_path)
 
