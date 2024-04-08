@@ -47,6 +47,9 @@ if len(ai_addr) == 0 or len(ai_api_key) == 0:
             elif line.startswith('ai_gpt_ver'):
                 ai_gpt_ver = int(line.split('=')[1].strip())
 
+def test_placeholder():
+    pass
+
 def get_latest_file_name(directory):
     """
     Get the name of the latest HTML file in a directory.
