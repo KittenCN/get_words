@@ -27,6 +27,7 @@ pre_prompts = "你是一个文学大师，小说家。我将提供一段文本�
 # ai_max_length =4096 - len(pre_prompts) - 100
 ai_max_length = 1000
 temperature = 0.5
+ai_gpt_ver = 4
 
 if len(ai_addr) == 0 or len(ai_api_key) == 0:
     # read config.ini file
@@ -41,6 +42,10 @@ if len(ai_addr) == 0 or len(ai_api_key) == 0:
                 google_ai_addr = line.split('=')[1].strip()
             elif line.startswith('google_ai_api_key'):
                 google_ai_api_key = line.split('=')[1].strip()
+            elif line.startswith('pre_prompts'):
+                pre_prompts = line.split('=')[1].strip()
+            elif line.startswith('ai_gpt_ver'):
+                ai_gpt_ver = int(line.split('=')[1].strip())
 
 def get_latest_file_name(directory):
     """
@@ -140,8 +145,7 @@ def rewrite_text_with_gpt3(text, prompt="Please rewrite this text:"):
     pbar = tqdm(total=len(chunks), ncols=150)
     for chunk in chunks:
         response = client.chat.completions.create(
-            # model="gpt-3.5-turbo",
-            model="gpt-4",
+            model="gpt-4" if ai_gpt_ver == 4 else "gpt-3.5-turbo",
             messages=[
                 {
                 "role": "system",
@@ -328,30 +332,35 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
     # print(f"Extraction completed, saved to: {output_file_path}")
 
 # Main program
-
+# check the folder address, if not exist, create it
+if not os.path.exists(contents_path):
+    os.makedirs(contents_path)
 content_name = get_latest_file_name(contents_path)
-input_name = input("Enter the content name (default: " + content_name + "): ")
+if content_name is None:
+    print("在文件夹中没有html文件")
+    exit()
+input_name = input("输入小说的名字(默认为: " + content_name + "): ")
 if len(input_name) > 0:
     content_name = input_name
-print("Current content is: " + content_name)
+print("当前选择的小说是: " + content_name)
 
-choice = input("1: pre process html file: \n2: process txt file with gpt: \n")
+choice = input("1: 预处理小说的网页文件: \n2: 使用AI洗文: \n3: 测试AI: \n请选择:")
 if choice == '1':
     html_file_path = contents_path + content_name + '.html'
     if(not os.path.exists(html_file_path)):
-        print("File not found: " + html_file_path)
+        print("文件没有找到: " + html_file_path)
         exit()
     extract_chinese_and_punctuation_from_html(html_file_path)
 elif choice == '2':
     base_name = contents_path + content_name
     ori__file_path = base_name + '.txt'
     if(not os.path.exists(ori__file_path)):
-        print("File not found: " + ori__file_path)
+        print("文件没有找到: " + ori__file_path)
         exit()
-    ai_choice = input("Current AI is: " + ("GPT" if ai_switch == 0 else "GenMini") + "\nDo you want to switch AI? (y/n): ")
+    ai_choice = input("当前的AI是: " + ("GPT" if ai_switch == 0 else "GenMini") + "\n你要不要切换(默认不要)? (y/n): ")
     if ai_choice == 'y':
         ai_switch = 1 - ai_switch
-        print("AI switched to: " + ("GPT" if ai_switch == 0 else "GenMini"))
+        print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini"))
     # base_name = os.path.splitext(html_file_path)[0]   
     if ai_switch == 0:
         mod_file_path = base_name + '_gpt.txt'
@@ -374,4 +383,18 @@ elif choice == '2':
     output_text = replace_punctuation_with_space(output_text)
     output_text = remove_lines_with_only_numbers_or_symbols(output_text)
     write_text_to_file(output_text, mod_file_path)
-
+elif choice == '3':
+    # check ai
+    ai_choice = input("当前准备测试的AI是: " + ("GPT" if ai_switch == 0 else "GenMini") + "\n你要不要切换(默认不要)? (y/n): ")
+    if ai_choice == 'y':
+        ai_switch = 1 - ai_switch
+        print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini"))
+    test_text = "你是哪家公司的什么AI模型？"
+    if ai_switch == 0:
+        output_text = rewrite_text_with_gpt3(test_text, "测试AI:")
+    elif ai_switch == 1:
+        output_text = rewrite_text_with_genai(test_text, "测试AI:")
+    print(output_text)
+else:
+    print("选择错误")
+    exit()
