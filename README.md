@@ -12,7 +12,7 @@
 1. 安装Python3
     请移步[这里](https://www.runoob.com/python3/python3-install.html)查看详细步骤  
     我这里就不赘述了，能找到这个项目的人应该都会安装Python3
-   --请务必安装3.10以上版本!__
+   __请务必安装3.10以上版本!__
 3. 下载本项目文件
     请点击右上角的绿色按钮，选择Download ZIP，或者使用git clone下载
 4. 安装依赖
