@@ -6,6 +6,7 @@ import httpx
 import re
 import os
 import glob
+import shutil
 
 ai_switch = 1 # (0:gpt, 1:genmini)
 
@@ -30,6 +31,15 @@ temperature = 0.5
 ai_gpt_ver = 4
 
 if len(ai_addr) == 0 or len(ai_api_key) == 0:
+    # check config.ini file, if it is not exict, then check the __config.ini file , if it is not exist, then warning and exit; else create the config.ini file from __config.ini file
+    if not os.path.exists('config.ini'):
+        if not os.path.exists('__config.ini'):
+            print("没有找到配置文件config.ini或者__config.ini")
+            exit()
+        else:
+            shutil.copy('__config.ini', 'config.ini')
+            print("已经创建了配置文件config.ini，请打开配置文件填写相应的信息后，再次运行本程序！")
+            exit()
     # read config.ini file
     with open('config.ini', 'r', encoding='utf-8') as file:
         lines = file.readlines()
