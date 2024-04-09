@@ -20,15 +20,26 @@
     ```shell
     pip install -r requirements.txt
     ```
-5. 配置
+5. 执行程序，自动初始化
+    ```shell
+        python get_words.py
+    ```
+    执行完成后，当前目录下将自动出现config.ini文件，用于配置GPT/Gemini参数, 以及contents文件夹，用于存放需要提取的小说网页
+    __如果初始化失败，请重新下载所有完整的仓库文件__
+6. 配置
     - 在config.ini中配置你的GPT/Gemini参数，格式如下
-        > ; 第三方GPT-3 API地址和API Key  
-        > ai_addr=https://api.xxxx.xxx/v1  
-        > ai_api_key=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
-        > ; Google API Key  
-        > google_ai_addr=null  
-        > google_ai_api_key=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
-    - 创建contents文件夹，将需要提取的小说网页(html扩展名)保存在contents文件夹下
+        > ; GPT版本
+        > ai_gpt_ver=4
+        > ; 第三方GPT-3 API地址和API Key
+        > ai_addr=https://api.xxxx.xxx/v1
+        > ai_api_key=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        > ; Google API Key
+        > google_ai_addr=null
+        > google_ai_api_key=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        > ; 提示词
+        > pre_prompts=xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+    - 创建contents文件夹，将需要提取的小说网页(__html扩展名__)保存在contents文件夹下
 6. 运行
     - 在项目文件夹下打开终端，输入以下命令
         ```shell
@@ -39,6 +50,7 @@
     - 程序会提示选择功能：
         > 1: pre process html file: （预处理html文件）    
         > 2: process txt file with gpt: （ai 洗文）  
+        > 3: test AI: （测试AI）
 
         __请务必先预处理html文件，再进行洗文操作；预处理html会自动切断每行的字数，并去除没有必要的标点符号。__
     - 如果选择ai洗文，下面系统会提示当前默认的ai是Gemini，如果需要切换使用GPT，请输入y，再回车
