@@ -25,19 +25,22 @@
         python get_words.py
     ```
     执行完成后，当前目录下将自动出现config.ini文件，用于配置GPT/Gemini参数, 以及contents文件夹，用于存放需要提取的小说网页
-    __如果初始化失败，请重新下载所有完整的仓库文件__
+    __如果初始化失败，请重新下载所有完整的仓库文件__  
+
+__也可使用Releases中的exe文件，跳过上述1-5步骤，如果是非windows系统，请严格按照1-5步骤执行__
+
 6. 配置
     - 在config.ini中配置你的GPT/Gemini参数，格式如下
-        > ; GPT版本
-        > ai_gpt_ver=4
-        > ; 第三方GPT-3 API地址和API Key
-        > ai_addr=https://api.xxxx.xxx/v1
-        > ai_api_key=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        > ; Google API Key
-        > google_ai_addr=null
-        > google_ai_api_key=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        > ; 提示词
-        > pre_prompts=xxxxxxxxxxxxxxxxxxxxxxxxxx
+        > ; GPT版本  
+        > ai_gpt_ver=4  
+        > ; 第三方GPT-3 API地址和API Key  
+        > ai_addr=https://api.xxxx.xxx/v1  
+        > ai_api_key=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
+        > ; Google API Key  
+        > google_ai_addr=null  
+        > google_ai_api_key=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
+        > ; 提示词  
+        > pre_prompts=xxxxxxxxxxxxxxxxxxxxxxxxxx  
 
     - 创建contents文件夹，将需要提取的小说网页(__html扩展名__)保存在contents文件夹下
 6. 运行
