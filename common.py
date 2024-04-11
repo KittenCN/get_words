@@ -35,6 +35,8 @@ pre_prompts = "你是一个文学大师，小说家。我将提供一段文本�
                 尽量使用与原文同一个意思，但是不同的词句用语来表述，\
                 不要额外添加没有意义的符号, \
                 除非原文是英文，否则必须使用中文回答:"
+zx_index = "【系统提词】解读正向词助手（升级版）"
+cj_index = "【系统场景】解读场景词助手（升级版）"
 SutuiDB = {
         "text_content" : "",
         "fenjin_text" : "",
@@ -93,6 +95,10 @@ if len(ai_addr) == 0 or len(ai_api_key) == 0:
                 ai_gpt_ver = int(line.split('=')[1].strip())
             elif line.startswith('sutui_db_addr'):
                 sutui_db_addr = line.split('=')[1].strip()
+            elif line.startswith('zx_index'):
+                zx_index = line.split('=')[1].strip()
+            elif line.startswith('cj_index'):
+                cj_index = line.split('=')[1].strip()
 
 # check file sutui_db_addr
 if not os.path.exists(sutui_db_addr):
@@ -100,10 +106,10 @@ if not os.path.exists(sutui_db_addr):
     print("没有找到数据库文件: " + sutui_db_addr)
     print("部分功能可能无法使用")
 else:
-    sql = "select * from gpt_roles where name = '【系统提词】解读正向词助手（升级版）'"
+    sql = "select * from gpt_roles where name = '" + zx_index +"'"
     result = exec_sql(sql)
     zx_prompts = result[0][3]
-    sql = "select * from gpt_roles where name = '【系统场景】解读场景词助手（升级版）'"
+    sql = "select * from gpt_roles where name = '" + cj_index +"'"
     result = exec_sql(sql)
     cj_prompts = result[0][3]
 
