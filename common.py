@@ -6,11 +6,106 @@ import httpx
 import re
 import glob
 import os
+import sqlite3
+import shutil
+import csv
 
 ai_max_length = 1000
 temperature = 0.5
 contents_path = "./contents/"
 log_file_path = "./error.log"
+drafts_path = "./drafts/"
+ai_gpt_ver = 4
+
+ai_addr = ""
+ai_api_key = ""
+google_ai_addr=""
+google_ai_api_key=""
+sutui_db_addr=""
+sutui_flag = 1
+cj_prompts = ""
+zx_prompts = ""
+pre_prompts = "你是一个文学大师，小说家。我将提供一段文本给你，请你理解这段文本，\
+                并结合上下文以及合理的想象，保持文本原有主题意思的情况下, \
+                以小说的风格，并加入适当的润色和合理的环境，心理或动作描写，改写这段话，\
+                如果上下文不连贯或有缺失，可以适当添加一些语句，甚至可以调整上下文的顺序， \
+                使得整个文段更加合理，更加流畅充实，\
+                最终达到词句，语言表达等与原文尽量不同，但是意思与原文大致相同的目的，\
+                但是内容更加充实优美的文字语句，修改后的字数不能少于原文字数，\
+                尽量使用与原文同一个意思，但是不同的词句用语来表述，\
+                不要额外添加没有意义的符号, \
+                除非原文是英文，否则必须使用中文回答:"
+SutuiDB = {
+        "text_content" : "",
+        "fenjin_text" : "",
+        "prompt" : "",
+        "image_width" : "1024",
+        "image_height" : "576",
+        "sampler_name" : "DPM++ 2M Karras",
+        "steps" : "30",
+        "cfg_scale" : "9",
+        "unknown1" : "",
+        "unknown2" : "0",
+        "tag" : "",
+        }
+
+def exec_sql(sql):
+    if sutui_flag == 0:
+        return []
+    conn = sqlite3.connect(sutui_db_addr)
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    result = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return result
+
+# check the folder address, if not exist, create it
+if not os.path.exists(contents_path):
+    os.makedirs(contents_path)
+if not os.path.exists(drafts_path):
+    os.makedirs(drafts_path)
+if len(ai_addr) == 0 or len(ai_api_key) == 0:
+    # check config.ini file, if it is not exict, then check the __config.ini file , if it is not exist, then warning and exit; else create the config.ini file from __config.ini file
+    if not os.path.exists('config.ini'):
+        if not os.path.exists('__config.ini'):
+            print("没有找到配置文件config.ini或者__config.ini")
+            exit()
+        else:
+            shutil.copy('__config.ini', 'config.ini')
+            print("已经创建了配置文件config.ini，请打开配置文件填写相应的信息后，再次运行本程序！")
+            exit()
+    # read config.ini file
+    with open('config.ini', 'r', encoding='utf-8') as file:
+        lines = file.readlines()
+        for line in lines:
+            if line.startswith('ai_addr'):
+                ai_addr = line.split('=')[1].strip()
+            elif line.startswith('ai_api_key'):
+                ai_api_key = line.split('=')[1].strip()
+            elif line.startswith('google_ai_addr'):
+                google_ai_addr = line.split('=')[1].strip()
+            elif line.startswith('google_ai_api_key'):
+                google_ai_api_key = line.split('=')[1].strip()
+            elif line.startswith('pre_prompts'):
+                pre_prompts = line.split('=')[1].strip()
+            elif line.startswith('ai_gpt_ver'):
+                ai_gpt_ver = int(line.split('=')[1].strip())
+            elif line.startswith('sutui_db_addr'):
+                sutui_db_addr = line.split('=')[1].strip()
+
+# check file sutui_db_addr
+if not os.path.exists(sutui_db_addr):
+    sutui_flag = 0
+    print("没有找到数据库文件: " + sutui_db_addr)
+    print("部分功能可能无法使用")
+else:
+    sql = "select * from gpt_roles where name = '【系统提词】解读正向词助手（升级版）'"
+    result = exec_sql(sql)
+    zx_prompts = result[0][3]
+    sql = "select * from gpt_roles where name = '【系统场景】解读场景词助手（升级版）'"
+    result = exec_sql(sql)
+    cj_prompts = result[0][3]
 
 def get_latest_file_name(directory):
     """
@@ -45,11 +140,12 @@ def split_text_into_chunks(text, max_length=ai_max_length):
     chunks.append(current_chunk)
     return chunks
 
-def rewrite_text_with_genai(text, google_ai_api_key, prompt="Please rewrite this text:"):
+def rewrite_text_with_genai(text, google_ai_api_key, prompt="Please rewrite this text:", pbar_flag=True):
     chunks = split_text_into_chunks(text)
     rewritten_text = ''
     current_model = 'gemini-pro'
-    pbar = tqdm(total=len(chunks), ncols=150)
+    if pbar_flag:
+        pbar = tqdm(total=len(chunks), ncols=150)
     genai.configure(api_key = google_ai_api_key)
     model = genai.GenerativeModel(current_model)
     error_text = []
@@ -89,8 +185,10 @@ def rewrite_text_with_genai(text, google_ai_api_key, prompt="Please rewrite this
                 rewritten_text += _chunk.text.strip()
             else:
                 error_text.append(_chunk)
-        pbar.update(1)
-    pbar.close()
+        if pbar_flag:
+            pbar.update(1)
+    if pbar_flag:
+        pbar.close()
     if len(error_text) > 0:
         with open(log_file_path, 'a', encoding='utf-8') as log_file:
             try:
@@ -100,7 +198,7 @@ def rewrite_text_with_genai(text, google_ai_api_key, prompt="Please rewrite this
                 log_file.write(str(e))
     return rewritten_text
 
-def rewrite_text_with_gpt3(text, ai_addr, ai_api_key, ai_gpt_ver, prompt="Please rewrite this text:"):
+def rewrite_text_with_gpt3(text, ai_addr, ai_api_key, ai_gpt_ver, prompt="Please rewrite this text:", pbar_flag=True):
     chunks = split_text_into_chunks(text)
     rewritten_text = ''
     error_text = []
@@ -112,7 +210,8 @@ def rewrite_text_with_gpt3(text, ai_addr, ai_api_key, ai_gpt_ver, prompt="Please
             follow_redirects=True,
         ),
     )
-    pbar = tqdm(total=len(chunks), ncols=150)
+    if pbar_flag:
+        pbar = tqdm(total=len(chunks), ncols=150)
     for chunk in chunks:
         response = client.chat.completions.create(
             model="gpt-4" if ai_gpt_ver == 4 else "gpt-3.5-turbo",
@@ -136,8 +235,10 @@ def rewrite_text_with_gpt3(text, ai_addr, ai_api_key, ai_gpt_ver, prompt="Please
                 rewritten_text += _chunk.choices[0].delta.content.strip()
             else:
                 error_text.append(_chunk)
-        pbar.update(1)
-    pbar.close()
+        if pbar_flag:        
+            pbar.update(1)
+    if pbar_flag:
+        pbar.close()
     if len(error_text) > 0:
         with open(log_file_path, 'a', encoding='utf-8') as log_file:
             try:
@@ -305,3 +406,12 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
     #     output_file.write(output_text)
 
     # print(f"Extraction completed, saved to: {output_file_path}")
+
+def dict_to_csv(dict_array, csv_file):
+    """
+    Write a dictionary to a CSV file.
+    """
+    with open(csv_file, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=dict_array[0].keys())
+        # writer.writeheader()  # 写入表头
+        writer.writerows(dict_array)  # 写入数据
