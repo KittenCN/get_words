@@ -41,6 +41,9 @@
         > google_ai_api_key=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
         > ; 提示词  
         > pre_prompts=xxxxxxxxxxxxxxxxxxxxxxxxxx  
+        > sutui_db_addr=C:/Users/XXXX/AppData/Roaming/text2video/book2video/database_v2.sqlite
+        > zx_index = "【系统提词】解读正向词助手（升级版）"
+        > cj_index = "【系统场景】解读场景词助手（升级版）"
 
     - 创建contents文件夹，将需要提取的小说网页(__html扩展名__)保存在contents文件夹下
 6. 运行
@@ -54,6 +57,7 @@
         > 1: pre process html file: （预处理html文件）    
         > 2: process txt file with gpt: （ai 洗文）  
         > 3: test AI: （测试AI）
+        > 4: 创建导入脚本
 
         __请务必先预处理html文件，再进行洗文操作；预处理html会自动切断每行的字数，并去除没有必要的标点符号。__
     - 如果选择ai洗文，下面系统会提示当前默认的ai是Gemini，如果需要切换使用GPT，请输入y，再回车
