@@ -1,8 +1,11 @@
 import os
+import csv
+from time import sleep
 from common import *
 
 ai_switch = 1 # (0:gpt, 1:genmini)
 # ai_max_length =4096 - len(pre_prompts) - 100
+dict_to_csv_limit = 10
 
 # Main program
 content_name = get_latest_file_name(contents_path)
@@ -70,11 +73,17 @@ while(True):
         print(output_text)
     elif choice == '4':
         if sutui_flag == 1:
+            current_tenants = ""
             base_name = contents_path + content_name
             ori__file_path = base_name + '.txt'
             if(not os.path.exists(ori__file_path)):
                 print("文件没有找到: " + ori__file_path)
                 exit()
+            rows = []
+            if(os.path.exists(drafts_path + content_name + '.csv')):
+                with open(drafts_path + content_name + '.csv', 'r', encoding='utf-8') as file:
+                    reader = csv.reader(file)
+                    rows = list(reader)
             ai_choice = input("当前的AI是: " + ("GPT" if ai_switch == 0 else "GenMini") + "\n你要不要切换(默认不要)? (y/n): ")
             if ai_choice == 'y':
                 ai_switch = 1 - ai_switch
@@ -87,10 +96,14 @@ while(True):
             # read mod file to get the text
             output_text = ""
             sutui = []
+            current_times = 0
             with open(mod_file_path, 'r', encoding='utf-8') as file:
                 output_text = file.read().split('\n')
             pbar = tqdm(total=len(output_text))
-            for item in output_text:
+            for _i, item in enumerate(output_text):
+                if len(rows) > 0 and (_i + 1) <= len(rows):
+                    pbar.update(1)
+                    continue
                 SutuiDB["text_content"] = item.strip()
                 if ai_switch == 0:
                     SutuiDB["fenjin_text"] = rewrite_text_with_gpt3(item, ai_addr, ai_api_key, ai_gpt_ver, cj_prompts, pbar_flag=False).strip()
@@ -98,10 +111,21 @@ while(True):
                 elif ai_switch == 1:
                     SutuiDB["fenjin_text"] = rewrite_text_with_genai(item, google_ai_api_key, cj_prompts, pbar_flag=False).strip()
                     SutuiDB["prompt"] = rewrite_text_with_genai(item, google_ai_api_key, zx_prompts, pbar_flag=False).strip()
+                if SutuiDB["fenjin_text"] == "error" or SutuiDB["prompt"] == "error":
+                    print("\nAI错误")
+                    break
                 sutui.append(SutuiDB.copy())
+                current_times += 1
+                if current_times >= dict_to_csv_limit:
+                    if len(sutui) > 0:
+                        dict_to_csv(sutui, drafts_path + content_name + '.csv')
+                    current_times = 0
+                    sutui = []
+                    sleep(10)
                 pbar.update(1)
             pbar.close()
-            dict_to_csv(sutui, drafts_path + content_name + '.csv')
+            if len(sutui) > 0:
+                dict_to_csv(sutui, drafts_path + content_name + '.csv')
         else:
             print("没有正确配置速推数据库")
     else:

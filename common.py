@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from openai import OpenAI
 from tqdm import tqdm
+from datetime import datetime
 import google.generativeai as genai
 import httpx
 import re
@@ -106,12 +107,18 @@ if not os.path.exists(sutui_db_addr):
     print("没有找到数据库文件: " + sutui_db_addr)
     print("部分功能可能无法使用")
 else:
-    sql = "select * from gpt_roles where name = '" + zx_index +"'"
+    sql = "SELECT * FROM gpt_roles where name = " + zx_index
     result = exec_sql(sql)
-    zx_prompts = result[0][3]
-    sql = "select * from gpt_roles where name = '" + cj_index +"'"
+    if len(result) == 0:
+        print("没有找到系统提词的配置信息")
+    else:
+        zx_prompts = result[0][3]  
+    sql = "SELECT * FROM gpt_roles where name = " + cj_index
     result = exec_sql(sql)
-    cj_prompts = result[0][3]
+    if len(result) == 0:
+        print("没有找到系统场景的配置信息")
+    else:
+        cj_prompts = result[0][3]
 
 def get_latest_file_name(directory):
     """
@@ -126,8 +133,9 @@ def get_latest_file_name(directory):
     return file_name
 
 def write_text_to_file(text, file_path):
-    with open(file_path, 'w', encoding='utf-8') as output_file:
-        output_file.write(text)
+    with open(file_path, 'a', encoding='utf-8') as output_file:
+        now = datetime.now()
+        output_file.write(now.strftime('%Y%m%d%H%M%S') + "    " + text)
     print(f"Extraction completed, saved to: {file_path}")
 
 def split_text_into_chunks(text, max_length=ai_max_length):
@@ -184,15 +192,19 @@ def rewrite_text_with_genai(text, google_ai_api_key, prompt="Please rewrite this
                     "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
                     "threshold": "BLOCK_NONE",
                 },
+                
             ]
         )
-        for _chunk in response:
-            if _chunk.text is not None:
-                rewritten_text += _chunk.text.strip()
-            else:
-                error_text.append(_chunk)
-        if pbar_flag:
-            pbar.update(1)
+        try:
+            for _chunk in response:
+                if _chunk.text is not None:
+                    rewritten_text += _chunk.text.strip()
+                else:
+                    error_text.append(_chunk)
+            if pbar_flag:
+                pbar.update(1)
+        except Exception as e:
+            return "error"
     if pbar_flag:
         pbar.close()
     if len(error_text) > 0:
@@ -236,13 +248,16 @@ def rewrite_text_with_gpt3(text, ai_addr, ai_api_key, ai_gpt_ver, prompt="Please
             stream=True,
         )
         # rewritten_text += response.choices[0].message.content.strip()
-        for _chunk in response:
-            if _chunk.choices[0].delta.content is not None:
-                rewritten_text += _chunk.choices[0].delta.content.strip()
-            else:
-                error_text.append(_chunk)
-        if pbar_flag:        
-            pbar.update(1)
+        try:
+            for _chunk in response:
+                if _chunk.choices[0].delta.content is not None:
+                    rewritten_text += _chunk.choices[0].delta.content.strip()
+                else:
+                    error_text.append(_chunk)
+            if pbar_flag:        
+                pbar.update(1)
+        except Exception as e:
+            return "error"
     if pbar_flag:
         pbar.close()
     if len(error_text) > 0:
@@ -417,7 +432,7 @@ def dict_to_csv(dict_array, csv_file):
     """
     Write a dictionary to a CSV file.
     """
-    with open(csv_file, 'w', newline='', encoding='utf-8') as f:
+    with open(csv_file, 'a', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=dict_array[0].keys())
         # writer.writeheader()  # 写入表头
         writer.writerows(dict_array)  # 写入数据
