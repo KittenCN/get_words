@@ -192,7 +192,6 @@ def rewrite_text_with_genai(text, google_ai_api_key, prompt="Please rewrite this
                     "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
                     "threshold": "BLOCK_NONE",
                 },
-                
             ]
         )
         try:

@@ -112,8 +112,9 @@ while(True):
                     SutuiDB["fenjin_text"] = rewrite_text_with_genai(item, google_ai_api_key, cj_prompts, pbar_flag=False).strip()
                     SutuiDB["prompt"] = rewrite_text_with_genai(item, google_ai_api_key, zx_prompts, pbar_flag=False).strip()
                 if SutuiDB["fenjin_text"] == "error" or SutuiDB["prompt"] == "error":
-                    print("\nAI错误")
-                    break
+                    print("\n第{}行发生AI错误，有可能是文字描述没有通过AI审查，请修改后再试.".format(_i + 1))
+                    SutuiDB["fenjin_text"] = "\n "
+                    SutuiDB["prompt"] = " "
                 sutui.append(SutuiDB.copy())
                 current_times += 1
                 if current_times >= dict_to_csv_limit:
