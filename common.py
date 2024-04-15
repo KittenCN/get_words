@@ -100,6 +100,10 @@ if len(ai_addr) == 0 or len(ai_api_key) == 0:
                 zx_index = line.split('=')[1].strip()
             elif line.startswith('cj_index'):
                 cj_index = line.split('=')[1].strip()
+            elif line.startswith('zx_prompts'):
+                zx_prompts = line.split('=')[1].strip()
+            elif line.startswith('cj_prompts'):
+                cj_prompts = line.split('=')[1].strip()
 
 # check file sutui_db_addr
 if not os.path.exists(sutui_db_addr):
@@ -107,18 +111,20 @@ if not os.path.exists(sutui_db_addr):
     print("没有找到数据库文件: " + sutui_db_addr)
     print("部分功能可能无法使用")
 else:
-    sql = "SELECT * FROM gpt_roles where name = " + zx_index
-    result = exec_sql(sql)
-    if len(result) == 0:
-        print("没有找到系统提词的配置信息")
-    else:
-        zx_prompts = result[0][3]  
-    sql = "SELECT * FROM gpt_roles where name = " + cj_index
-    result = exec_sql(sql)
-    if len(result) == 0:
-        print("没有找到系统场景的配置信息")
-    else:
-        cj_prompts = result[0][3]
+    if len(zx_prompts) == 0:
+        sql = "SELECT * FROM gpt_roles where name = " + zx_index
+        result = exec_sql(sql)
+        if len(result) == 0:
+            print("没有找到系统提词的配置信息")
+        else:
+            zx_prompts = result[0][3]  
+    if len(cj_prompts) == 0:
+        sql = "SELECT * FROM gpt_roles where name = " + cj_index
+        result = exec_sql(sql)
+        if len(result) == 0:
+            print("没有找到系统场景的配置信息")
+        else:
+            cj_prompts = result[0][3]
 
 def get_latest_file_name(directory):
     """
