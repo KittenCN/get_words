@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 from openai import OpenAI
 from tqdm import tqdm
 from datetime import datetime
+from config import write_config
 import google.generativeai as genai
 import httpx
 import re
@@ -71,42 +72,59 @@ if not os.path.exists(drafts_path):
     os.makedirs(drafts_path)
 if len(ai_addr) == 0 or len(ai_api_key) == 0:
     # check config.ini file, if it is not exict, then check the __config.ini file , if it is not exist, then warning and exit; else create the config.ini file from __config.ini file
+    # if not os.path.exists('config.ini'):
+    #     if not os.path.exists('__config.ini'):
+    #         print("没有找到配置文件config.ini或者__config.ini")
+    #         os.system("pause")
+    #         sys.exit()
+    #     else:
+    #         shutil.copy('__config.ini', 'config.ini')
+    #         print("已经创建了配置文件config.ini，请打开配置文件填写相应的信息后，再次运行本程序！")
+    #         os.system("pause")
+    #         sys.exit()
     if not os.path.exists('config.ini'):
-        if not os.path.exists('__config.ini'):
-            print("没有找到配置文件config.ini或者__config.ini")
-            os.system("pause")
-            sys.exit()
-        else:
-            shutil.copy('__config.ini', 'config.ini')
-            print("已经创建了配置文件config.ini，请打开配置文件填写相应的信息后，再次运行本程序！")
-            os.system("pause")
-            sys.exit()
+        write_config()
     # read config.ini file
+    last_ver = 0
     with open('config.ini', 'r', encoding='utf-8') as file:
         lines = file.readlines()
         for line in lines:
             if line.startswith('ai_addr'):
                 ai_addr = line.split('=')[1].strip()
+                last_ver += 1
             elif line.startswith('ai_api_key'):
                 ai_api_key = line.split('=')[1].strip()
+                last_ver += 1
             elif line.startswith('google_ai_addr'):
                 google_ai_addr = line.split('=')[1].strip()
+                last_ver += 1
             elif line.startswith('google_ai_api_key'):
                 google_ai_api_key = line.split('=')[1].strip()
+                last_ver += 1
             elif line.startswith('pre_prompts'):
                 pre_prompts = line.split('=')[1].strip()
+                last_ver += 1
             elif line.startswith('ai_gpt_ver'):
                 ai_gpt_ver = int(line.split('=')[1].strip())
+                last_ver += 1
             elif line.startswith('sutui_db_addr'):
                 sutui_db_addr = line.split('=')[1].strip()
+                last_ver += 1
             elif line.startswith('zx_index'):
                 zx_index = line.split('=')[1].strip()
+                last_ver += 1
             elif line.startswith('cj_index'):
                 cj_index = line.split('=')[1].strip()
+                last_ver += 1
             elif line.startswith('zx_prompts'):
                 zx_prompts = line.split('=')[1].strip()
+                last_ver += 1
             elif line.startswith('cj_prompts'):
                 cj_prompts = line.split('=')[1].strip()
+                last_ver += 1
+        if last_ver < 11:
+            print("软件非最新版本，部分功能可能无法使用，建议重新下载最新版本！")
+            print("并按照__config.ini文件的格式补充填写config.ini文件！")
 
 # check file sutui_db_addr
 if not os.path.exists(sutui_db_addr):
