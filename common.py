@@ -11,7 +11,7 @@ import sqlite3
 import shutil
 import csv
 
-ai_max_length = 2000
+ai_max_length = 1000
 temperature = 0.5
 contents_path = "./contents/"
 log_file_path = "./error.log"

@@ -6,6 +6,8 @@ from common import *
 ai_switch = 1 # (0:gpt, 1:genmini)
 # ai_max_length =4096 - len(pre_prompts) - 100
 dict_to_csv_limit = 10
+up_scale = 8
+down_scale = 3
 
 # Main program
 content_name = get_latest_file_name(contents_path)
@@ -105,12 +107,21 @@ while(True):
                         pbar.update(1)
                         continue
                     SutuiDB["text_content"] = item.strip()
+                    up_string = ""
+                    down_string = ""
+                    for index in range(up_scale, 0, -1):
+                        if (_i - index) >= 0:
+                            up_string = output_text[_i - index] + ' ' + up_string
+                    for index in range(1, down_scale + 1):
+                        if (_i + index) < len(output_text):
+                            down_string = down_string + ' ' + output_text[_i + index]
+                    _other = " 以下是提供给你分析上下文关联的段落，上文: " + up_string + " 下文: " + down_string + " 下面是正文，请分析后按上述要求输出："
                     if ai_switch == 0:
-                        SutuiDB["fenjin_text"] = rewrite_text_with_gpt3(item, ai_addr, ai_api_key, ai_gpt_ver, cj_prompts, pbar_flag=False).strip()
-                        SutuiDB["prompt"] = rewrite_text_with_gpt3(item, ai_addr, ai_api_key, ai_gpt_ver, zx_prompts, pbar_flag=False).strip()
+                        SutuiDB["fenjin_text"] = rewrite_text_with_gpt3(item, ai_addr, ai_api_key, ai_gpt_ver, cj_prompts +_other, pbar_flag=False).strip()
+                        SutuiDB["prompt"] = rewrite_text_with_gpt3(item, ai_addr, ai_api_key, ai_gpt_ver, zx_prompts +_other, pbar_flag=False).strip()
                     elif ai_switch == 1:
-                        SutuiDB["fenjin_text"] = rewrite_text_with_genai(item, google_ai_api_key, cj_prompts, pbar_flag=False).strip()
-                        SutuiDB["prompt"] = rewrite_text_with_genai(item, google_ai_api_key, zx_prompts, pbar_flag=False).strip()
+                        SutuiDB["fenjin_text"] = rewrite_text_with_genai(item, google_ai_api_key, cj_prompts +_other, pbar_flag=False).strip()
+                        SutuiDB["prompt"] = rewrite_text_with_genai(item, google_ai_api_key, zx_prompts +_other, pbar_flag=False).strip()
                     if SutuiDB["fenjin_text"] == "error" or SutuiDB["prompt"] == "error":
                         print("\n第{}行发生AI错误，有可能是文字描述没有通过AI审查，请修改后再试.".format(_i + 1))
                         SutuiDB["fenjin_text"] = " "
