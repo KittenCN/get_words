@@ -1,5 +1,3 @@
-import os
-import csv
 from time import sleep
 from common import *
 
@@ -13,7 +11,7 @@ down_scale = 3
 content_name = get_latest_file_name(contents_path)
 if content_name is None:
     print("在文件夹中没有小说html文件")
-    exit()
+    sys.exit()
 input_name = input("输入小说的名字(默认为: " + content_name + "): ")
 if len(input_name) > 0:
     content_name = input_name
