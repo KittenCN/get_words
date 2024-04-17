@@ -74,10 +74,12 @@ if len(ai_addr) == 0 or len(ai_api_key) == 0:
     if not os.path.exists('config.ini'):
         if not os.path.exists('__config.ini'):
             print("没有找到配置文件config.ini或者__config.ini")
+            os.system("pause")
             sys.exit()
         else:
             shutil.copy('__config.ini', 'config.ini')
             print("已经创建了配置文件config.ini，请打开配置文件填写相应的信息后，再次运行本程序！")
+            os.system("pause")
             sys.exit()
     # read config.ini file
     with open('config.ini', 'r', encoding='utf-8') as file:
