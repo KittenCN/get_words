@@ -434,6 +434,22 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
 
     # print(f"Extraction completed, saved to: {output_file_path}")
 
+def remove_duplicates(csv_file, column):
+    # 读取并去重数据
+    words = set()
+    rows = []
+    with open(csv_file, 'r', encoding='utf-8') as f:
+        reader = csv.reader(f)
+        for row in reader:
+            no_chinese = re.sub(r'[\u4e00-\u9fff]+', '', row[column])
+            row[column] = ','.join(set(no_chinese.split(',')))
+            rows.append(row)
+
+    # 将去重后的数据写回文件
+    with open(csv_file, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        writer.writerows(rows)
+
 def dict_to_csv(dict_array, csv_file):
     """
     Write a dictionary to a CSV file.
@@ -442,3 +458,4 @@ def dict_to_csv(dict_array, csv_file):
         writer = csv.DictWriter(f, fieldnames=dict_array[0].keys())
         # writer.writeheader()  # 写入表头
         writer.writerows(dict_array)  # 写入数据
+    remove_duplicates(csv_file, 2)

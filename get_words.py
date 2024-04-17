@@ -59,6 +59,7 @@ while(True):
             output_text = replace_punctuation_with_space(output_text)
             output_text = remove_lines_with_only_numbers_or_symbols(output_text)
             write_text_to_file(output_text, mod_file_path)
+            print("处理完成")
     elif choice == '3':
         # check ai
         ai_choice = input("当前准备测试的AI是: " + ("GPT" if ai_switch == 0 else "GenMini") + "\n你要不要切换(默认不要)? (y/n): ")
@@ -136,6 +137,7 @@ while(True):
                 pbar.close()
                 if len(sutui) > 0:
                     dict_to_csv(sutui, drafts_path + content_name + '.csv')
+                print("处理完成")
         else:
             print("没有正确配置速推数据库")
     elif choice == '5':
@@ -164,3 +166,4 @@ while(True):
     else:
         print("选择错误")
     choice = input("1: 预处理小说的网页文件: \n2: 使用AI洗文: \n3: 测试AI: \n4: 创建导入脚本: \n5: 分析文档\n0: 退出\n请选择:")
+os.system("pause")
