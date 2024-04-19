@@ -82,19 +82,22 @@ while(True):
                 print("文件没有找到: " + ori__file_path)
             else:
                 rows = []
-                if(os.path.exists(drafts_path + content_name + '.csv')):
-                    with open(drafts_path + content_name + '.csv', 'r', encoding='utf-8') as file:
-                        reader = csv.reader(file)
-                        rows = list(reader)
                 ai_choice = input("当前的AI是: " + ("GPT" if ai_switch == 0 else "GenMini") + "\n你要不要切换(默认不要)? (y/n): ")
                 if ai_choice == 'y':
                     ai_switch = 1 - ai_switch
                     print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini"))
                 # base_name = os.path.splitext(html_file_path)[0]   
+                extent = ""
                 if ai_switch == 0:
                     mod_file_path = base_name + '_gpt.txt'
+                    extent = "_gpt"
                 elif ai_switch == 1:
                     mod_file_path = base_name + '_gen.txt'
+                    extent = "_gen"
+                if(os.path.exists(drafts_path + content_name + extent + '.csv')):
+                    with open(drafts_path + content_name + extent + '.csv', 'r', encoding='utf-8') as file:
+                        reader = csv.reader(file)
+                        rows = list(reader)
                 # read mod file to get the text
                 output_text = ""
                 sutui = []
@@ -115,7 +118,7 @@ while(True):
                     for index in range(1, down_scale + 1):
                         if (_i + index) < len(output_text):
                             down_string = down_string + ' ' + output_text[_i + index]
-                    _other = " 以下是提供给你分析上下文关联的段落，上文: " + up_string + " 下文: " + down_string + " 下面是正文，请分析后按上述要求输出："
+                    _other = " 以下是提供给你分析用的,上下文关联的段落,上文: " + up_string + " 下文: " + down_string + " 下面是正文，请分析后按上述要求输出："
                     if ai_switch == 0:
                         SutuiDB["fenjin_text"] = rewrite_text_with_gpt3(item, ai_addr, ai_api_key, ai_gpt_ver, cj_prompts +_other, pbar_flag=False).strip()
                         SutuiDB["prompt"] = rewrite_text_with_gpt3(item, ai_addr, ai_api_key, ai_gpt_ver, zx_prompts +_other, pbar_flag=False).strip()
@@ -130,14 +133,14 @@ while(True):
                     current_times += 1
                     if current_times >= dict_to_csv_limit:
                         if len(sutui) > 0:
-                            dict_to_csv(sutui, drafts_path + content_name + '.csv')
+                            dict_to_csv(sutui, drafts_path + content_name + extent + '.csv')
                         current_times = 0
                         sutui = []
                         sleep(10)
                     pbar.update(1)
                 pbar.close()
                 if len(sutui) > 0:
-                    dict_to_csv(sutui, drafts_path + content_name + '.csv')
+                    dict_to_csv(sutui, drafts_path + content_name + extent + '.csv')
                 print("处理完成")
         else:
             print("没有正确配置速推数据库")
@@ -163,7 +166,9 @@ while(True):
                 output_text = rewrite_text_with_gpt3(output_text, ai_addr, ai_api_key, ai_gpt_ver, _prompts)
             elif ai_switch == 1:
                 output_text = rewrite_text_with_genai(output_text, google_ai_api_key, _prompts)
-            print(output_text)
+            with open(analysis_path + content_name + '_analysis.txt', 'w', encoding='utf-8') as file:
+                file.write(output_text)
+            print("处理完成")
     else:
         print("选择错误")
     choice = input("1: 预处理小说的网页文件: \n2: 使用AI洗文: \n3: 测试AI: \n4: 创建导入脚本: \n5: 分析文档\n0: 退出\n请选择:")

@@ -18,6 +18,7 @@ temperature = 0.5
 contents_path = "./contents/"
 log_file_path = "./error.log"
 drafts_path = "./drafts/"
+analysis_path = "./analysis/"
 ai_gpt_ver = 4
 
 ai_addr = ""
@@ -29,15 +30,15 @@ sutui_flag = 1
 cj_prompts = ""
 zx_prompts = ""
 pre_prompts = "你是一个文学大师，小说家。我将提供一段文本给你，请你理解这段文本，\
-                并结合上下文以及合理的想象，保持文本原有主题意思的情况下, \
-                以小说的风格，并加入适当的润色和合理的环境，心理或动作描写，改写这段话，\
-                如果上下文不连贯或有缺失，可以适当添加一些语句，甚至可以调整上下文的顺序， \
-                使得整个文段更加合理，更加流畅充实，\
-                最终达到词句，语言表达等与原文尽量不同，但是意思与原文大致相同的目的，\
-                但是内容更加充实优美的文字语句，修改后的字数不能少于原文字数，\
-                尽量使用与原文同一个意思，但是不同的词句用语来表述，\
-                不要额外添加没有意义的符号, \
-                除非原文是英文，否则必须使用中文回答:"
+并结合上下文以及合理的想象，保持文本原有主题意思的情况下, \
+以小说的风格，并加入适当的润色和合理的环境，心理或动作描写，改写这段话，\
+如果上下文不连贯或有缺失，可以适当添加一些语句，甚至可以调整上下文的顺序， \
+使得整个文段更加合理，更加流畅充实，\
+最终达到词句，语言表达等与原文尽量不同，但是意思与原文大致相同的目的，\
+但是内容更加充实优美的文字语句，修改后的字数不能少于原文字数，\
+尽量使用与原文同一个意思，但是不同的词句用语来表述，\
+不要额外添加没有意义的符号, \
+除非原文是英文，否则必须使用中文回答:"
 zx_index = "【系统提词】解读正向词助手（升级版）"
 cj_index = "【系统场景】解读场景词助手（升级版）"
 SutuiDB = {
@@ -66,10 +67,9 @@ def exec_sql(sql):
     return result
 
 # check the folder address, if not exist, create it
-if not os.path.exists(contents_path):
-    os.makedirs(contents_path)
-if not os.path.exists(drafts_path):
-    os.makedirs(drafts_path)
+for item in [contents_path, drafts_path, analysis_path]:
+    if not os.path.exists(item):
+        os.makedirs(item)
 if len(ai_addr) == 0 or len(ai_api_key) == 0:
     # check config.ini file, if it is not exict, then check the __config.ini file , if it is not exist, then warning and exit; else create the config.ini file from __config.ini file
     # if not os.path.exists('config.ini'):
@@ -90,37 +90,48 @@ if len(ai_addr) == 0 or len(ai_api_key) == 0:
         lines = file.readlines()
         for line in lines:
             if line.startswith('ai_addr'):
-                ai_addr = line.split('=')[1].strip()
+                if len(line.split('=')[1].strip()) > 0:
+                    ai_addr = line.split('=')[1].strip()
                 last_ver += 1
             elif line.startswith('ai_api_key'):
-                ai_api_key = line.split('=')[1].strip()
+                if len(line.split('=')[1].strip()) > 0:
+                    ai_api_key = line.split('=')[1].strip()
                 last_ver += 1
             elif line.startswith('google_ai_addr'):
-                google_ai_addr = line.split('=')[1].strip()
+                if len(line.split('=')[1].strip()) > 0:
+                    google_ai_addr = line.split('=')[1].strip()
                 last_ver += 1
             elif line.startswith('google_ai_api_key'):
-                google_ai_api_key = line.split('=')[1].strip()
+                if len(line.split('=')[1].strip()) > 0:
+                    google_ai_api_key = line.split('=')[1].strip()
                 last_ver += 1
             elif line.startswith('pre_prompts'):
-                pre_prompts = line.split('=')[1].strip()
+                if len(line.split('=')[1].strip()) > 0:
+                    pre_prompts = line.split('=')[1].strip()
                 last_ver += 1
             elif line.startswith('ai_gpt_ver'):
-                ai_gpt_ver = int(line.split('=')[1].strip())
+                if len(line.split('=')[1].strip()) > 0:
+                    ai_gpt_ver = int(line.split('=')[1].strip())
                 last_ver += 1
             elif line.startswith('sutui_db_addr'):
-                sutui_db_addr = line.split('=')[1].strip()
+                if len(line.split('=')[1].strip()) > 0:
+                    sutui_db_addr = line.split('=')[1].strip()
                 last_ver += 1
             elif line.startswith('zx_index'):
-                zx_index = line.split('=')[1].strip()
+                if len(line.split('=')[1].strip()) > 0:
+                    zx_index = line.split('=')[1].strip()
                 last_ver += 1
             elif line.startswith('cj_index'):
-                cj_index = line.split('=')[1].strip()
+                if len(line.split('=')[1].strip()) > 0:
+                    cj_index = line.split('=')[1].strip()
                 last_ver += 1
             elif line.startswith('zx_prompts'):
-                zx_prompts = line.split('=')[1].strip()
+                if len(line.split('=')[1].strip()) > 0:
+                    zx_prompts = line.split('=')[1].strip()
                 last_ver += 1
             elif line.startswith('cj_prompts'):
-                cj_prompts = line.split('=')[1].strip()
+                if len(line.split('=')[1].strip()) > 0:
+                    cj_prompts = line.split('=')[1].strip()
                 last_ver += 1
         if last_ver < 11:
             print("软件非最新版本，部分功能可能无法使用，建议重新下载最新版本！")
@@ -225,8 +236,6 @@ def rewrite_text_with_genai(text, google_ai_api_key, prompt="Please rewrite this
             for _chunk in response:
                 if _chunk.text is not None:
                     rewritten_text += _chunk.text.strip()
-                else:
-                    error_text.append(_chunk)
             if pbar_flag:
                 pbar.update(1)
         except Exception as e:
@@ -270,16 +279,13 @@ def rewrite_text_with_gpt3(text, ai_addr, ai_api_key, ai_gpt_ver, prompt="Please
                 }
             ],
             temperature=temperature,
-            max_tokens=4096,
             stream=True,
         )
         # rewritten_text += response.choices[0].message.content.strip()
         try:
             for _chunk in response:
-                if _chunk.choices[0].delta.content is not None:
+                if len(_chunk.choices) > 0 and _chunk.choices[0].delta.content is not None:
                     rewritten_text += _chunk.choices[0].delta.content.strip()
-                else:
-                    error_text.append(_chunk)
             if pbar_flag:        
                 pbar.update(1)
         except Exception as e:
