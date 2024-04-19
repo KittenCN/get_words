@@ -19,17 +19,21 @@ contents_path = "./contents/"
 log_file_path = "./error.log"
 drafts_path = "./drafts/"
 analysis_path = "./analysis/"
-ai_gpt_ver = 4
 
-ai_addr = ""
-ai_api_key = ""
-google_ai_addr=""
-google_ai_api_key=""
-sutui_db_addr=""
+parameter_list = ['ai_addr', 'ai_api_key', 'google_ai_addr', 'google_ai_api_key', 'pre_prompts', \
+                  'ai_gpt_ver', 'sutui_db_addr', 'zx_index', 'cj_index', 'zx_prompts', 'cj_prompts', \
+                  'proxy_addr', 'proxy_port']
 sutui_flag = 1
-cj_prompts = ""
-zx_prompts = ""
-pre_prompts = "你是一个文学大师，小说家。我将提供一段文本给你，请你理解这段文本，\
+parameters = {
+        "ai_gpt_ver" : 4,
+        "ai_addr" : "",
+        "ai_api_key" : "",
+        "google_ai_addr":"",
+        "google_ai_api_key":"",
+        "sutui_db_addr":"",
+        "cj_prompts" : "",
+        "zx_prompts" : "",
+        "pre_prompts" : "你是一个文学大师，小说家。我将提供一段文本给你，请你理解这段文本，\
 并结合上下文以及合理的想象，保持文本原有主题意思的情况下, \
 以小说的风格，并加入适当的润色和合理的环境，心理或动作描写，改写这段话，\
 如果上下文不连贯或有缺失，可以适当添加一些语句，甚至可以调整上下文的顺序， \
@@ -38,9 +42,12 @@ pre_prompts = "你是一个文学大师，小说家。我将提供一段文本�
 但是内容更加充实优美的文字语句，修改后的字数不能少于原文字数，\
 尽量使用与原文同一个意思，但是不同的词句用语来表述，\
 不要额外添加没有意义的符号, \
-除非原文是英文，否则必须使用中文回答:"
-zx_index = "【系统提词】解读正向词助手（升级版）"
-cj_index = "【系统场景】解读场景词助手（升级版）"
+除非原文是英文，否则必须使用中文回答:",
+        "zx_index" : "【系统提词】解读正向词助手（升级版）",
+        "cj_index" : "【系统场景】解读场景词助手（升级版）",
+        "proxy_addr" : "",
+        "proxy_port" : "",
+        }
 SutuiDB = {
         "text_content" : "",
         "fenjin_text" : "",
@@ -58,7 +65,7 @@ SutuiDB = {
 def exec_sql(sql):
     if sutui_flag == 0:
         return []
-    conn = sqlite3.connect(sutui_db_addr)
+    conn = sqlite3.connect(parameters['sutui_db_addr'])
     cursor = conn.cursor()
     cursor.execute(sql)
     result = cursor.fetchall()
@@ -70,93 +77,60 @@ def exec_sql(sql):
 for item in [contents_path, drafts_path, analysis_path]:
     if not os.path.exists(item):
         os.makedirs(item)
-if len(ai_addr) == 0 or len(ai_api_key) == 0:
-    # check config.ini file, if it is not exict, then check the __config.ini file , if it is not exist, then warning and exit; else create the config.ini file from __config.ini file
-    # if not os.path.exists('config.ini'):
-    #     if not os.path.exists('__config.ini'):
-    #         print("没有找到配置文件config.ini或者__config.ini")
-    #         os.system("pause")
-    #         sys.exit()
-    #     else:
-    #         shutil.copy('__config.ini', 'config.ini')
-    #         print("已经创建了配置文件config.ini，请打开配置文件填写相应的信息后，再次运行本程序！")
-    #         os.system("pause")
-    #         sys.exit()
-    if not os.path.exists('config.ini'):
-        write_config()
-    # read config.ini file
-    last_ver = 0
-    with open('config.ini', 'r', encoding='utf-8') as file:
-        lines = file.readlines()
-        for line in lines:
-            if line.startswith('ai_addr'):
+if not os.path.exists('config.ini'):
+    write_config()
+# read config.ini file
+last_ver = 0
+with open('config.ini', 'r', encoding='utf-8') as file:
+    lines = file.readlines()
+    for line in lines:
+        for parameter in parameter_list:
+            if line.startswith(parameter):
                 if len(line.split('=')[1].strip()) > 0:
-                    ai_addr = line.split('=')[1].strip()
+                    parameters[parameter] = line.split('=')[1].strip()
                 last_ver += 1
-            elif line.startswith('ai_api_key'):
-                if len(line.split('=')[1].strip()) > 0:
-                    ai_api_key = line.split('=')[1].strip()
-                last_ver += 1
-            elif line.startswith('google_ai_addr'):
-                if len(line.split('=')[1].strip()) > 0:
-                    google_ai_addr = line.split('=')[1].strip()
-                last_ver += 1
-            elif line.startswith('google_ai_api_key'):
-                if len(line.split('=')[1].strip()) > 0:
-                    google_ai_api_key = line.split('=')[1].strip()
-                last_ver += 1
-            elif line.startswith('pre_prompts'):
-                if len(line.split('=')[1].strip()) > 0:
-                    pre_prompts = line.split('=')[1].strip()
-                last_ver += 1
-            elif line.startswith('ai_gpt_ver'):
-                if len(line.split('=')[1].strip()) > 0:
-                    ai_gpt_ver = int(line.split('=')[1].strip())
-                last_ver += 1
-            elif line.startswith('sutui_db_addr'):
-                if len(line.split('=')[1].strip()) > 0:
-                    sutui_db_addr = line.split('=')[1].strip()
-                last_ver += 1
-            elif line.startswith('zx_index'):
-                if len(line.split('=')[1].strip()) > 0:
-                    zx_index = line.split('=')[1].strip()
-                last_ver += 1
-            elif line.startswith('cj_index'):
-                if len(line.split('=')[1].strip()) > 0:
-                    cj_index = line.split('=')[1].strip()
-                last_ver += 1
-            elif line.startswith('zx_prompts'):
-                if len(line.split('=')[1].strip()) > 0:
-                    zx_prompts = line.split('=')[1].strip()
-                last_ver += 1
-            elif line.startswith('cj_prompts'):
-                if len(line.split('=')[1].strip()) > 0:
-                    cj_prompts = line.split('=')[1].strip()
-                last_ver += 1
-        if last_ver < 11:
-            print("软件非最新版本，部分功能可能无法使用，建议重新下载最新版本！")
-            print("并按照__config.ini文件的格式补充填写config.ini文件！")
+                break
+    if last_ver < 11:
+        print("软件非最新版本，部分功能可能无法使用，建议重新下载最新版本！")
+        print("并按照__config.ini文件的格式补充填写config.ini文件！")
 
 # check file sutui_db_addr
-if not os.path.exists(sutui_db_addr):
+if not os.path.exists(parameters['sutui_db_addr']):
     sutui_flag = 0
-    print("没有找到数据库文件: " + sutui_db_addr)
+    print("没有找到数据库文件: " + parameters['sutui_db_addr'])
     print("部分功能可能无法使用")
 else:
-    if len(zx_prompts) == 0:
-        sql = "SELECT * FROM gpt_roles where name = " + zx_index
+    if len(parameters['zx_prompts']) == 0:
+        sql = "SELECT * FROM gpt_roles where name = " + parameters['zx_index']
         result = exec_sql(sql)
         if len(result) == 0:
             print("没有找到系统提词的配置信息")
         else:
-            zx_prompts = result[0][3]  
-    if len(cj_prompts) == 0:
-        sql = "SELECT * FROM gpt_roles where name = " + cj_index
+            parameters['zx_prompts'] = result[0][3]  
+    if len(parameters['cj_prompts']) == 0:
+        sql = "SELECT * FROM gpt_roles where name = " + parameters['cj_index']
         result = exec_sql(sql)
         if len(result) == 0:
             print("没有找到系统场景的配置信息")
         else:
-            cj_prompts = result[0][3]
+            parameters['cj_prompts'] = result[0][3]
+
+# check and set system proxy
+if len(parameters["proxy_addr"]) > 0 and len(parameters["proxy_port"]) > 0:
+    os.environ['HTTP_PROXY'] = "http://" + parameters["proxy_addr"] + ":" + parameters["proxy_port"]
+    os.environ['HTTPS_PROXY'] = "http://" + parameters["proxy_addr"] + ":" + parameters["proxy_port"]
+    print("系统代理设置为: " + "http://" + parameters["proxy_addr"] + ":" + parameters["proxy_port"])
+
+def check_ai(ai_switch):
+    if ai_switch == 0:
+        if len(parameters['ai_addr']) == 0 or len(parameters['ai_api_key']) == 0:
+            print("AI配置信息不完整，请检查config.ini文件")
+            return False
+    elif ai_switch == 1:
+        if len(parameters['google_ai_api_key']) == 0:
+            print("AI配置信息不完整，请检查config.ini文件")
+            return False
+    return True
 
 def get_latest_file_name(directory):
     """
@@ -261,6 +235,7 @@ def rewrite_text_with_gpt3(text, ai_addr, ai_api_key, ai_gpt_ver, prompt="Please
         http_client=httpx.Client(
             base_url=ai_addr,
             follow_redirects=True,
+            # proxy=parameters["proxy_addr"] + ":" + parameters["proxy_port"] if len(parameters["proxy_addr"]) and len(parameters["proxy_port"]) > 0 else None,
         ),
     )
     if pbar_flag:

@@ -21,6 +21,11 @@ print("当前选择的小说是: " + content_name)
 choice = input("1: 预处理小说的网页文件: \n2: 使用AI洗文: \n3: 测试AI: \n4: 创建导入脚本: \n5: 分析文档\n0: 退出\n请选择:")
 while(True):
     if choice == '0':
+        # check and unset system proxy
+        if len(parameters["proxy_addr"]) > 0 and len(parameters["proxy_port"]) > 0:
+            os.environ.pop('http_proxy')
+            os.environ.pop('https_proxy')
+            print("已经取消代理设置")
         break
     elif choice == '1':
         html_file_path = contents_path + content_name + '.html'
@@ -38,6 +43,8 @@ while(True):
             if ai_choice == 'y':
                 ai_switch = 1 - ai_switch
                 print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini"))
+            if check_ai(ai_switch) == False:
+                continue
             # base_name = os.path.splitext(html_file_path)[0]   
             if ai_switch == 0:
                 mod_file_path = base_name + '_gpt.txt'
@@ -50,9 +57,9 @@ while(True):
             # output_text = output_text.replace('\n', '')
             output_text = remove_chapter_markers(output_text)
             if ai_switch == 0:
-                output_text = rewrite_text_with_gpt3(output_text, ai_addr, ai_api_key, ai_gpt_ver, pre_prompts)
+                output_text = rewrite_text_with_gpt3(output_text, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], parameters['pre_prompts'])
             elif ai_switch == 1:
-                output_text = rewrite_text_with_genai(output_text, google_ai_api_key, pre_prompts)
+                output_text = rewrite_text_with_genai(output_text, parameters['google_ai_api_key'], parameters['pre_prompts'])
             output_text = merge_lines_without_punctuation(output_text)
             output_text = insert_new_lines_with_condition(output_text)
             output_text = split_long_lines(output_text)
@@ -67,11 +74,13 @@ while(True):
         if ai_choice == 'y':
             ai_switch = 1 - ai_switch
             print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini"))
+        if check_ai(ai_switch) == False:
+            continue
         test_text = "你是哪家公司的什么AI模型？"
         if ai_switch == 0:
-            output_text = rewrite_text_with_gpt3(test_text, ai_addr, ai_api_key, ai_gpt_ver, "测试AI:")
+            output_text = rewrite_text_with_gpt3(test_text, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], "测试AI:")
         elif ai_switch == 1:
-            output_text = rewrite_text_with_genai(test_text, google_ai_api_key, "测试AI:")
+            output_text = rewrite_text_with_genai(test_text, parameters['google_ai_api_key'], "测试AI:")
         print(output_text)
     elif choice == '4':
         if sutui_flag == 1:
@@ -87,6 +96,8 @@ while(True):
                     ai_switch = 1 - ai_switch
                     print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini"))
                 # base_name = os.path.splitext(html_file_path)[0]   
+                if check_ai(ai_switch) == False:
+                    continue
                 extent = ""
                 if ai_switch == 0:
                     mod_file_path = base_name + '_gpt.txt'
@@ -120,11 +131,11 @@ while(True):
                             down_string = down_string + ' ' + output_text[_i + index]
                     _other = " 以下是提供给你分析用的,上下文关联的段落,上文: " + up_string + " 下文: " + down_string + " 下面是正文，请分析后按上述要求输出："
                     if ai_switch == 0:
-                        SutuiDB["fenjin_text"] = rewrite_text_with_gpt3(item, ai_addr, ai_api_key, ai_gpt_ver, cj_prompts +_other, pbar_flag=False).strip()
-                        SutuiDB["prompt"] = rewrite_text_with_gpt3(item, ai_addr, ai_api_key, ai_gpt_ver, zx_prompts +_other, pbar_flag=False).strip()
+                        SutuiDB["fenjin_text"] = rewrite_text_with_gpt3(item, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], parameters['cj_prompts'] +_other, pbar_flag=False).strip()
+                        SutuiDB["prompt"] = rewrite_text_with_gpt3(item, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], parameters['zx_prompts'] +_other, pbar_flag=False).strip()
                     elif ai_switch == 1:
-                        SutuiDB["fenjin_text"] = rewrite_text_with_genai(item, google_ai_api_key, cj_prompts +_other, pbar_flag=False).strip()
-                        SutuiDB["prompt"] = rewrite_text_with_genai(item, google_ai_api_key, zx_prompts +_other, pbar_flag=False).strip()
+                        SutuiDB["fenjin_text"] = rewrite_text_with_genai(item, parameters['google_ai_api_key'], parameters['cj_prompts'] +_other, pbar_flag=False).strip()
+                        SutuiDB["prompt"] = rewrite_text_with_genai(item, parameters['google_ai_api_key'], parameters['zx_prompts'] +_other, pbar_flag=False).strip()
                     if SutuiDB["fenjin_text"] == "error" or SutuiDB["prompt"] == "error":
                         print("\n第{}行发生AI错误，有可能是文字描述没有通过AI审查，请修改后再试.".format(_i + 1))
                         SutuiDB["fenjin_text"] = " "
@@ -159,13 +170,15 @@ while(True):
             if ai_choice == 'y':
                 ai_switch = 1 - ai_switch
                 print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini"))
+            if check_ai(ai_switch) == False:
+                continue
             output_text = ""
             with open(ori__file_path, 'r', encoding='utf-8') as file:
                 output_text = file.read()
             if ai_switch == 0:
-                output_text = rewrite_text_with_gpt3(output_text, ai_addr, ai_api_key, ai_gpt_ver, _prompts)
+                output_text = rewrite_text_with_gpt3(output_text, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], _prompts)
             elif ai_switch == 1:
-                output_text = rewrite_text_with_genai(output_text, google_ai_api_key, _prompts)
+                output_text = rewrite_text_with_genai(output_text, parameters['google_ai_api_key'], _prompts)
             with open(analysis_path + content_name + '_analysis.txt', 'w', encoding='utf-8') as file:
                 file.write(output_text)
             print("处理完成")
