@@ -16,7 +16,9 @@ sutui_db_addr=C:/Users/XXXX/AppData/Roaming/text2video/book2video/database_v2.sq
 zx_index="【系统提词】解读正向词助手（升级版）" \n\
 cj_index="【系统场景】解读场景词助手（升级版）" \n\
 zx_prompts= \n\
-cj_prompts= \n'
+cj_prompts= \n\
+proxy_addr= \n\
+proxy_port= \n'
 
 
 def write_config():
