@@ -19,6 +19,7 @@ contents_path = "./contents/"
 log_file_path = "./error.log"
 drafts_path = "./drafts/"
 analysis_path = "./analysis/"
+ver_num = 13
 
 parameter_list = ['ai_addr', 'ai_api_key', 'google_ai_addr', 'google_ai_api_key', 'pre_prompts', \
                   'ai_gpt_ver', 'sutui_db_addr', 'zx_index', 'cj_index', 'zx_prompts', 'cj_prompts', \
@@ -90,7 +91,7 @@ with open('config.ini', 'r', encoding='utf-8') as file:
                     parameters[parameter] = line.split('=')[1].strip()
                 last_ver += 1
                 break
-    if last_ver < 11:
+    if last_ver < ver_num:
         print("软件非最新版本，部分功能可能无法使用，建议重新下载最新版本！")
         print("并按照__config.ini文件的格式补充填写config.ini文件！")
 
