@@ -60,13 +60,14 @@ while(True):
                 output_text = rewrite_text_with_gpt3(output_text, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], parameters['pre_prompts'])
             elif ai_switch == 1:
                 output_text = rewrite_text_with_genai(output_text, parameters['google_ai_api_key'], parameters['pre_prompts'])
-            output_text = merge_lines_without_punctuation(output_text)
-            output_text = insert_new_lines_with_condition(output_text)
-            output_text = split_long_lines(output_text)
-            output_text = merge_short_lines(output_text)
-            output_text = replace_punctuation_with_space(output_text)
-            output_text = remove_lines_with_only_numbers_or_symbols(output_text)
-            write_text_to_file(output_text, mod_file_path)
+            process_contents(output_text, mod_file_path)
+            # output_text = merge_lines_without_punctuation(output_text)
+            # output_text = insert_new_lines_with_condition(output_text)
+            # output_text = split_long_lines(output_text)
+            # output_text = merge_short_lines(output_text)
+            # output_text = replace_punctuation_with_space(output_text)
+            # output_text = remove_lines_with_only_numbers_or_symbols(output_text)
+            # write_text_to_file(output_text, mod_file_path)
             print("处理完成")
     elif choice == '3':
         # check ai
