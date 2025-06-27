@@ -9,6 +9,9 @@ ai_api_key=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \n\
 ; Google API Key \n\
 google_ai_addr=null \n\
 google_ai_api_key=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \n\
+; Ollama \n\
+ollama_api_addr=xxxx \n\
+ollama_api_model=XXXX \n\
 ; 提示词 \n\
 pre_prompts= \n\
 ; 速推数据库地址, 一般windows系统下地址为C:/Users/XXXX/AppData/Roaming/text2video/book2video/database_v2.sqlite，其中XXXX为用户名；其他系统请自行找寻 \n\

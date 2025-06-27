@@ -1,4 +1,5 @@
 bs4
 openai
+ollama
 google-generativeai
 httpx

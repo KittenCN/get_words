@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from openai import OpenAI
+from ollama import Client
 from tqdm import tqdm
 from datetime import datetime
 from config import write_config
@@ -12,6 +13,7 @@ import sqlite3
 import shutil
 import csv
 import sys
+import re
 
 ai_max_length = 1000
 temperature = 0.5
@@ -21,17 +23,19 @@ drafts_path = "./drafts/"
 analysis_path = "./analysis/"
 ver_num = 13
 
-parameter_list = ['ai_addr', 'ai_api_key', 'google_ai_addr', 'google_ai_api_key', 'pre_prompts', \
-                  'ai_gpt_ver', 'sutui_db_addr', 'zx_index', 'cj_index', 'zx_prompts', 'cj_prompts', \
-                  'proxy_addr', 'proxy_port']
+parameter_list = ['ai_addr', 'ai_api_key', 'google_ai_addr', 'google_ai_api_key', 'ollama_api_addr', \
+                  'ollama_api_model', 'pre_prompts', 'ai_gpt_ver', 'sutui_db_addr', 'zx_index', \
+                  'cj_index', 'zx_prompts', 'cj_prompts', 'proxy_addr', 'proxy_port']
 sutui_flag = 1
 parameters = {
         "ai_gpt_ver" : 4,
         "ai_addr" : "",
         "ai_api_key" : "",
         "google_ai_addr":"",
-        "google_ai_api_key":"",
-        "sutui_db_addr":"",
+        "google_ai_api_key" : "",
+        "ollama_api_addr" : "",
+        "ollama_api_model" : "",
+        "sutui_db_addr" : "",
         "cj_prompts" : "",
         "zx_prompts" : "",
         "pre_prompts" : "你是一个文学大师，小说家。我将提供一段文本给你，请你理解这段文本，\
@@ -129,6 +133,10 @@ def check_ai(ai_switch):
             return False
     elif ai_switch == 1:
         if len(parameters['google_ai_api_key']) == 0:
+            print("AI配置信息不完整，请检查config.ini文件")
+            return False
+    elif ai_switch == 2:
+        if len(parameters['ai_addr']) == 0 or len(parameters['ollama_api_addr']) == 0:
             print("AI配置信息不完整，请检查config.ini文件")
             return False
     return True
@@ -262,6 +270,51 @@ def rewrite_text_with_gpt3(text, ai_addr, ai_api_key, ai_gpt_ver, prompt="Please
             for _chunk in response:
                 if len(_chunk.choices) > 0 and _chunk.choices[0].delta.content is not None:
                     rewritten_text += _chunk.choices[0].delta.content.strip()
+            if pbar_flag:        
+                pbar.update(1)
+        except Exception as e:
+            return "error"
+    if pbar_flag:
+        pbar.close()
+    if len(error_text) > 0:
+        with open(log_file_path, 'a', encoding='utf-8') as log_file:
+            try:
+                for _chunk in error_text:
+                    log_file.write(_chunk)
+            except Exception as e:
+                log_file.write(str(e))
+    return rewritten_text
+
+def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, prompt="Please rewrite this text:", pbar_flag=True):
+    chunks = split_text_into_chunks(text)
+    rewritten_text = ''
+    error_text = []
+    client = Client(
+        host = ai_addr,
+        timeout = 60,
+        headers={'x-some-header': 'some-value'},
+    )
+    if pbar_flag:
+        pbar = tqdm(total=len(chunks), ncols=100)
+    for chunk in chunks:
+        response = client.chat(
+            model =ollama_api_model,
+            messages=[
+                {
+                    "role": "system",
+                    "content": prompt
+                },
+                {
+                    "role": "user",
+                    "content": chunk
+                }
+            ]
+        )
+        try:
+            content = response.message.content.strip()
+            content = re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
+            if content is not None:
+                rewritten_text += content
             if pbar_flag:        
                 pbar.update(1)
         except Exception as e:

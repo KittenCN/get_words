@@ -1,7 +1,7 @@
 from time import sleep
 from common import *
 
-ai_switch = 1 # (0:gpt, 1:genmini)
+ai_switch = 2 # (0:gpt, 1:genmini, 2:Ollama)
 # ai_max_length =4096 - len(pre_prompts) - 100
 dict_to_csv_limit = 10
 up_scale = 8
@@ -39,10 +39,10 @@ while(True):
         if(not os.path.exists(ori__file_path)):
             print("文件没有找到: " + ori__file_path)
         else:
-            ai_choice = input("当前的AI是: " + ("GPT" if ai_switch == 0 else "GenMini") + "\n你要不要切换(默认不要)? (y/n): ")
+            ai_choice = input("当前的AI是: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama") + "\n你要不要切换(默认不要)? (y/n): ")
             if ai_choice == 'y':
-                ai_switch = 1 - ai_switch
-                print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini"))
+                ai_switch = input("请输入AI的选择(0: GPT, 1: GenMini, 2: Ollama): ")
+                print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama"))
             if check_ai(ai_switch) == False:
                 continue
             # base_name = os.path.splitext(html_file_path)[0]   
@@ -50,6 +50,8 @@ while(True):
                 mod_file_path = base_name + '_gpt.txt'
             elif ai_switch == 1:
                 mod_file_path = base_name + '_gen.txt'
+            elif ai_switch == 2:
+                mod_file_path = base_name + '_ollama.txt'
             # read mod file to get the text
             output_text = ""
             with open(ori__file_path, 'r', encoding='utf-8') as file:
@@ -60,6 +62,8 @@ while(True):
                 output_text = rewrite_text_with_gpt3(output_text, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], parameters['pre_prompts'])
             elif ai_switch == 1:
                 output_text = rewrite_text_with_genai(output_text, parameters['google_ai_api_key'], parameters['pre_prompts'])
+            elif ai_switch == 2:
+                output_text = rewrite_text_with_Ollama(output_text, parameters['ai_addr'], parameters['ollama_api_addr'], parameters['ollama_api_model'], parameters['pre_prompts'])
             process_contents(output_text, mod_file_path)
             # output_text = merge_lines_without_punctuation(output_text)
             # output_text = insert_new_lines_with_condition(output_text)
@@ -71,10 +75,10 @@ while(True):
             print("处理完成")
     elif choice == '3':
         # check ai
-        ai_choice = input("当前准备测试的AI是: " + ("GPT" if ai_switch == 0 else "GenMini") + "\n你要不要切换(默认不要)? (y/n): ")
+        ai_choice = input("当前准备测试的AI是: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama") + "\n你要不要切换(默认不要)? (y/n): ")
         if ai_choice == 'y':
-            ai_switch = 1 - ai_switch
-            print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini"))
+            ai_switch = input("请输入AI的选择(0: GPT, 1: GenMini, 2: Ollama): ")
+            print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama"))
         if check_ai(ai_switch) == False:
             continue
         test_text = "你是哪家公司的什么AI模型？"
@@ -82,6 +86,8 @@ while(True):
             output_text = rewrite_text_with_gpt3(test_text, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], "测试AI:")
         elif ai_switch == 1:
             output_text = rewrite_text_with_genai(test_text, parameters['google_ai_api_key'], "测试AI:")
+        elif ai_switch == 2:
+            output_text = rewrite_text_with_Ollama(test_text, parameters['ai_addr'], parameters['ollama_api_addr'], parameters['ollama_api_model'], "测试AI:")
         print(output_text)
     elif choice == '4':
         if sutui_flag == 1:
@@ -92,10 +98,10 @@ while(True):
                 print("文件没有找到: " + ori__file_path)
             else:
                 rows = []
-                ai_choice = input("当前的AI是: " + ("GPT" if ai_switch == 0 else "GenMini") + "\n你要不要切换(默认不要)? (y/n): ")
+                ai_choice = input("当前的AI是: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama") + "\n你要不要切换(默认不要)? (y/n): ")
                 if ai_choice == 'y':
-                    ai_switch = 1 - ai_switch
-                    print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini"))
+                    ai_switch = input("请输入AI的选择(0: GPT, 1: GenMini, 2: Ollama): ")
+                    print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama"))
                 # base_name = os.path.splitext(html_file_path)[0]   
                 if check_ai(ai_switch) == False:
                     continue
@@ -106,6 +112,9 @@ while(True):
                 elif ai_switch == 1:
                     mod_file_path = base_name + '_gen.txt'
                     extent = "_gen"
+                elif ai_switch == 2:
+                    mod_file_path = base_name + '_ollama.txt'
+                    extent = "_ollama"
                 if(os.path.exists(drafts_path + content_name + extent + '.csv')):
                     with open(drafts_path + content_name + extent + '.csv', 'r', encoding='utf-8') as file:
                         reader = csv.reader(file)
@@ -137,6 +146,9 @@ while(True):
                     elif ai_switch == 1:
                         SutuiDB["fenjin_text"] = rewrite_text_with_genai(item, parameters['google_ai_api_key'], parameters['cj_prompts'] +_other, pbar_flag=False).strip()
                         SutuiDB["prompt"] = rewrite_text_with_genai(item, parameters['google_ai_api_key'], parameters['zx_prompts'] +_other, pbar_flag=False).strip()
+                    elif ai_switch == 2:
+                        SutuiDB["fenjin_text"] = rewrite_text_with_Ollama(item, parameters['ai_addr'], parameters['ollama_api_addr'],  parameters['ollama_api_model'],parameters['cj_prompts'] +_other, pbar_flag=False).strip()
+                        SutuiDB["prompt"] = rewrite_text_with_Ollama(item, parameters['ai_addr'], parameters['ollama_api_addr'],  parameters['ollama_api_model'], parameters['zx_prompts'] +_other, pbar_flag=False).strip()
                     if SutuiDB["fenjin_text"] == "error" or SutuiDB["prompt"] == "error":
                         print("\n第{}行发生AI错误，有可能是文字描述没有通过AI审查，请修改后再试.".format(_i + 1))
                         SutuiDB["fenjin_text"] = " "
@@ -167,10 +179,10 @@ while(True):
         if(not os.path.exists(ori__file_path)):
             print("文件没有找到: " + ori__file_path)
         else:
-            ai_choice = input("当前的AI是: " + ("GPT" if ai_switch == 0 else "GenMini") + "\n你要不要切换(默认不要)? (y/n): ")
+            ai_choice = input("当前的AI是: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama") + "\n你要不要切换(默认不要)? (y/n): ")
             if ai_choice == 'y':
-                ai_switch = 1 - ai_switch
-                print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini"))
+                ai_switch = input("请输入AI的选择(0: GPT, 1: GenMini, 2: Ollama): ")
+                print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama"))
             if check_ai(ai_switch) == False:
                 continue
             output_text = ""
