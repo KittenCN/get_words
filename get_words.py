@@ -42,6 +42,7 @@ while(True):
             ai_choice = input("当前的AI是: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama") + "\n你要不要切换(默认不要)? (y/n): ")
             if ai_choice == 'y':
                 ai_switch = input("请输入AI的选择(0: GPT, 1: GenMini, 2: Ollama): ")
+                ai_switch = int(ai_switch)
                 print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama"))
             if check_ai(ai_switch) == False:
                 continue
@@ -78,6 +79,7 @@ while(True):
         ai_choice = input("当前准备测试的AI是: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama") + "\n你要不要切换(默认不要)? (y/n): ")
         if ai_choice == 'y':
             ai_switch = input("请输入AI的选择(0: GPT, 1: GenMini, 2: Ollama): ")
+            ai_switch = int(ai_switch)
             print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama"))
         if check_ai(ai_switch) == False:
             continue
@@ -101,6 +103,7 @@ while(True):
                 ai_choice = input("当前的AI是: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama") + "\n你要不要切换(默认不要)? (y/n): ")
                 if ai_choice == 'y':
                     ai_switch = input("请输入AI的选择(0: GPT, 1: GenMini, 2: Ollama): ")
+                    ai_switch = int(ai_switch)
                     print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama"))
                 # base_name = os.path.splitext(html_file_path)[0]   
                 if check_ai(ai_switch) == False:
@@ -174,7 +177,10 @@ while(True):
         _ee_text = "_gen"
         ex_choice = input("你要分析哪种文件(默认为: gen文件),要不要切换(默认不要)? (y/n): ")
         if ex_choice == 'y':
-            _ee_text = "_gpt"
+            ai_switch = input("请输入AI的选择(0: GPT, 1: GenMini, 2: Ollama): ")
+            ai_switch = int(ai_switch)
+            _ee_text = "_gpt" if ai_switch == 0 else "_gen" if ai_switch == 1 else "_ollama"
+            print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama"))
         ori__file_path = base_name + _ee_text + '.txt'
         if(not os.path.exists(ori__file_path)):
             print("文件没有找到: " + ori__file_path)
@@ -182,6 +188,7 @@ while(True):
             ai_choice = input("当前的AI是: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama") + "\n你要不要切换(默认不要)? (y/n): ")
             if ai_choice == 'y':
                 ai_switch = input("请输入AI的选择(0: GPT, 1: GenMini, 2: Ollama): ")
+                ai_switch = int(ai_switch)
                 print("AI切换为: " + ("GPT" if ai_switch == 0 else "GenMini" if ai_switch == 1 else "Ollama"))
             if check_ai(ai_switch) == False:
                 continue
@@ -192,6 +199,8 @@ while(True):
                 output_text = rewrite_text_with_gpt3(output_text, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], _prompts)
             elif ai_switch == 1:
                 output_text = rewrite_text_with_genai(output_text, parameters['google_ai_api_key'], _prompts)
+            elif ai_switch == 2:
+                output_text = rewrite_text_with_Ollama(output_text, parameters['ai_addr'], parameters['ollama_api_addr'], parameters['ollama_api_model'], _prompts,split_flag=False) 
             with open(analysis_path + content_name + '_analysis.txt', 'w', encoding='utf-8') as file:
                 file.write(output_text)
             print("处理完成")

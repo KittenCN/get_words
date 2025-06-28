@@ -38,16 +38,23 @@ parameters = {
         "sutui_db_addr" : "",
         "cj_prompts" : "",
         "zx_prompts" : "",
-        "pre_prompts" : "你是一个文学大师，小说家。我将提供一段文本给你，请你理解这段文本，\
-并结合上下文以及合理的想象，保持文本原有主题意思的情况下, \
-以小说的风格，并加入适当的润色和合理的环境，心理或动作描写，改写这段话，\
-如果上下文不连贯或有缺失，可以适当添加一些语句，甚至可以调整上下文的顺序， \
-使得整个文段更加合理，更加流畅充实，\
-最终达到词句，语言表达等与原文尽量不同，但是意思与原文大致相同的目的，\
-但是内容更加充实优美的文字语句，修改后的字数不能少于原文字数，\
-尽量使用与原文同一个意思，但是不同的词句用语来表述，\
-不要额外添加没有意义的符号, \
-除非原文是英文，否则必须使用中文回答:",
+        "pre_prompts" : "# 角色设定 \n\
+你是一位杰出的中文小说家，精于语言润色与情节重组。 \n\
+# 任务 \n\
+仅根据我随后提供的【原文】： \n\
+1. 理解情节与主题，不改变核心意义。   \n\
+2. 以小说叙事方式重写，允许补充合理的环境、心理或动作描写，必要时可调整段落顺序，使文意连贯。   \n\
+3. 文字应比原文更充实优美，且字数≥原文字数。   \n\
+4. 尽量使用不同的词语与句式表达同一含义。   \n\
+5. 尽量在同一行中输出适合同一个场景的内容，避免过多换行；且不同场景的内容一定不输出到同一行。   \n\
+6. 禁止出现无意义符号、空行填充、字母、数字或任何与小说无关的内容。   \n\
+# 输出格式 \n\
+仅输出【重写后文本】本身。   \n\
+**不要**包含任何解释、思考、提示、问句、系统指令或标记。   \n\
+除非原文为英文，否则一律使用中文。   \n\
+# 开始 \n\
+请等待我提供【原文】，收到后立即给出【重写后文本】，不做其他回应。 \n\
+",
         "zx_index" : "【系统提词】解读正向词助手（升级版）",
         "cj_index" : "【系统场景】解读场景词助手（升级版）",
         "proxy_addr" : "",
@@ -285,18 +292,47 @@ def rewrite_text_with_gpt3(text, ai_addr, ai_api_key, ai_gpt_ver, prompt="Please
                 log_file.write(str(e))
     return rewritten_text
 
-def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, prompt="Please rewrite this text:", pbar_flag=True):
-    chunks = split_text_into_chunks(text)
+def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, prompt="Please rewrite this text:", pbar_flag=True, split_flag=True):
     rewritten_text = ''
     error_text = []
     client = Client(
         host = ai_addr,
-        timeout = 60,
         headers={'x-some-header': 'some-value'},
     )
-    if pbar_flag:
-        pbar = tqdm(total=len(chunks), ncols=100)
-    for chunk in chunks:
+    if split_flag:
+        chunks = split_text_into_chunks(text)
+        if pbar_flag:
+            pbar = tqdm(total=len(chunks), ncols=100)
+        for chunk in chunks:
+            response = client.chat(
+                model =ollama_api_model,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": prompt
+                    },
+                    {
+                        "role": "user",
+                        "content": chunk
+                    }
+                ],
+                options={
+                    "num_ctx": 8192 * 8 ,
+                }
+            )
+            try:
+                content = response.message.content.strip()
+                content = re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
+                if content is not None:
+                    rewritten_text += content
+                if pbar_flag:        
+                    pbar.update(1)
+            except Exception as e:
+                return "error"
+        if pbar_flag:
+            pbar.close()
+    else:
+        chunks = text
         response = client.chat(
             model =ollama_api_model,
             messages=[
@@ -306,21 +342,21 @@ def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, p
                 },
                 {
                     "role": "user",
-                    "content": chunk
+                    "content": chunks
                 }
-            ]
+            ],
+            options={
+                "num_ctx": 8192 * 8 ,
+            }
         )
         try:
             content = response.message.content.strip()
             content = re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
             if content is not None:
                 rewritten_text += content
-            if pbar_flag:        
-                pbar.update(1)
         except Exception as e:
             return "error"
-    if pbar_flag:
-        pbar.close()
+    
     if len(error_text) > 0:
         with open(log_file_path, 'a', encoding='utf-8') as log_file:
             try:
