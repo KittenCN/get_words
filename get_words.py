@@ -89,7 +89,7 @@ while(True):
         elif ai_switch == 1:
             output_text = rewrite_text_with_genai(test_text, parameters['google_ai_api_key'], "测试AI:")
         elif ai_switch == 2:
-            output_text = rewrite_text_with_Ollama(test_text, parameters['ai_addr'], parameters['ollama_api_addr'], parameters['ollama_api_model'], "测试AI:")
+            output_text = rewrite_text_with_Ollama(test_text, parameters['ai_addr'], parameters['ollama_api_addr'], parameters['ollama_api_model'], "测试AI:", pbar_flag=False)
         # print(output_text)
     elif choice == '4':
         if sutui_flag == 1:
@@ -129,14 +129,13 @@ while(True):
                 with open(mod_file_path, 'r', encoding='utf-8') as file:
                     output_text = file.read().split('\n')
                 pbar = tqdm(total=len(output_text))
-                batch_size = 10  # 每次发送的行数
                 batched_output = []
                 for batch_start in range(0, len(output_text), batch_size):
                     batch_end = min(batch_start + batch_size, len(output_text))
                     batch = output_text[batch_start:batch_end]
 
                     # 为每行文字添加编号
-                    numbered_batch = [f"{idx}: {line.strip()}" for idx, line in enumerate(batch, start=batch_start)]
+                    numbered_batch = [f"{idx+1}. {line.strip()}" for idx, line in enumerate(batch, start=batch_start)]
 
                     # 组合成一个字符串发送给LLM
                     batch_text = "\n".join(numbered_batch)
@@ -152,8 +151,8 @@ while(True):
 
                     # 解析返回结果并按编号恢复顺序
                     for line in response.split("\n"):
-                        if ": " in line:
-                            idx, modified_text = line.split(": ", 1)
+                        if ". " in line:
+                            idx, modified_text = line.split(". ", 1)
                             idx = int(idx.strip())
                             batched_output.append((idx, modified_text.strip()))
 
@@ -162,7 +161,9 @@ while(True):
                 final_output = [text for _, text in batched_output]
 
                 # 写入CSV文件
+                pbar = tqdm(total=len(final_output), desc="Writing to CSV")
                 for text in final_output:
+                    pbar.update(1)
                     SutuiDB["text_content"] = text
                     sutui.append(SutuiDB.copy())
                     current_times += 1
@@ -171,7 +172,8 @@ while(True):
                             dict_to_csv(sutui, drafts_path + content_name + extent + '.csv')
                         current_times = 0
                         sutui = []
-                        sleep(10)
+                        sleep(5)
+                pbar.close()
 
                 if len(sutui) > 0:
                     dict_to_csv(sutui, drafts_path + content_name + extent + '.csv')

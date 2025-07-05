@@ -19,6 +19,7 @@ import requests, json
 import textwrap, tiktoken
 
 ai_max_length = 1000
+batch_size = 30
 num_ctx = 8000
 overlap = 10
 temperature = 0.5
@@ -43,7 +44,49 @@ parameters = {
         "ollama_api_addr" : "",
         "ollama_api_model" : "",
         "sutui_db_addr" : "",
-        "cj_prompts" : "",
+        "cj_prompts" : f"You are a Stable Diffusion prompt generator.\n\
+目标：针对用户一次性给出的 {batch_size} 行中文句子（行号格式 1.–{batch_size}.），结合上下文逐行提取关键信息，生成英文关键词行，以便 Stable Diffusion 还原场景。\n\
+输入规则: \n\
+每行前缀 1.~{batch_size}. 是行号，不可作为提取内容。\n\
+{batch_size} 行内容在情节上可能连续或相互呼应，可跨行推断。\n\
+输出格式: \n\
+按行号对应输出：1. 主体, 表情, 动作, 背景/场景, 综合修饰,\n\
+只输出关键词行，不得出现解释、空行、附加文本。\n\
+只输出这 {batch_size} 行关键词，不得添加任何解释、标题或空行。\n\
+如果上下行重复，或者其他情况导致该行没有数据输出，依旧要严格输出行号。\n\
+行号是表示该行在原文中的位置，所以不一定是从1开始，因此必须严格按照输入的行号输出，不可自行修改，重置等行为。\n\
+输入的行号必须与输出的行号一一对应， 不允许有增加，减少，修改。\n\
+5 个槽位一律半角逗号分隔，行尾保留逗号。\n\
+关键词按画面重要度由高到低排序；缺失信息按下列规则处理。\n\
+每行关键词：\n\
+主体（首位，必留槽位，可留空）：1man | 1woman | 1boy | 1girl | 1old man | 1old woman | 1animal（如未注明主体，根据外貌/行为推断）。\n\
+    若当前行缺乏线索，可向前后句寻找提示。 \n\
+    若上下文仍无法判断，可留空：直接写 , 保持占位。\n\
+    如果明确知道人物主体的名字，一定要直接输出名字的拼音， 此时针对这个主体，就不需要输出“1man | 1woman”等概述词了\n\
+    允许有多个主体。\n\
+表情：情绪形容词（例：smiling, angry）。无法推断可留空。\n\
+动作：动词短语（例：running, reading a book）。无法推断可留空。\n\
+背景/场景：地点、环境、道具。无法推断可留空。\n\
+综合修饰：画风、氛围、季节天气、光照、镜头角度等。无法推断可留空。\n\
+关键词按画面重要度高→低排序，半角逗号分隔，行尾保留逗号。\n\
+推断规则:\n\
+可跨行引用信息：如第 2 行出现人物，第 3 行延续同一人物，可复用。\n\
+若某槽位缺失且上下文无解，可合理猜测或直接留空。\n\
+如任何规则导致无限递归/循环推断，立即停止该槽位推断并留空。\n\
+对话、心理独白、成语、谚语：先推断情境再产出关键词。\n\
+不可输出任何与关键词无关的内容。\n\
+思考的过程，完全不需要输出给我！\n\
+示例: \n\
+用户输入：\n\
+1. 暴风雨中的老船长紧握方向舵  \n\
+2. 雪夜里女孩抬头望月  \n\
+3. 雪夜里女孩抬头望月  \n\
+…（共{batch_size}行）\n\
+系统输出：\n\
+1. 1old man, determined, gripping ship wheel, stormy sea deck, dramatic lighting, cinematic,  \n\
+2. 1girl, hopeful, looking up, snowy night town square, soft glow, anime style,  \n\
+3. \n\
+…（共{batch_size}行）",
         "zx_prompts" : "",
         "pre_prompts" : "# 角色设定 \n\
 你是一位杰出的中文小说家，精于语言润色与情节重组。 \n\
@@ -169,8 +212,9 @@ def get_latest_file_name(directory):
 
 def write_text_to_file(text, file_path):
     with open(file_path, 'a', encoding='utf-8') as output_file:
-        now = datetime.now()
-        output_file.write(now.strftime('%Y%m%d%H%M%S') + "    " + text)
+        # now = datetime.now()
+        # output_file.write(now.strftime('%Y%m%d%H%M%S') + "    " + text)
+        output_file.write(text)
     print(f"Extraction completed, saved to: {file_path}")
 
 def split_article(text):
@@ -331,7 +375,7 @@ def ollame_with_requests(ai_addr, ollama_api_model, ollama_api_addr, prompt, str
             }
         }
         response = requests.post(
-            f"{ai_addr}/api/generate",
+            f"{ai_addr}{ollama_api_addr}",
             headers=headers,
             json=data
         )
@@ -387,6 +431,8 @@ def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, p
                     'num_gpu': -1,
                 }
             )
+            response = re.sub(r'<think>.*?</think>\s*', '', response, flags=re.DOTALL).strip()
+            response = re.sub(r'Thinking\.\.\..*?\.\.\.done thinking\.', '', response, flags=re.DOTALL).strip()
             rewritten_text += response
             # response = client.generate(
             #     model =ollama_api_model,
@@ -430,6 +476,8 @@ def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, p
                 'num_gpu': -1,
             }
         )
+        response = re.sub(r'<think>.*?</think>\s*', '', response, flags=re.DOTALL).strip()
+        response = re.sub(r'Thinking\.\.\..*?\.\.\.done thinking\.', '', response, flags=re.DOTALL).strip()
         rewritten_text += response
         # response = client.generate(
         #     model =ollama_api_model,
