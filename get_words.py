@@ -64,7 +64,7 @@ while(True):
             elif ai_switch == 1:
                 output_text = rewrite_text_with_genai(output_text, parameters['google_ai_api_key'], parameters['pre_prompts'])
             elif ai_switch == 2:
-                output_text = rewrite_text_with_Ollama(output_text, parameters['ai_addr'], parameters['ollama_api_addr'], parameters['ollama_api_model'], parameters['pre_prompts'], pbar_flag=False, split_flag=False)
+                output_text = rewrite_text_with_Ollama(output_text, parameters['ai_addr'], parameters['ollama_api_addr'], parameters['ollama_api_model'], parameters['pre_prompts'], pbar_flag=False, split_flag=True)
             process_contents(output_text, mod_file_path)
             # output_text = merge_lines_without_punctuation(output_text)
             # output_text = insert_new_lines_with_condition(output_text)
