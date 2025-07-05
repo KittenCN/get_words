@@ -4,6 +4,7 @@ from ollama import Client
 from tqdm import tqdm
 from datetime import datetime
 from config import write_config
+# from transformers import LlamaTokenizer
 import google.generativeai as genai
 import httpx
 import re
@@ -14,14 +15,20 @@ import shutil
 import csv
 import sys
 import re
+import requests, json
+import textwrap, tiktoken
 
 ai_max_length = 1000
+num_ctx = 8000
+overlap = 10
 temperature = 0.5
 contents_path = "./contents/"
 log_file_path = "./error.log"
 drafts_path = "./drafts/"
 analysis_path = "./analysis/"
 ver_num = 13
+enc = tiktoken.get_encoding('cl100k_base')
+# chinese_llama_tokenizer = LlamaTokenizer.from_pretrained("./tokenizer-human")
 
 parameter_list = ['ai_addr', 'ai_api_key', 'google_ai_addr', 'google_ai_api_key', 'ollama_api_addr', \
                   'ollama_api_model', 'pre_prompts', 'ai_gpt_ver', 'sutui_db_addr', 'zx_index', \
@@ -166,6 +173,16 @@ def write_text_to_file(text, file_path):
         output_file.write(now.strftime('%Y%m%d%H%M%S') + "    " + text)
     print(f"Extraction completed, saved to: {file_path}")
 
+def split_article(text):
+    words = enc.encode(text)
+    i, n = 0, len(words)
+    chunks = []
+    while i < n:
+        chunks = words[i:i + num_ctx]
+        yield enc.decode(chunks)
+        i += num_ctx - 200
+    return chunks
+
 def split_text_into_chunks(text, max_length=ai_max_length):
     """
     Split text into chunks with a maximum length, ensuring that splits only occur at line breaks.
@@ -177,8 +194,10 @@ def split_text_into_chunks(text, max_length=ai_max_length):
         if len(current_chunk + ' ' + line) <= max_length:
             current_chunk += ' ' + line
         else:
+            # current_chunk = chinese_llama_tokenizer.tokenize(current_chunk)
             chunks.append(current_chunk)
             current_chunk = line
+    # current_chunk = chinese_llama_tokenizer.tokenize(current_chunk)
     chunks.append(current_chunk)
     return chunks
 
@@ -292,6 +311,59 @@ def rewrite_text_with_gpt3(text, ai_addr, ai_api_key, ai_gpt_ver, prompt="Please
                 log_file.write(str(e))
     return rewritten_text
 
+def ollame_with_requests(ai_addr, ollama_api_model, ollama_api_addr, prompt, stream=False, options=None, output=True):
+    """
+    Use requests to call the Ollama API.
+    """
+    rewritten_text = ''
+    if stream == False:
+        headers = {
+            'Content-Type': 'application/json',
+            'x-some-header': 'some-value',
+        }
+        data = {
+            'model': ollama_api_model,
+            'prompt': prompt,
+            "stream": stream,
+            'options': options if options else {
+                "num_ctx": num_ctx,
+                'num_gpu': -1,
+            }
+        }
+        response = requests.post(
+            f"{ai_addr}/api/generate",
+            headers=headers,
+            json=data
+        )
+        if response.status_code == 200:
+            return response.json()
+    else:
+        url = ai_addr + ollama_api_addr
+        payload = {
+            'model': ollama_api_model,
+            'prompt': prompt,
+            "stream": stream,
+            'options': {
+                "num_ctx": num_ctx,
+                'num_gpu': -1,
+            }
+        }
+        response = requests.post(url, json=payload, stream=True)
+        for line in response.iter_lines():
+            if not line:
+                continue
+            data = json.loads(line.decode())
+            if data.get('done'):
+                break
+            if 'response' in data:
+                content = data['response']
+                if content is not None:
+                    rewritten_text += content
+                    if output == True:
+                        sys.stdout.write(content)
+                        sys.stdout.flush()
+        return rewritten_text
+
 def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, prompt="Please rewrite this text:", pbar_flag=True, split_flag=True):
     rewritten_text = ''
     error_text = []
@@ -304,58 +376,86 @@ def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, p
         if pbar_flag:
             pbar = tqdm(total=len(chunks), ncols=100)
         for chunk in chunks:
-            response = client.chat(
-                model =ollama_api_model,
-                messages=[
-                    {
-                        "role": "system",
-                        "content": prompt
-                    },
-                    {
-                        "role": "user",
-                        "content": chunk
-                    }
-                ],
+            response = ollame_with_requests(
+                ai_addr=ai_addr,
+                ollama_api_model=ollama_api_model,
+                ollama_api_addr=ollama_api_addr,
+                stream=True,
+                prompt=prompt + "\n" + chunk,
                 options={
-                    "num_ctx": 8192 * 8 ,
+                    "num_ctx": num_ctx,
+                    'num_gpu': -1,
                 }
             )
-            try:
-                content = response.message.content.strip()
-                content = re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
-                if content is not None:
-                    rewritten_text += content
-                if pbar_flag:        
-                    pbar.update(1)
-            except Exception as e:
-                return "error"
+            rewritten_text += response
+            # response = client.generate(
+            #     model =ollama_api_model,
+            #     messages=[
+            #         {
+            #             "role": "system",
+            #             "content": prompt
+            #         },
+            #         {
+            #             "role": "user",
+            #             "content": chunk
+            #         }
+            #     ],
+            #     options={
+            #         "num_ctx": num_ctx,
+            #         'num_gpu': -1,
+            #     }
+            # )
+            # try:
+            #     # content = response.message.content.strip()
+            #     # content = re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
+            #     content = response['response']
+            #     if content is not None:
+            #         rewritten_text += content
+            #     if pbar_flag:        
+            #         pbar.update(1)
+            # except Exception as e:
+            #     return "error"
         if pbar_flag:
             pbar.close()
     else:
         chunks = text
-        response = client.chat(
-            model =ollama_api_model,
-            messages=[
-                {
-                    "role": "system",
-                    "content": prompt
-                },
-                {
-                    "role": "user",
-                    "content": chunks
-                }
-            ],
+        response = ollame_with_requests(
+            ai_addr=ai_addr,
+            ollama_api_model=ollama_api_model,
+            ollama_api_addr=ollama_api_addr,
+            stream=True,
+            prompt=prompt + "\n\n{seg}",
             options={
-                "num_ctx": 8192 * 8 ,
+                "num_ctx": num_ctx,
+                'num_gpu': -1,
             }
         )
-        try:
-            content = response.message.content.strip()
-            content = re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
-            if content is not None:
-                rewritten_text += content
-        except Exception as e:
-            return "error"
+        rewritten_text += response
+        # response = client.generate(
+        #     model =ollama_api_model,
+        #     messages=[
+        #         {
+        #             "role": "system",
+        #             "content": prompt
+        #         },
+        #         {
+        #             "role": "user",
+        #             "content": chunks
+        #         }
+        #     ],
+        #     options={
+        #         "num_ctx": num_ctx,
+        #         'num_gpu': -1 ,
+        #     }
+        # )
+        # try:
+        #     # content = response.message.content.strip()
+        #     # content = re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
+        #     content = response['response']
+        #     if content is not None:
+        #         rewritten_text += content
+        # except Exception as e:
+        #     return "error"
     
     if len(error_text) > 0:
         with open(log_file_path, 'a', encoding='utf-8') as log_file:
@@ -379,8 +479,8 @@ def replace_punctuation_with_space(text):
     """
     Replace all punctuation marks (except newline characters) with a space.
     """
-    chinese_punctuation = r'[。，、；：？！“”‘’《》（）【】]'
-    english_punctuation = r'[.,;:?!""''<>()[\]{}]'
+    chinese_punctuation = r"[。，、；：？！“”‘’《》（）【】]"
+    english_punctuation = r"[.,;:?!\"\"''<>()[\]{}]"
     text = re.sub(chinese_punctuation, ' ', text)
     text = re.sub(english_punctuation, ' ', text)
     return text

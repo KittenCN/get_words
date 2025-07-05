@@ -64,7 +64,7 @@ while(True):
             elif ai_switch == 1:
                 output_text = rewrite_text_with_genai(output_text, parameters['google_ai_api_key'], parameters['pre_prompts'])
             elif ai_switch == 2:
-                output_text = rewrite_text_with_Ollama(output_text, parameters['ai_addr'], parameters['ollama_api_addr'], parameters['ollama_api_model'], parameters['pre_prompts'])
+                output_text = rewrite_text_with_Ollama(output_text, parameters['ai_addr'], parameters['ollama_api_addr'], parameters['ollama_api_model'], parameters['pre_prompts'], pbar_flag=False, split_flag=False)
             process_contents(output_text, mod_file_path)
             # output_text = merge_lines_without_punctuation(output_text)
             # output_text = insert_new_lines_with_condition(output_text)
@@ -90,7 +90,7 @@ while(True):
             output_text = rewrite_text_with_genai(test_text, parameters['google_ai_api_key'], "测试AI:")
         elif ai_switch == 2:
             output_text = rewrite_text_with_Ollama(test_text, parameters['ai_addr'], parameters['ollama_api_addr'], parameters['ollama_api_model'], "测试AI:")
-        print(output_text)
+        # print(output_text)
     elif choice == '4':
         if sutui_flag == 1:
             current_tenants = ""
@@ -129,33 +129,41 @@ while(True):
                 with open(mod_file_path, 'r', encoding='utf-8') as file:
                     output_text = file.read().split('\n')
                 pbar = tqdm(total=len(output_text))
-                for _i, item in enumerate(output_text):
-                    if len(rows) > 0 and (_i + 1) <= len(rows):
-                        pbar.update(1)
-                        continue
-                    SutuiDB["text_content"] = item.strip()
-                    up_string = ""
-                    down_string = ""
-                    for index in range(up_scale, 0, -1):
-                        if (_i - index) >= 0:
-                            up_string = output_text[_i - index] + ' ' + up_string
-                    for index in range(1, down_scale + 1):
-                        if (_i + index) < len(output_text):
-                            down_string = down_string + ' ' + output_text[_i + index]
-                    _other = " 以下是提供给你分析用的,上下文关联的段落,上文: " + up_string + " 下文: " + down_string + " 下面是正文，请分析后按上述要求输出："
+                batch_size = 10  # 每次发送的行数
+                batched_output = []
+                for batch_start in range(0, len(output_text), batch_size):
+                    batch_end = min(batch_start + batch_size, len(output_text))
+                    batch = output_text[batch_start:batch_end]
+
+                    # 为每行文字添加编号
+                    numbered_batch = [f"{idx}: {line.strip()}" for idx, line in enumerate(batch, start=batch_start)]
+
+                    # 组合成一个字符串发送给LLM
+                    batch_text = "\n".join(numbered_batch)
+
+                    _other = " 以下是提供给你分析用的,上下文关联的段落,请按编号返回修改后的内容：\n" + batch_text
+
                     if ai_switch == 0:
-                        SutuiDB["fenjin_text"] = rewrite_text_with_gpt3(item, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], parameters['cj_prompts'] +_other, pbar_flag=False).strip()
-                        SutuiDB["prompt"] = rewrite_text_with_gpt3(item, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], parameters['zx_prompts'] +_other, pbar_flag=False).strip()
+                        response = rewrite_text_with_gpt3(batch_text, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], parameters['cj_prompts'] + _other, pbar_flag=False)
                     elif ai_switch == 1:
-                        SutuiDB["fenjin_text"] = rewrite_text_with_genai(item, parameters['google_ai_api_key'], parameters['cj_prompts'] +_other, pbar_flag=False).strip()
-                        SutuiDB["prompt"] = rewrite_text_with_genai(item, parameters['google_ai_api_key'], parameters['zx_prompts'] +_other, pbar_flag=False).strip()
+                        response = rewrite_text_with_genai(batch_text, parameters['google_ai_api_key'], parameters['cj_prompts'] + _other, pbar_flag=False)
                     elif ai_switch == 2:
-                        SutuiDB["fenjin_text"] = rewrite_text_with_Ollama(item, parameters['ai_addr'], parameters['ollama_api_addr'],  parameters['ollama_api_model'],parameters['cj_prompts'] +_other, pbar_flag=False).strip()
-                        SutuiDB["prompt"] = rewrite_text_with_Ollama(item, parameters['ai_addr'], parameters['ollama_api_addr'],  parameters['ollama_api_model'], parameters['zx_prompts'] +_other, pbar_flag=False).strip()
-                    if SutuiDB["fenjin_text"] == "error" or SutuiDB["prompt"] == "error":
-                        print("\n第{}行发生AI错误，有可能是文字描述没有通过AI审查，请修改后再试.".format(_i + 1))
-                        SutuiDB["fenjin_text"] = " "
-                        SutuiDB["prompt"] = " "
+                        response = rewrite_text_with_Ollama(batch_text, parameters['ai_addr'], parameters['ollama_api_addr'], parameters['ollama_api_model'], parameters['cj_prompts'] + _other, pbar_flag=False)
+
+                    # 解析返回结果并按编号恢复顺序
+                    for line in response.split("\n"):
+                        if ": " in line:
+                            idx, modified_text = line.split(": ", 1)
+                            idx = int(idx.strip())
+                            batched_output.append((idx, modified_text.strip()))
+
+                # 按编号排序并恢复原顺序
+                batched_output.sort(key=lambda x: x[0])
+                final_output = [text for _, text in batched_output]
+
+                # 写入CSV文件
+                for text in final_output:
+                    SutuiDB["text_content"] = text
                     sutui.append(SutuiDB.copy())
                     current_times += 1
                     if current_times >= dict_to_csv_limit:
@@ -164,11 +172,51 @@ while(True):
                         current_times = 0
                         sutui = []
                         sleep(10)
-                    pbar.update(1)
-                pbar.close()
+
                 if len(sutui) > 0:
                     dict_to_csv(sutui, drafts_path + content_name + extent + '.csv')
+
                 print("处理完成")
+                # for _i, item in enumerate(output_text):
+                #     if len(rows) > 0 and (_i + 1) <= len(rows):
+                #         pbar.update(1)
+                #         continue
+                #     SutuiDB["text_content"] = item.strip()
+                #     up_string = ""
+                #     down_string = ""
+                #     for index in range(up_scale, 0, -1):
+                #         if (_i - index) >= 0:
+                #             up_string = output_text[_i - index] + ' ' + up_string
+                #     for index in range(1, down_scale + 1):
+                #         if (_i + index) < len(output_text):
+                #             down_string = down_string + ' ' + output_text[_i + index]
+                #     _other = " 以下是提供给你分析用的,上下文关联的段落,上文: " + up_string + " 下文: " + down_string + " 下面是正文，请分析后按上述要求输出："
+                #     if ai_switch == 0:
+                #         SutuiDB["fenjin_text"] = rewrite_text_with_gpt3(item, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], parameters['cj_prompts'] +_other, pbar_flag=False).strip()
+                #         SutuiDB["prompt"] = rewrite_text_with_gpt3(item, parameters['ai_addr'], parameters['ai_api_key'], parameters['ai_gpt_ver'], parameters['zx_prompts'] +_other, pbar_flag=False).strip()
+                #     elif ai_switch == 1:
+                #         SutuiDB["fenjin_text"] = rewrite_text_with_genai(item, parameters['google_ai_api_key'], parameters['cj_prompts'] +_other, pbar_flag=False).strip()
+                #         SutuiDB["prompt"] = rewrite_text_with_genai(item, parameters['google_ai_api_key'], parameters['zx_prompts'] +_other, pbar_flag=False).strip()
+                #     elif ai_switch == 2:
+                #         SutuiDB["fenjin_text"] = rewrite_text_with_Ollama(item, parameters['ai_addr'], parameters['ollama_api_addr'],  parameters['ollama_api_model'],parameters['cj_prompts'] +_other, pbar_flag=False).strip()
+                #         SutuiDB["prompt"] = rewrite_text_with_Ollama(item, parameters['ai_addr'], parameters['ollama_api_addr'],  parameters['ollama_api_model'], parameters['zx_prompts'] +_other, pbar_flag=False).strip()
+                #     if SutuiDB["fenjin_text"] == "error" or SutuiDB["prompt"] == "error":
+                #         print("\n第{}行发生AI错误，有可能是文字描述没有通过AI审查，请修改后再试.".format(_i + 1))
+                #         SutuiDB["fenjin_text"] = " "
+                #         SutuiDB["prompt"] = " "
+                #     sutui.append(SutuiDB.copy())
+                #     current_times += 1
+                #     if current_times >= dict_to_csv_limit:
+                #         if len(sutui) > 0:
+                #             dict_to_csv(sutui, drafts_path + content_name + extent + '.csv')
+                #         current_times = 0
+                #         sutui = []
+                #         sleep(10)
+                #     pbar.update(1)
+                # pbar.close()
+                # if len(sutui) > 0:
+                #     dict_to_csv(sutui, drafts_path + content_name + extent + '.csv')
+                # print("处理完成")
         else:
             print("没有正确配置速推数据库")
     elif choice == '5':

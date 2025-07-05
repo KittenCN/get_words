@@ -2,4 +2,10 @@ bs4
 openai
 ollama
 google-generativeai
+sentencepiece 
 httpx
+transformers
+torch 
+torchvision 
+torchaudio
+tqdm
