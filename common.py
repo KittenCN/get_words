@@ -29,11 +29,12 @@ drafts_path = "./drafts/"
 analysis_path = "./analysis/"
 ver_num = 13
 enc = tiktoken.get_encoding('cl100k_base')
+conversation_id = None
 # chinese_llama_tokenizer = LlamaTokenizer.from_pretrained("./tokenizer-human")
 
 parameter_list = ['ai_addr', 'ai_api_key', 'google_ai_addr', 'google_ai_api_key', 'ollama_api_addr', \
                   'ollama_api_model', 'pre_prompts', 'ai_gpt_ver', 'sutui_db_addr', 'zx_index', \
-                  'cj_index', 'zx_prompts', 'cj_prompts', 'proxy_addr', 'proxy_port']
+                  'cj_index', 'zx_prompts', 'cj_prompts', 'proxy_addr', 'proxy_port', '1st_prompts']
 sutui_flag = 1
 parameters = {
         "ai_gpt_ver" : 4,
@@ -91,7 +92,7 @@ parameters = {
         "pre_prompts" : "# 角色设定 \n\
 你是一位杰出的中文小说家，精于语言润色与情节重组。 \n\
 # 任务 \n\
-仅根据我随后提供的【原文】： \n\
+仅根据我随后提供的【原文】片段： \n\
 1. 理解情节与主题，不改变核心意义。   \n\
 2. 以小说叙事方式重写，允许补充合理的环境、心理或动作描写，必要时可调整段落顺序，使文意连贯。   \n\
 3. 文字应比原文更充实优美，且字数≥原文字数。   \n\
@@ -103,12 +104,16 @@ parameters = {
 **不要**包含任何解释、思考、提示、问句、系统指令或标记。   \n\
 除非原文为英文，否则一律使用中文。   \n\
 # 开始 \n\
-请等待我提供【原文】，收到后立即给出【重写后文本】，不做其他回应。 \n\
+请等待我提供【原文】片段，收到后立即给出【重写后文本】，不做其他回应。 \n\
 ",
         "zx_index" : "【系统提词】解读正向词助手（升级版）",
         "cj_index" : "【系统场景】解读场景词助手（升级版）",
         "proxy_addr" : "",
         "proxy_port" : "",
+        "1st_prompts" : "你是一个小说家，擅长将原文进行润色和重写。\n\
+下面我将提供原文全文，请仔细阅读并理解原文，并分析人物关系、情节发展和主题思想。\n\
+然后请你暂时记住这些内容，并之后的对话中，按照我提出要求和你理解和分析的内容，做出正确的操作。\n\
+以下是原文全文：",
         }
 SutuiDB = {
         "text_content" : "",
@@ -355,7 +360,7 @@ def rewrite_text_with_gpt3(text, ai_addr, ai_api_key, ai_gpt_ver, prompt="Please
                 log_file.write(str(e))
     return rewritten_text
 
-def ollame_with_requests(ai_addr, ollama_api_model, ollama_api_addr, prompt, stream=False, options=None, output=True):
+def ollama_with_requests(ai_addr, ollama_api_model, ollama_api_addr, prompt, stream=False, options=None, output=True):
     """
     Use requests to call the Ollama API.
     """
@@ -374,6 +379,8 @@ def ollame_with_requests(ai_addr, ollama_api_model, ollama_api_addr, prompt, str
                 'num_gpu': -1,
             }
         }
+        # if conversation_id is not None:
+        #     data['conversation_id'] = conversation_id
         response = requests.post(
             f"{ai_addr}{ollama_api_addr}",
             headers=headers,
@@ -383,7 +390,7 @@ def ollame_with_requests(ai_addr, ollama_api_model, ollama_api_addr, prompt, str
             return response.json()
     else:
         url = ai_addr + ollama_api_addr
-        payload = {
+        data = {
             'model': ollama_api_model,
             'prompt': prompt,
             "stream": stream,
@@ -392,40 +399,73 @@ def ollame_with_requests(ai_addr, ollama_api_model, ollama_api_addr, prompt, str
                 'num_gpu': -1,
             }
         }
-        response = requests.post(url, json=payload, stream=True)
+        # if conversation_id is not None:
+        #     data['conversation_id'] = conversation_id
+        response = requests.post(url, json=data, stream=True)
         for line in response.iter_lines():
             if not line:
                 continue
-            data = json.loads(line.decode())
-            if data.get('done'):
-                break
-            if 'response' in data:
-                content = data['response']
-                if content is not None:
-                    rewritten_text += content
-                    if output == True:
-                        sys.stdout.write(content)
-                        sys.stdout.flush()
+            request = json.loads(line.decode())
+            if ollama_api_addr == '/api/chat':
+                content = request['message']['content'].strip()
+                content = re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
+                rewritten_text += content
+            elif ollama_api_addr == '/api/generate':
+                if 'response' in request:               
+                    if request.get('done'):
+                        break
+                    content = request['response']
+                    if content is not None:
+                        rewritten_text += content
+                        if output == True:
+                            sys.stdout.write(content)
+                            sys.stdout.flush()
         return rewritten_text
 
-def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, prompt="Please rewrite this text:", pbar_flag=True, split_flag=True):
+def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, prompt="Please rewrite this text:", pbar_flag=True, split_flag=True, conversation_id=None):
     rewritten_text = ''
     error_text = []
     client = Client(
         host = ai_addr,
         headers={'x-some-header': 'some-value'},
     )
+    # if prompt != "测试AI:" and conversation_id is None:
+    #     response = ollama_with_requests(
+    #         ai_addr=ai_addr,
+    #         ollama_api_model=ollama_api_model,
+    #         ollama_api_addr=ollama_api_addr,
+    #         stream=True,
+    #         prompt=parameters['1st_prompts'] + "\n" + text,
+    #         options={
+    #             "num_ctx": num_ctx,
+    #             'num_gpu': -1,
+    #         }
+    #     )
+    #     conversation_id = response.get('conversation_id', None)
     if split_flag:
         chunks = split_text_into_chunks(text)
         if pbar_flag:
             pbar = tqdm(total=len(chunks), ncols=100)
         for chunk in chunks:
-            response = ollame_with_requests(
+            if ollama_api_addr == '/api/chat':
+                messages=[
+                        {
+                            "role": "system",
+                            "content": prompt
+                        },
+                        {
+                            "role": "user",
+                            "content": chunk
+                        }
+                    ]
+            elif ollama_api_addr == '/api/generate':
+                messages = prompt + "\n" + chunk
+            response = ollama_with_requests(
                 ai_addr=ai_addr,
                 ollama_api_model=ollama_api_model,
                 ollama_api_addr=ollama_api_addr,
                 stream=True,
-                prompt=prompt + "\n" + chunk,
+                prompt=messages,
                 options={
                     "num_ctx": num_ctx,
                     'num_gpu': -1,
@@ -465,12 +505,25 @@ def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, p
             pbar.close()
     else:
         chunks = text
-        response = ollame_with_requests(
+        if ollama_api_addr == '/api/chat':
+            messages=[
+                    {
+                        "role": "system",
+                        "content": prompt
+                    },
+                    {
+                        "role": "user",
+                        "content": chunks
+                    }
+                ]
+        elif ollama_api_addr == '/api/generate':
+            messages = prompt + "\n" + chunks
+        response = ollama_with_requests(
             ai_addr=ai_addr,
             ollama_api_model=ollama_api_model,
             ollama_api_addr=ollama_api_addr,
             stream=True,
-            prompt=prompt + "\n\n{seg}",
+            prompt=messages,
             options={
                 "num_ctx": num_ctx,
                 'num_gpu': -1,

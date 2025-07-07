@@ -21,7 +21,8 @@ cj_index="【系统场景】解读场景词助手（升级版）" \n\
 zx_prompts= \n\
 cj_prompts= \n\
 proxy_addr= \n\
-proxy_port= \n'
+proxy_port= \n\
+1st_prompts= \n'
 
 
 def write_config():

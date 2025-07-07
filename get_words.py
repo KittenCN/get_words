@@ -34,6 +34,7 @@ while(True):
         else:
          extract_chinese_and_punctuation_from_html(html_file_path)
     elif choice == '2':
+        conversation_id = None
         base_name = contents_path + content_name
         ori__file_path = base_name + '.txt'
         if(not os.path.exists(ori__file_path)):
@@ -92,6 +93,7 @@ while(True):
             output_text = rewrite_text_with_Ollama(test_text, parameters['ai_addr'], parameters['ollama_api_addr'], parameters['ollama_api_model'], "测试AI:", pbar_flag=False)
         # print(output_text)
     elif choice == '4':
+        conversation_id = None
         if sutui_flag == 1:
             current_tenants = ""
             base_name = contents_path + content_name
@@ -224,8 +226,8 @@ while(True):
     elif choice == '5':
         _prompts = "你现在是一个文档分析器，我需要你分析下面的文字段落，把其中所有人物名字提取出来；并尝试分析上下文，找出其中可能存在的逻辑错误。下面就是这段文字：\n"
         base_name = contents_path + content_name
-        _ee_text = "_gen"
-        ex_choice = input("你要分析哪种文件(默认为: gen文件),要不要切换(默认不要)? (y/n): ")
+        _ee_text = "_ollama"
+        ex_choice = input("你要分析哪种文件(默认为: ollama文件),要不要切换(默认不要)? (y/n): ")
         if ex_choice == 'y':
             ai_switch = input("请输入AI的选择(0: GPT, 1: GenMini, 2: Ollama): ")
             ai_switch = int(ai_switch)
