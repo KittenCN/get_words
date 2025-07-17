@@ -132,12 +132,13 @@ while(True):
                     output_text = file.read().split('\n')
                 pbar = tqdm(total=len(output_text))
                 batched_output = []
+                tmp_output = []
                 for batch_start in range(0, len(output_text), batch_size):
                     batch_end = min(batch_start + batch_size, len(output_text))
                     batch = output_text[batch_start:batch_end]
 
                     # 为每行文字添加编号
-                    numbered_batch = [f"{idx+1}. {line.strip()}" for idx, line in enumerate(batch, start=batch_start)]
+                    numbered_batch = [f"{idx+1}.{line.strip()}" for idx, line in enumerate(batch, start=batch_start)]
 
                     # 组合成一个字符串发送给LLM
                     batch_text = "\n".join(numbered_batch)
@@ -152,15 +153,21 @@ while(True):
                         response = rewrite_text_with_Ollama(batch_text, parameters['ai_addr'], parameters['ollama_api_addr'], parameters['ollama_api_model'], parameters['cj_prompts'] + _other, pbar_flag=False)
 
                     # 解析返回结果并按编号恢复顺序
+                    index = 0
+                    response = split_by_line_number(response)
                     for line in response.split("\n"):
-                        if ". " in line:
-                            idx, modified_text = line.split(". ", 1)
+                        if "." in line:
+                            idx, modified_text = line.split(".", 1)
                             idx = int(idx.strip())
                             batched_output.append((idx, modified_text.strip()))
+                            tmp_output.append(numbered_batch[index])
+                            tmp_output.append(line.strip())
+                            index += 1
 
                 # 按编号排序并恢复原顺序
                 batched_output.sort(key=lambda x: x[0])
                 final_output = [text for _, text in batched_output]
+                write_text_to_file(tmp_output, drafts_path + content_name + extent + '.txt')
 
                 # 写入CSV文件
                 pbar = tqdm(total=len(final_output), desc="Writing to CSV")

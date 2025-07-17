@@ -29,7 +29,6 @@ drafts_path = "./drafts/"
 analysis_path = "./analysis/"
 ver_num = 13
 enc = tiktoken.get_encoding('cl100k_base')
-conversation_id = None
 # chinese_llama_tokenizer = LlamaTokenizer.from_pretrained("./tokenizer-human")
 
 parameter_list = ['ai_addr', 'ai_api_key', 'google_ai_addr', 'google_ai_api_key', 'ollama_api_addr', \
@@ -77,6 +76,7 @@ parameters = {
 对话、心理独白、成语、谚语：先推断情境再产出关键词。\n\
 不可输出任何与关键词无关的内容。\n\
 思考的过程，完全不需要输出给我！\n\
+每行输出完，一定要换行，就是说每行包含一个行号及其内容。 \n\
 示例: \n\
 用户输入：\n\
 1. 暴风雨中的老船长紧握方向舵  \n\
@@ -379,8 +379,6 @@ def ollama_with_requests(ai_addr, ollama_api_model, ollama_api_addr, prompt, str
                 'num_gpu': -1,
             }
         }
-        # if conversation_id is not None:
-        #     data['conversation_id'] = conversation_id
         response = requests.post(
             f"{ai_addr}{ollama_api_addr}",
             headers=headers,
@@ -399,8 +397,6 @@ def ollama_with_requests(ai_addr, ollama_api_model, ollama_api_addr, prompt, str
                 'num_gpu': -1,
             }
         }
-        # if conversation_id is not None:
-        #     data['conversation_id'] = conversation_id
         response = requests.post(url, json=data, stream=True)
         for line in response.iter_lines():
             if not line:
@@ -422,141 +418,159 @@ def ollama_with_requests(ai_addr, ollama_api_model, ollama_api_addr, prompt, str
                             sys.stdout.flush()
         return rewritten_text
 
-def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, prompt="Please rewrite this text:", pbar_flag=True, split_flag=True, conversation_id=None):
+def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, prompt="Please rewrite this text:", pbar_flag=True, split_flag=True):
     rewritten_text = ''
     error_text = []
-    client = Client(
+    clients = Client(
         host = ai_addr,
         headers={'x-some-header': 'some-value'},
     )
-    # if prompt != "测试AI:" and conversation_id is None:
-    #     response = ollama_with_requests(
-    #         ai_addr=ai_addr,
-    #         ollama_api_model=ollama_api_model,
-    #         ollama_api_addr=ollama_api_addr,
-    #         stream=True,
-    #         prompt=parameters['1st_prompts'] + "\n" + text,
-    #         options={
-    #             "num_ctx": num_ctx,
-    #             'num_gpu': -1,
-    #         }
-    #     )
-    #     conversation_id = response.get('conversation_id', None)
+    if ollama_api_addr == '/api/chat':
+        client = clients.chat
+    elif ollama_api_addr == '/api/generate':
+        client = clients.generate
     if split_flag:
         chunks = split_text_into_chunks(text)
         if pbar_flag:
             pbar = tqdm(total=len(chunks), ncols=100)
         for chunk in chunks:
-            if ollama_api_addr == '/api/chat':
-                messages=[
-                        {
-                            "role": "system",
-                            "content": prompt
-                        },
-                        {
-                            "role": "user",
-                            "content": chunk
-                        }
-                    ]
-            elif ollama_api_addr == '/api/generate':
-                messages = prompt + "\n" + chunk
-            response = ollama_with_requests(
-                ai_addr=ai_addr,
-                ollama_api_model=ollama_api_model,
-                ollama_api_addr=ollama_api_addr,
-                stream=True,
-                prompt=messages,
-                options={
-                    "num_ctx": num_ctx,
-                    'num_gpu': -1,
-                }
-            )
-            response = re.sub(r'<think>.*?</think>\s*', '', response, flags=re.DOTALL).strip()
-            response = re.sub(r'Thinking\.\.\..*?\.\.\.done thinking\.', '', response, flags=re.DOTALL).strip()
-            rewritten_text += response
-            # response = client.generate(
-            #     model =ollama_api_model,
+            # if ollama_api_addr == '/api/chat':
             #     messages=[
-            #         {
-            #             "role": "system",
-            #             "content": prompt
-            #         },
-            #         {
-            #             "role": "user",
-            #             "content": chunk
-            #         }
-            #     ],
+            #             {
+            #                 "role": "system",
+            #                 "content": prompt
+            #             },
+            #             {
+            #                 "role": "user",
+            #                 "content": chunk
+            #             }
+            #         ]
+            # elif ollama_api_addr == '/api/generate':
+            #     messages = prompt + "\n" + chunk
+            # response = ollama_with_requests(
+            #     ai_addr=ai_addr,
+            #     ollama_api_model=ollama_api_model,
+            #     ollama_api_addr=ollama_api_addr,
+            #     stream=True,
+            #     prompt=messages,
             #     options={
             #         "num_ctx": num_ctx,
             #         'num_gpu': -1,
             #     }
             # )
-            # try:
-            #     # content = response.message.content.strip()
-            #     # content = re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
-            #     content = response['response']
-            #     if content is not None:
-            #         rewritten_text += content
-            #     if pbar_flag:        
-            #         pbar.update(1)
-            # except Exception as e:
-            #     return "error"
-        if pbar_flag:
-            pbar.close()
-    else:
-        chunks = text
-        if ollama_api_addr == '/api/chat':
-            messages=[
+            # response = re.sub(r'<think>.*?</think>\s*', '', response, flags=re.DOTALL).strip()
+            # response = re.sub(r'Thinking\.\.\..*?\.\.\.done thinking\.', '', response, flags=re.DOTALL).strip()
+            # rewritten_text += response
+            response = client(
+                model =ollama_api_model,
+                stream=True,
+                messages=[
                     {
                         "role": "system",
                         "content": prompt
                     },
                     {
                         "role": "user",
-                        "content": chunks
+                        "content": chunk
                     }
-                ]
-        elif ollama_api_addr == '/api/generate':
-            messages = prompt + "\n" + chunks
-        response = ollama_with_requests(
-            ai_addr=ai_addr,
-            ollama_api_model=ollama_api_model,
-            ollama_api_addr=ollama_api_addr,
-            stream=True,
-            prompt=messages,
-            options={
-                "num_ctx": num_ctx,
-                'num_gpu': -1,
-            }
-        )
-        response = re.sub(r'<think>.*?</think>\s*', '', response, flags=re.DOTALL).strip()
-        response = re.sub(r'Thinking\.\.\..*?\.\.\.done thinking\.', '', response, flags=re.DOTALL).strip()
-        rewritten_text += response
-        # response = client.generate(
-        #     model =ollama_api_model,
+                ],
+                options={
+                    "num_ctx": num_ctx,
+                    'num_gpu': -1,
+                }
+            )
+            try:
+                for line in response:
+                    if not line:
+                        continue
+                    # request = json.loads(line.decode())
+                    request = line
+                    if line.get('error'):
+                        error_text.append(f"Error: {line['error']}\n")
+                        continue
+                    if ollama_api_addr == '/api/chat':
+                        content = request.message.content.strip()
+                        rewritten_text += content
+                    elif ollama_api_addr == '/api/generate':
+                        if 'response' in request:
+                            content = request['response']
+                            if content is not None:
+                                rewritten_text += content
+                    sys.stdout.write(content)
+                    sys.stdout.flush()
+                    if request.get('done'):
+                        break
+                rewritten_text = re.sub(r'<think>.*?</think>\s*', '', rewritten_text, flags=re.DOTALL).strip()
+                rewritten_text = re.sub(r'Thinking\.\.\..*?\.\.\.done thinking\.', '', rewritten_text, flags=re.DOTALL).strip()
+                # if ollama_api_addr == '/api/chat':
+                #     content = response.message.content.strip()
+                #     content = re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
+                # elif ollama_api_addr == '/api/generate':
+                #     content = response['response']
+                #     if content is not None:
+                #         rewritten_text += content
+                if pbar_flag:        
+                    pbar.update(1)
+            except Exception as e:
+                return "error"
+        if pbar_flag:
+            pbar.close()
+    else:
+        chunks = text
+        # if ollama_api_addr == '/api/chat':
         #     messages=[
-        #         {
-        #             "role": "system",
-        #             "content": prompt
-        #         },
-        #         {
-        #             "role": "user",
-        #             "content": chunks
-        #         }
-        #     ],
+        #             {
+        #                 "role": "system",
+        #                 "content": prompt
+        #             },
+        #             {
+        #                 "role": "user",
+        #                 "content": chunks
+        #             }
+        #         ]
+        # elif ollama_api_addr == '/api/generate':
+        #     messages = prompt + "\n" + chunks
+        # response = ollama_with_requests(
+        #     ai_addr=ai_addr,
+        #     ollama_api_model=ollama_api_model,
+        #     ollama_api_addr=ollama_api_addr,
+        #     stream=True,
+        #     prompt=messages,
         #     options={
         #         "num_ctx": num_ctx,
-        #         'num_gpu': -1 ,
+        #         'num_gpu': -1,
         #     }
         # )
-        # try:
-        #     # content = response.message.content.strip()
-        #     # content = re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
-        #     content = response['response']
-        #     if content is not None:
-        #         rewritten_text += content
-        # except Exception as e:
-        #     return "error"
+        # response = re.sub(r'<think>.*?</think>\s*', '', response, flags=re.DOTALL).strip()
+        # response = re.sub(r'Thinking\.\.\..*?\.\.\.done thinking\.', '', response, flags=re.DOTALL).strip()
+        # rewritten_text += response
+        response = client(
+            model =ollama_api_model,
+            messages=[
+                {
+                    "role": "system",
+                    "content": prompt
+                },
+                {
+                    "role": "user",
+                    "content": chunks
+                }
+            ],
+            options={
+                "num_ctx": num_ctx,
+                'num_gpu': -1 ,
+            }
+        )
+        try:
+            if ollama_api_addr == '/api/chat':
+                content = response.message.content.strip()
+                content = re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
+            elif ollama_api_addr == '/api/generate':
+                content = response['response']
+                if content is not None:
+                    rewritten_text += content
+        except Exception as e:
+            return "error"
     
     if len(error_text) > 0:
         with open(log_file_path, 'a', encoding='utf-8') as log_file:
@@ -762,3 +776,16 @@ def dict_to_csv(dict_array, csv_file):
         # writer.writeheader()  # 写入表头
         writer.writerows(dict_array)  # 写入数据
     remove_duplicates(csv_file, 2)
+
+def split_by_line_number(text):
+    """
+    将字符串中的行号及内容分到单独的行。
+    行号格式为数字后跟点，例如：1. 2. 3. 等。
+    """
+    # 修改正则表达式，匹配行号及其后面的内容，直到下一个行号出现
+    pattern = r'(\d+\..*?)(?=\d+\.|$)'
+    matches = re.findall(pattern, text, flags=re.DOTALL)
+
+    # 将匹配的内容分到单独的行
+    result = "\n".join(matches)
+    return result
