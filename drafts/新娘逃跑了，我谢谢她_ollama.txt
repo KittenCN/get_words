@@ -1,0 +1,2614 @@
+1.结婚当天 新娘逃婚了
+1.1man,cold,standing,grandweddingvenue,dramatictension,
+2.我冷笑一声 转头便娶了她妈
+2.1man,smirking,turning,俞familymansion,darkmood,
+3.做不了你的新郎 就做你的新爹
+3.1man,determined,declaring,俞familymansion,serious,
+4.她回来时 看见我依旧住在她家 还以为我死皮赖脸不愿走 从身后牵出一朵清纯小白脸
+4.1woman,angry,returning,俞familymansion,surprised,
+5.直言那是她的真爱 让我别痴心妄想
+5.1woman,smirking,presenting,俞familymansion,confident,
+6.我微微一笑 握住身旁女人的手 轻声道  女儿 女婿 先叫声爸听听
+6.1man,smiling,holdingwoman'shand,weddingvenue,calm,
+7.我是明氏集团的太子 今天本该是我与俞氏千金俞金莎成婚的日子
+7.1man,serious,speaking,grandweddinghall,corporatestyle,
+8.原本应该站在红毯尽头 身穿婚纱的那道身影 却始终没有出现
+8.1woman,absent,weddingaisle,grandweddinghall,tense,
+9.你是说……俞金莎逃婚了
+9.1man,icy,questioning,weddinghall,emotional,
+10.我声音冰冷 像刀子般划破空气  据说是的
+10.1man,cold,speaking,weddinghall,tenseatmosphere,
+11.女仆颤颤巍巍地回答 声音几乎要抖散了
+11.1woman,trembling,answering,weddinghall,nervous,
+12.我爸妈脸色铁青 愤怒得几乎说不出话
+12.1man,parents,angry,weddingvenue,upset,
+13.为了这场婚礼 明家和俞家几个月前就开始筹备 京都的豪门几乎全被邀请
+13.1man,parents,planning,grandweddinghall,luxurious,
+14.媒体更是早早就架好了摄像机 准备记录这场豪门联姻的盛况
+14.1man,mediapresent,grandweddinghall,formal,
+15.在如此盛大的场合 若是俞金莎早有异议 完全可以直接提出来
+15.1woman,absent,weddingvenue,dramatic,
+16.可她偏偏在婚礼当天逃了 这无异于当众打明家的脸
+16.1woman,fleeing,weddingvenue,disrespectful,
+17.爸妈安抚了我几句 便匆匆离去商量对策
+17.1man,alone,corner,weddingvenue,thoughtful,
+18.我独自缩在角落 思索着这场婚礼该如何继续下去
+18.1man,isolated,corner,weddingvenue,anxious,
+19.就在这时 门口突然一阵骚动
+19.1man,lookingup,weddingvenueentrance,curious,
+20.我下意识抬头 只见一位身穿黑色西装的女人缓步走来 她容颜绝美
+20.1woman,elegant,approaching,weddingvenue,confident,
+21.气质冷艳 仿佛从画中走出的仙子
+21.1woman,cold,walking,weddingvenue,mysterious,
+22.是俞飞飞——俞家现任掌权人 也是俞金莎名义上的母亲
+22.1woman,俞飞飞,walking,grandweddinghall,authoritative,
+23.三十五岁的年纪 却看上去像二十出头的少女 肤若凝脂 眉目如画
+23.1woman,俞飞飞,youthful,weddingvenue,elegant,
+24.俞飞飞极少出现在这种大型场合 就连我 见过她也不过寥寥数次
+24.1woman,俞飞飞,rareappearance,grandweddinghall,enigmatic,
+25.但此刻 她一出现 整个宴席顿时骚动起来 各大家族的宾客纷纷围了上来
+25.1woman,俞飞飞,entering,grandweddinghall,commanding,
+26.想要一睹这位神秘女强人的风采
+26.1woman,俞飞飞,rejecting,weddingvenuecrowd,composed,
+27.我看着她优雅地回绝每一个人 然后大步朝我走来
+27.1man,俞阿姨,smiling,weddingvenue,polite,
+28.俞阿姨  我露出礼貌的微笑 语气中却带着一丝委屈
+28.1man,俞阿姨,calling,weddingvenue,polite,
+29.明公子 这次让您受委屈了
+29.1woman,俞飞飞,speaking,weddingvenue,calm,
+30.她声音低沉婉转 宛如大提琴的琴声 令人沉醉  我已经派人去找她了 找到后任您处置
+30.1woman,俞飞飞,speaking,weddingvenue,composed,
+31.我会向大家解释婚礼延迟 所有损失由我俞氏承担
+31.1woman,俞飞飞,speaking,weddingvenue,determined,
+32.这确实是个完美的解决方案 但我已经有了更好的选择  俞阿姨
+32.1man,俞阿姨,speaking,weddingvenue,confident,
+33.我轻声开口 语气中带着一丝坚定  我自小与俞家定下亲事 但结婚的对象 不一定非要是俞金莎吧
+33.1man,俞阿姨,speaking,weddingvenue,resolute,
+34.什么  俞飞飞一时没反应过来 神情错愕
+34.1woman,俞飞飞,confused,weddingvenue,surprised,
+35.她很快回神 目光深沉地看向我  那你想选谁
+35.1woman,俞飞飞,serious,weddingvenue,calculating,
+36.我微微一笑 毫不犹豫地伸出手 语气坚定  你愿意成为我的新娘吗
+36.1man,俞阿姨,proposing,weddingvenue,confident,
+37.俞飞飞虽是俞金莎名义上的母亲 但并非她的亲生母亲
+37.1woman,俞飞飞,speaking,weddingvenue,composed,
+38.事实上 她至今未婚
+38.1woman,俞飞飞,speaking,weddingvenue,reserved,
+39.传闻二十五岁那年 她从旁系过继了一个孩子 那便是俞金莎
+39.1woman,俞飞飞,speaking,weddingvenue,mysterious,
+40.她挑了挑眉 嘴角微微上扬 露出一抹明艳的笑容  你确定
+40.1woman,俞飞飞,smiling,weddingvenue,elegant,
+41.当然  我毫不犹豫地点头
+41.1man,俞阿姨,nodding,weddingvenue,firm,
+42.比起俞金莎 俞飞飞这个 妈  可比她好看了不止一两倍
+42.1man,俞阿姨,speaking,weddingvenue,confident,
+43.每天看着她这张绝世容颜 心情也会格外舒坦
+43.1man,俞阿姨,speaking,weddingvenue,composed,
+44.总比被俞金莎这个令人厌恶的女子在背后给自己戴上绿帽子要好
+44.1man,俞阿姨,speaking,weddingvenue,disdainful,
+45.俞飞飞静静地望着我 眼神中透着坚定 我微微一笑 她那双白皙而凉意未散的手紧握着我的手 我的心也为之一震
+45.1man,俞阿姨,holdinghands,weddingvenue,serious,
+46.这场原本属于别人的婚礼 如今却换上了主角 甚至连婚纱都没换 洁白典雅的礼服穿在俞飞飞身上
+46.1man,俞阿姨,weddingdress,weddingvenue,elegant,
+47.仿佛是为她量身定制 两人站在一起 竟有种天生一对的默契 仿佛他们才是彼此命中注定的伴侣
+47.1man,俞阿姨,standingtogether,weddingvenue,romantic,
+48.婚宴的宾客皆为精明之人 俞金莎的逃婚太过突然 毫无遮掩 婚礼现场几乎人人都知道了内情
+48.1woman,俞金莎,absent,weddingvenue,shocked,
+49.记者们更是嗅到了八卦的气味 纷纷举起摄像机 对着台上 期待着京都两大豪门的闹剧
+49.1group,journalists,filming,weddingvenue,curious,
+50.当看到我牵着俞飞飞走上红毯 不少人惊得张大了嘴巴
+50.1man,俞阿姨,walkingaisle,weddingvenue,surprisedaudience,
+51.面对这场临时换新娘的戏剧性操作 他们也只能默默服气
+51.,frustrated,standinginweddingceremony,weddinghall,dramatic,
+52.司仪手中拿着刚刚修改好的名单 认真地介绍着新郎新娘的名字
+52.1man,serious,holdingpaperlist,weddinghall,professional,
+53.请新郎新娘交换戒指
+53.1man,1woman,exchangingrings,weddingaltar,formal,
+54.俞飞飞率先将一枚戒指戴在我手上 我也将戒指戴在她手上
+54.1man,1woman,puttingringoneachother,weddingaltar,intimate,
+55.然而在给她戴上时 我发现戒指并不合适 眼中闪过一丝歉意
+55.1man,apologetic,noticingringsizemismatch,weddingaltar,awkward,
+56.这枚戒指原本是为俞金莎准备的 尺寸不合 时间紧迫 根本来不及重新打造 只能勉强凑合
+56.1man,thoughtful,holdingring,weddingaltar,tense,
+57.交换完戒指 接下来便是新郎亲吻新娘
+57.1man,1woman,abouttokiss,weddingaltar,nervous,
+58.我有些紧张 毕竟俞飞飞一向以清冷自持的形象示人 出席活动时连一个男伴都不曾带过
+58.1man,nervous,lookingat1woman,weddinghall,anxious,
+59.她是否愿意接受这最后一吻 我心里没底
+59.1man,uncertain,lookingat1woman,weddinghall,anxious,
+60.我有些后悔 因为自己一时冲动 竟将她卷入这场风波之中
+60.1man,regretful,standingalone,weddinghall,somber,
+61.正当我思绪万千时 忽然感觉嘴唇上传来一阵柔软的触感 我睁开眼
+61.1man,surprised,kissing1woman,weddingaltar,shocked,
+62.映入眼帘的是俞飞飞那张毫无瑕疵的面容
+62.1man,1woman,kissing,weddingaltar,romantic,
+63.她似乎察觉到我的震惊 轻轻托住我的后脑勺 加深了这个吻
+63.1woman,1man,kissing,weddingaltar,passionate,
+64.我也缓缓闭上眼睛 耳边传来宾客们热烈的掌声和祝福声
+64.1man,1woman,kissing,weddinghallwithaudience,joyful,
+65.对于我这般突如其来的决定 父母事先毫不知情
+65.1man,1woman,parents,weddingvenue,surprised,
+66.面对众人的恭贺 他们也只能强颜欢笑 毕竟当众打自己儿子的面 也太过难堪
+66.1man,1woman,parents,weddingvenue,forcedsmile,
+67.敬酒时 我母亲悄悄拉住我的手 把我带进了屋内 父亲也在里面
+67.1man,1woman,parents,insidehouse,worried,
+68.门一关上 母亲便迫不及待地问  儿子 这是怎么回事
+68.1woman,1man,parents,insidehouse,anxious,
+69.你怎么突然就跟俞飞飞在一起了
+69.1woman,1man,parents,insidehouse,questioning,
+70.我一时语塞 只能敷衍地说  因为她长得好看
+70.1man,awkward,answeringparents,insidehouse,embarrassed,
+71.母亲望着俞飞飞 迟疑片刻 似乎也觉得她确实不错 但随即皱眉道  可她比你大十几岁啊
+71.1woman,1man,parents,insidehouse,uncertain,
+72.她小学都快毕业了 你才刚出生呢
+72.1woman,1man,parents,insidehouse,critical,
+73.这有什么 都说成熟的女人更懂得疼人
+73.1man,confident,defending1woman,insidehouse,stubborn,
+74.我厚着脸皮说道 可我母亲依旧眉头紧锁
+74.1man,1woman,parents,insidehouse,skeptical,
+75.我正绞尽脑汁想着如何糊弄过去时 门外忽然传来一阵敲门声 咚咚咚
+75.1man,1woman,parents,insidehouse,nervous,
+76.母亲打开门 只见俞飞飞站在门口 不知是刚刚才到 还是早已在此等候
+76.1woman,arrivingatdoor,house,determined,
+77.我父母脸上迅速换上一副得体的笑容 仿佛刚才质疑人家的不是他们自己似的
+77.1woman,1man,parents,insidehouse,polite,
+78.母亲客气地问  俞总 有什么事吗
+78.1woman,speakingtoparents,insidehouse,calm,
+79.俞飞飞微微一笑 说  我有些事情 想找伯父伯母谈一谈
+79.1woman,speakingtoparents,insidehouse,composed,
+80.她与我父母在屋里不知说了些什么 时间不长 他们便不再反对这门亲事
+80.1woman,1man,parents,insidehouse,accepting,
+81.反而态度大变 开始对我这门婚事寄予厚望
+81.1woman,1man,parents,insidehouse,hopeful,
+82.俞飞飞不仅容貌出众 更拥有极强的能力与手腕 他们心中或许早已认可了她
+82.1woman,successful,insidehouse,respected,
+83.我爸对俞飞飞的能力表示认同 虽然年纪是大了些 但他一直认为 成熟稳重的女人更懂得体贴人
+83.1man,1woman,parents,insidehouse,approving,
+84.相比之下 俞金莎那种临阵脱逃的表现 根本配不上他的儿子
+84.1man,1woman,parents,insidehouse,judgmental,
+85.婚礼过后 我便搬进了俞家的大别墅——那是俞飞飞自己的住所 我也是第一次踏进这个家门
+85.1man,enteringhouse,luxuryvilla,nervous,
+86.别墅内部装修风格简约 黑白灰三色占据主导 冷色调的氛围让人不自觉收敛起情绪
+86.1man,walkingintominimalistvilla,moderninterior,elegant,
+87.经过一天的应酬 她身上带着酒气与汗味 洗漱完后 我坐在沙发上休息
+87.1man,sittingonsofa,villa,tired,
+88.耳边传来浴室里哗啦啦的水声
+88.1man,hearingshower,villa,awkward,
+89.透过磨砂玻璃 隐约能看见她的身影 我有些不好意思 悄悄咽了口口水
+89.1man,peekingat1womanthroughglass,villa,shy,
+90.水声停了 我忍不住抬头 只见俞飞飞从浴室里走出来 身穿浴袍 领口微微敞开 露出白皙修长的双腿
+90.1man,1womaninbathrobe,exitingbathroom,villa,surprising,
+91.我一时愣住 没想到她身材竟保持得这么好
+91.1man,shocked,seeing1woman,villa,stunned,
+92.察觉到我直直盯着她 她嘴角微微上扬 露出一抹浅笑 语气低沉而磁性
+92.1woman,smiling,lookingat1man,villa,seductive,
+93.小奇 你也去洗个澡吧
+93.1woman,speakingto1man,villa,calm,
+94.我这才意识到自己看得太久 慌乱地躲进浴室 脱掉衣服 水冲在身上
+94.1man,enteringbathroom,villa,nervous,
+95.耳边还回响着她那句 小奇  之前怎么没发现她那么勾人
+95.1man,inshower,villa,thinking,
+96.洗完澡后 我忽然想起自己没带衣服进来 只能小心翼翼地打开浴室门一条缝
+96.1man,peekingoutofbathroom,villa,awkward,
+97.露出半张脸 试探着喊道  俞 俞飞飞 我忘记拿衣服了 能不能麻烦你递给我一下
+97.1man,asking1womanforclothes,villa,shy,
+98.就在沙发上的那个袋子里 你一起递给我就行
+98.1woman,speakingto1man,villa,composed,
+99.外面沉默片刻 没有回应
+99.1man,waiting,villa,confused,
+100.我有些疑惑 俞飞飞是不是出去了
+100.1man,thinking,villa,uncertain,
+101.正准备再喊一遍 忽然传来一声回应  好
+101.1man,surprised,callingout,bathroomdoor,dimlighting,
+102.声音低柔 却带着一丝暗哑
+102.voice,low,raspy,hallway,quietatmosphere,
+103.接着是外面走动的声音 袋子被窸窸窣窣地拿了起来
+103.1woman,moving,pickingupbag,outsidehallway,softrustling,
+104.没多久 俞飞飞来到浴室前 轻声说  给你
+104.1woman,soft-spoken,handingclothes,bathroomentrance,calm,
+105.我小心翼翼地打开门缝 伸出手臂 衣物被轻轻地放到了手中
+105.1man,cautious,reachingout,slightlyopendoor,darkroom,
+106.谢谢  我低声说道
+106.1man,grateful,whispering,hallway,tensemoment,
+107.合上门的瞬间 我不小心与她的目光撞上 那双深邃的眼睛仿佛燃烧着什么 让我心头一颤
+107.1man,flustered,eyecontact,bathroomdoor,intensegaze,
+108.再低头一看手中的内裤 我顿时脸红得彻底 心里暗叫一声 啊啊啊
+108.1man,embarrassed,holdingunderwear,bathroom,blushing,
+109.我明明让把袋子一起递过来的……在浴室里磨蹭了半天 终究还是得出来
+109.1man,annoyed,exitingbathroom,hallway,nervous,
+110.我深吸一口气 推开门走了出去
+110.1man,determined,walkingout,bedroomdoorway,calm,
+111.此时 俞飞飞已经换好了睡衣 坐在床边看一份资料
+111.1woman,wearingnightgown,readingdocument,bedroom,calm,
+112.见我出来 她合上资料 脸上没有打趣的神色 我也松了口气
+112.1woman,composed,closingdocument,bedroom,serious,
+113.我刚坐下 便忍不住问出心中的疑问  关于俞金莎的事 你打算怎么处理
+113.1man,curious,askingquestion,bedroom,tense,
+114.她似乎早有预料 将资料递给我 我走过去接过
+114.1woman,prepared,handingdocument,bedroom,calm,
+115.资料中详细记录了俞金莎与一个男人的交往过程 简直像是古早虐文里的情节——富家千金与小白脸
+115.document,detailed,romanticdrama,bedroom,dramatic,
+116.旁边的附注还贴了一张照片 那男人分明就是典型的 绿茶男
+116.photo,man,typicalcheater,document,realistic,
+117.他们之间经历了一次又一次的分合 虐恋与重逢交替上演 直到昨晚上
+117.relationship,on-againoff-again,documents,emotional,
+118.那小白脸得知俞金莎要结婚 竟然哭着给她打了一通电话
+118.1man,crying,callingphone,dramatic,
+119.我心疼了 后悔了 那个即将与我步入婚姻殿堂的未婚妻 竟然在婚礼前夕抛下我
+119.1man,heartbroken,wedding,betrayal,emotional,
+120.连夜与她的 小男友 私奔去了
+120.1woman,1man,eloping,romantic,dramatic,
+121.若不是我就是那个被抛弃的人 恐怕我还要为他们的爱情故事感动落泪
+121.1man,conflicted,emotional,romanticstory,
+122.可偏偏 我就是那个被背叛的未婚夫
+122.1man,angry,betrayed,bedroom,tense,
+123.我忍不住咬牙切齿 这两人到底早干嘛去了
+123.1man,furious,shouting,bedroom,angry,
+124.看资料上的时间显示 他们的 虐恋 已经持续了两个月 比我们筹备婚礼的时间还要长
+124.document,twomonths,longerweddingprep,dramatic,
+125.如果俞金莎能早一点透露出一点风声 我也不会如此愤怒 心碎
+125.1man,angry,heartbroken,bedroom,emotional,
+126.如今 她已经带着那个男人飞往国外度假 我甚至已经派人去把她抓回来
+126.1woman,1man,flyingabroad,dramatic,
+127.如果她愿意回头 我们之间的婚礼还可以作数 我不会计较
+127.1man,determined,forgiving,bedroom,calm,
+128.俞飞飞看出了我眼中的怒火 却误以为我后悔了 语气淡淡地说  反正我们也没领证 只办了一场婚礼而已
+128.1woman,calm,sarcastic,bedroom,composed,
+129.可我怎么可能后悔 丢了一个垃圾 又捡了一个宝贝 这简直是上天给我的幸运
+129.1man,smirking,lucky,bedroom,confident,
+130.我笑了笑 语气坚定地说  我们已经结婚了 从今以后 你便是我的妻子
+130.1man,determined,declaringmarriage,bedroom,serious,
+131.明天我们就去领证
+131.1man,1woman,planningmarriage,bedroom,calm,
+132.俞飞飞听出我话中的认真 也逐渐收敛了轻笑 点头答应  好
+132.1woman,agreeing,bedroom,serious,
+133.我接着说  你之前说俞金莎任由我处置 这话还算数吧
+133.1man,sly,planningrevenge,bedroom,cunning,
+134.我眼中闪过一丝顽劣的笑意 而俞飞飞似乎看懂了我的心思 不仅没有阻止
+134.1man,mischievous,bedroom,confident,
+135.反而煽风点火地点头  随你 很好
+135.1woman,encouraging,bedroom,amused,
+136.我要你冻结她的所有资金账户
+136.command,freezeaccounts,bedroom,serious,
+137.没有了经济支持 看她还能不能和那男人逍遥自在地在海外游山玩水
+137.1woman,1man,travelingabroad,romantic,
+138.俞飞飞看出了我的恶趣味 没有阻止 反而笑着调侃  从今天起 她名下的所有资金都会被我收走 小老公 你觉得怎么样
+138.1woman,amused,callinghim,bedroom,playful,
+139.小老公 这个词突如其来 让我一时间愣在原地
+139.1man,surprised,bedroom,calm,
+140.我觉得很好  我嘴角微扬  让她过得更惨 我自然更高兴
+140.1man,smirking,bedroom,cruel,
+141.处理完那个背叛我的女人 接下来 便是另一个全新的开始
+141.1man,determined,newbeginning,bedroom,calm,
+142.那我们休息吧  俞飞飞似乎是真的累了 抬手关了灯
+142.1woman,tired,turningofflight,bedroom,dark,
+143.房间陷入一片黑暗 我僵硬地躺在床上 心跳如小鹿乱撞
+143.1man,nervous,lyinginbed,darkroom,anxious,
+144.这是我第一次步入婚姻 对接下来的 洞房花烛 环节还显得有些手足无措
+144.1man,uncertain,firstnight,bedroom,awkward,
+145.我正思索着该不该主动出击时 她却轻声说了一句  在你愿意之前 我不会动你的
+145.1woman,gentle,speaking,darkroom,calm,
+146.这句话按理说 应该由男人来说才对
+146.dialogue,traditionalexpectation,darkroom,serious,
+147.可眼前这个英俊潇洒的男人 竟然能忍住不动手
+147.1man,surprised,holdingback,darkroom,calm,
+148.我刚闭上眼 俞飞飞却又睁开了 我才反应过来 自己刚才不小心把心里话说了出来
+148.1man,embarrassed,speakingout,darkroom,flustered,
+149.我赶紧装作睡着 可没等我缓过来 就感觉她的身体已经覆在我身上
+149.1woman,mischievous,lyingover,darkroom,teasing,
+150.她的手微凉 轻轻搭在我胸口 温热的呼吸拂过我的耳畔  想试试
+150.1woman,coolhands,whispering,close-up,intimate,
+151.果然 不要惹一个禁欲多年的成熟女人 否则后果自负
+151.1woman,mature,dominant,bedroom,dramatic,
+152.第二天醒来 阳光已经洒满房间 身边却是冰冷的 俞飞飞早已离开
+152.1man,alone,wakingup,sunnybedroom,morninglight,
+153.也是 总裁日理万机 哪有时间陪我赖床
+153.1man,resigned,thinking,office,modern,
+154.我饿得肚子咕咕叫 便下楼准备觅食
+154.1man,hungry,descendingstairs,home,morning,
+155.出乎意料的是 俞飞飞竟坐在餐桌旁 手中翻阅着一本杂志 神情淡然
+155.1woman,calm,reading,diningroom,breakfasttable,
+156.小老公 起来了 昨晚休息得还好吗  她笑着问道
+156.1woman,smiling,speaking,diningroom,domestic,
+157.今天的她没有穿西装 而是穿着一件简单的白色衬衫 领口微微敞开 隐约露出昨夜留下的痕迹
+157.1woman,casual,shirt,diningroom,subtlehint,
+158.我看着她 脸上不自觉地泛起红晕 嘴上却强撑着不甘示弱地回道  休息得很好 飞飞
+158.1man,blushing,defensive,diningroom,awkward,
+159.听到这个称呼 俞飞飞嘴角的笑意愈发张扬 眼神中带着几分得意与宠溺
+159.1woman,smirking,pleased,diningroom,teasing,
+160.她一边说 一边轻笑着靠近我 语气里带着几分调侃的意味  看来小老公昨晚很满足 那我也就放心了
+160.1woman,approaching,playful,diningroom,intimate,
+161.我忍不住皱眉 她却笑着追问  干吗非要在老公前面加个小 哪里小了
+161.1man,frowning,defensive,diningroom,embarrassed,
+162.她目光从上到下地扫过我 像是在打量一件刚被试穿的新衣 语气轻佻  不小不小 看你急的
+162.1woman,looking,teasing,diningroom,flirtatious,
+163.我哼哼唧唧地坐到餐桌旁 揉了揉肚子 声音闷闷的  我饿了
+163.1man,sulking,rubbingstomach,diningroom,hungry,
+164.俞飞飞嘴角含笑 宠溺地看了我一眼 转身走进厨房 不一会儿端出一盘温着的食物
+164.1woman,smiling,servingfood,diningroom,caring,
+165.她语气柔和地说  你刚起床 也吃不下太油腻的
+165.1woman,gentle,speaking,breakfasttable,simplemeal,
+166.桌上的早餐很简单 一盘包子 两碟小菜 还有一碗热腾腾的白粥
+166.diningtable,buns,sidedishes,porridge,homey,
+167.我饿得厉害 也不顾那么多 迫不及待地拿起一个包子咬了一口 眼睛瞬间亮了起来  好吃欸 真的好吃
+167.1man,eating,happy,diningroom,delighted,
+168.这包子是谁包的啊
+168.1man,curious,asking,diningroom,questioning,
+169.俞飞飞只是笑而不语 我心中一动 试探着问  该不会是你包的吧
+169.1woman,smiling,silent,diningroom,mysterious,
+170.她轻飘飘地说了一句 算是默认  合老公的胃口就好
+170.1woman,answering,teasing,diningroom,playful,
+171.我想说几句打击她的话 可这包子味道确实好 人不能昧了良心
+171.1man,conflicted,eating,diningroom,sincere,
+172.看着我吃得开心 俞飞飞也很满意 毕竟她为了这顿早餐专门去学了厨艺
+172.1woman,satisfied,watching,diningroom,proud,
+173.吃完饭后 我磨蹭了一会儿 时间已经不早了
+173.1man,hesitating,upstairs,home,unsure,
+174.我上楼换了身衣服 心里有些恍惚
+174.1man,changingclothes,upstairs,home,dazed,
+175.选择和俞飞飞结婚这个决定太突然 也没有提前准备
+175.1man,thinking,bedroom,suddenmarriage,emotional,
+176.别墅里没有男士的衣服 我那几件还是从家里带回来的
+176.1man,searching,closet,home,empty,
+177.俞飞飞微微皱了下眉头 转身出去打了个电话
+177.1woman,frowning,calling,home,concerned,
+178.等她回来时 我已经收拾妥当了
+178.1woman,returning,home,calm,
+179.我拍拍她的肩膀 笑着说  走吧 飞飞   好
+179.1man,smiling,speaking,home,affectionate,
+180.俞飞飞今天穿着一件白衬衫 搭配浅色牛仔裤 一眼看上去像是个青葱大学生
+180.1woman,casual,whiteshirt,jeans,youthful,
+181.我红着脸看着她衬衫领口露出的锁骨 还有下面那个红色的印记 忍不住开口  你就这么去吗
+181.1man,blushing,looking,home,shy,
+182.不行吧  俞飞飞一脸不解地看着我  怎么了
+182.1woman,confused,speaking,home,puzzled,
+183.我上前一步 替她整理了下领口 然后牵着她的手往外走
+183.1man,adjusting,holdinghand,home,tender,
+184.随着结婚证的新鲜出炉 我和俞飞飞 真的成了夫妻
+184.1man,1woman,married,home,emotional,
+185.就这么告别单身生活 我心里还有些不习惯
+185.1man,thinking,home,emotional,
+186.但当我看到结婚照上的那对俊男靓女 忍不住啧啧感叹  啧啧啧 真般配啊 我眼光真好
+186.1man,looking,atphoto,home,satisfied,
+187.俞金莎和那个小白脸出国旅游去了 我早就断了他的卡 没有钱 最多两天她就得屁颠屁颠地回来
+187.1woman,1man,traveling,abroad,luxurious,
+188.我特别期待俞金莎回来 看看她看见我成为她 爸 的场景
+188.1man,imagining,home,smug,
+189.俞飞飞真的很贴心 领完结婚证回到家后 我就看见原本空荡荡的衣柜里被塞满了各种男士衣服
+189.1woman,thoughtful,home,closetfull,
+190.全是当季新款 而且都是品牌货
+190.closet,men'sclothes,brandnew,modern,
+191.她语气淡淡地说  时间紧急 没来得及定制 你先勉强用着
+191.1woman,speaking,home,calm,
+192.虽然这里面有不少衣服我本来就有 但看到她这份心意 我还是很感动
+192.1man,moved,home,emotional,
+193.正如我所料 俞金莎所有的卡都被冻结了 她在国外简直寸步难行
+193.1woman,abroad,nomoney,frustrated,
+194.她作为一个集团千金 口袋里从来都没装过现金
+194.1woman,rich,nocash,abroad,
+195.幸亏有那个小白脸在身边 自从他和俞金莎在一起之后 就再也没有上过班 手里还剩下一些积蓄
+195.1man,supporting,abroad,helpful,
+196.要不是这个小白脸 她估计都回不来了
+196.1man,essential,abroad,grateful,
+197.这个小白脸原名叫赵华俊 他假模假样地安慰着俞金莎  金莎 你别担心
+197.1man,fakecomforting,abroad,
+198.可能是发生了什么事 我们先买机票回去看看   老公 谢谢你
+198.1man,speaking,abroad,thankful,
+199.赵华俊从背包里拿出一叠厚厚的现金 递到俞金莎面前 那是一笔他多年积蓄换来的机票钱
+199.1man,handing,cash,abroad,generous,
+200.她接过时 指尖轻轻摩挲着钞票边缘 嘴角不自觉地扬起一抹感动的弧度
+200.1woman,accepting,cash,abroad,touched,
+201.她心里清楚 自己的信用卡被冻结绝非偶然
+201.1woman,thoughtful,standinginroom,luxuriousinterior,cinematiclighting,
+202.她的卡可是无限额的 银行方面根本不敢轻易动它 除非是有人在背后施压
+202.1woman,determined,standinginroom,luxuriousinterior,dramatic,
+203.她几乎可以肯定 是明奇那女人在说些什么
+203.1woman,suspicious,standinginroom,luxuriousinterior,subtletension,
+204.反正婚礼一结束 她也该回国了
+204.1woman,resolved,walking,airport,dramatic,
+205.赵华俊陪在她身边这么久 两人之间的感情早已超越了暧昧 她也该给他一个名正言顺的身份了
+205.1woman,1man,affectionate,embracing,luxurioussuite,romanticatmosphere,
+206.毕竟 她连第一次都给了他
+206.1woman,1man,intimate,hugging,romantic,softlighting,
+207.想到这里 她的眼神温柔了几分 脸上浮现出幸福的笑意
+207.1woman,smiling,gazing,luxurioussuite,happy,warmlighting,
+208.等他们回国 就该办婚礼了 到时候她从俞飞飞手中接过俞氏的控制权
+208.1woman,1man,holdinghands,luxuriousmansion,triumphant,cinematic,
+209.从此再无人能左右她的命运
+209.1woman,confident,walking,futurepalace,powerful,goldenlight,
+210.她已经能想象到自己未来的生活 那将是属于她的时代
+210.1woman,imaginative,gazing,futurepalace,regal,dreamy,
+211.于是 两人迫不及待地连夜搭乘航班 七个小时的飞行后 清晨八点
+211.1woman,1man,walking,airport,hurried,nightscene,
+212.他们终于抵达了位于海边的那栋豪华庄园
+212.1woman,1man,arriving,beachfrontmansion,dramatic,sunrise,
+213.俞金莎知道俞飞飞通常不住在老宅 便径直朝她别墅的方向走去
+213.1woman,determined,walking,mansioncorridor,confident,
+214.而我 正懒洋洋地窝在客厅的沙发上 一边看电视剧一边等俞飞飞准备早餐
+214.1man,lazy,sitting,livingroom,watchingTV,relaxed,
+215.这几天几乎天天陪着她 起初觉得她冷淡疏离 像是一个禁欲的禁脔
+215.1man,1woman,together,livingroom,mysterious,coldatmosphere,
+216.可现在才发现 那不过是她刻意营造的假象
+216.1man,1woman,together,livingroom,warm,softsmile,
+217.她分明就是个妖精 专门吸人精气的妖精
+217.1woman,seductive,smiling,livingroom,mystical,
+218.为了享受二人世界 她甚至特地安排别墅里的佣人放假 只留了一个打扫卫生的阿姨偶尔来一次
+218.1woman,1man,inhouse,emptyexceptformaid,romantic,
+219.所以 一日三餐自然就落到了她身上
+219.1woman,cooking,kitchen,1maneating,cozy,
+220.虽然我每次吃得满嘴油光 她却总是带着几分恶趣味地戳我脸颊
+220.1man,eating,1womanpoking,kitchen,playful,
+221.就在我准备继续享受这惬意时光的时候 耳边响起了机械的提示音  主人 有人敲门
+221.1man,surprised,hearingvoice,livingroom,robotvoice,
+222.我趿拉着拖鞋 走到监控前一看 赫然是风尘仆仆的俞金莎和赵华俊
+222.1man,walking,lookingatmonitor,mansionentrance,curious,
+223.我不由得挑了挑眉 这速度 倒是挺快的
+223.1man,smirking,mansioncorridor,watchingmonitor,
+224.我走进厨房 从身后搂住正煎蛋的俞飞飞 看着她手法娴熟地煎出一个完美的太阳蛋
+224.1man,hugging,1womancooking,kitchen,affectionate,
+225.忍不住啧啧赞叹  人与人果然不能比啊
+225.1man,impressed,watching,kitchen,dramaticlighting,
+226.嗯 随你处置  俞飞飞头也不抬地回应
+226.1woman,focused,cooking,kitchen,calm,
+227.等的就是她这句话 我故意把两人晾在门外 自己慢悠悠地回房换了一身衣服 才打开大门
+227.1man,smug,walking,mansioncorridor,slow,
+228.这座别墅占地不小 外院更是像一个小庄园 以往访客都是开车进来的
+228.1man,standing,mansionentrance,lazy,
+229.可惜现在司机也放假了 我懒得动弹 干脆让他们自己走过来好了
+229.1man,sarcastic,mansiongate,ignoringguests,
+230.俞金莎和赵华俊下了飞机就马不停蹄地赶来这里 连饭都没来得及吃
+230.1woman,1man,arriving,mansiongate,exhausted,
+231.此刻又饿又渴 只能强忍着站在门口等待
+231.1woman,1man,standing,mansionentrance,hungry,
+232.好不容易等到大门开启 却还要靠自己的双腿走进去
+232.1woman,1man,walking,mansioncourtyard,exhausted,
+233.这里可真大呀  赵华俊望着四周 眼中闪过一丝羡慕与不甘
+233.1man,admiring,mansioncourtyard,envious,
+234.等我们结婚了 我也给你买个这么大的
+234.1woman,confident,speaking,mansioncourtyard,proud,
+235.俞金莎语气豪迈 仿佛这一切已经是囊中之物
+235.1woman,boastful,mansioncourtyard,triumphant,
+236.那一定很贵吧  赵华俊小心翼翼地问
+236.1man,hesitant,mansioncourtyard,nervous,
+237.金莎 没有必要的
+237.1man,gentle,speaking,mansioncourtyard,sincere,
+238.他轻声说  不管住在哪儿 只要能和你在一起 我就已经很满足了   这有什么
+238.1man,affectionate,speaking,mansioncourtyard,calm,
+239.俞金莎嘴角微扬 眼中带着几分宠溺与傲然  以后我给你买几座别墅 你爱住哪就住哪
+239.1woman,smirking,mansioncourtyard,proud,
+240.嘴上说得再潇洒 真正站在俞家大门前 俞金莎还是忍不住迟疑了
+240.1woman,nervous,mansionentrance,hesitant,
+241.她深吸了一口气 手指在门把手上摩挲了几下 才鼓起勇气推开
+241.1woman,determined,holdingdoorknob,mansionentrance,tense,
+242.小时候 她对 俞飞飞 这个名字毫无敬畏 甚至觉得这个 名义上的妈 不过是个摆设
+242.1woman,childish,walking,mansioncorridor,arrogant,
+243.然而 自打亲眼看到俞飞飞如何对待那些不听话的人后 她便学会了低头
+243.1woman,fearful,watching,mansioncorridor,tense,
+244.长大后 她更清楚地认识到 俞飞飞的手段远比她想象的要冷酷 隐忍
+244.1woman,respectful,walking,mansioncorridor,serious,
+245.她心中对这位母亲的敬畏与日俱增
+245.1woman,respectful,walking,mansioncorridor,solemn,
+246.但正因为俞飞飞极少插手家务事 她才敢一拍脑门 决定逃婚
+246.1woman,defiant,walking,mansioncorridor,determined,
+247.她相信 这位 妈 绝不会为了她这种小事多管闲事——毕竟她是俞家的继承人 不是那些任人摆布的下人
+247.1woman,confident,walking,mansioncorridor,smug,
+248.她抱着这样的心理安慰自己 推门而入
+248.1woman,assured,entering,mansioncorridor,calm,
+249.然而 映入眼帘的却不是她想象中的俞飞飞 而是一个让她措手不及的人
+249.1woman,shocked,entering,mansioncorridor,surprised,
+250.站在她面前的是个男人 正对她笑得和蔼可亲
+250.1man,smiling,standing,mansioncorridor,friendly,
+251.你……你你怎么在这
+251.1woman,surprised,lookingatman,livingroom,dramatic,
+252.俞金莎下意识地后退一步 声音有些发颤
+252.Yujinsha,nervous,steppingback,livingroom,tenseatmosphere,
+253.就在这时 她身后传来一声闷哼 她一回头 顿时愣住——赵华俊正站在她身后
+253.Yujinsha,shocked,turningaround,ZhaoHuajun,livingroom,
+254.显然是被她踩到了脚 疼得咬牙忍着没出声
+254.ZhaoHuajun,pained,standing,livingroom,hurtexpression,
+255.她连忙转头看向赵华俊 语气里带着关切  没事吧 依依
+255.Yujinsha,concerned,lookingatZhaoHuajun,livingroom,
+256.赵华俊微微一笑 声音柔弱得像是受了天大的委屈  金莎 你没事就好
+256.ZhaoHuajun,weak,smiling,livingroom,
+257.俞金莎一边安抚赵华俊 一边转头看向门口的男人 眼中满是愤怒与不解
+257.Yujinsha,angry,lookingatMingqi,livingroom,
+258.明奇 我没想到你竟然这么恶毒
+258.Yujinsha,cold,speaking,livingroom,
+259.她冷冷地说道  我干什么了 莫名其妙
+259.Yujinsha,cold,speaking,livingroom,
+260.男人皱眉  从头到尾我都没动过 你别想碰瓷
+260.Mingqi,confused,frowning,livingroom,
+261.俞金莎一愣 意识到自己刚才的话确实有些离谱 便换了个角度继续攻击  我没想到你这么无耻
+261.Yujinsha,confused,speaking,livingroom,
+262.我们的婚都没办 你怎么好意思住在这里
+262.Yujinsha,angry,speaking,livingroom,
+263.我不喜欢你 我们之间不可能有未来
+263.Yujinsha,determined,speaking,livingroom,
+264.这才是我的男朋友赵华俊 我们很快就要结婚了
+264.Yujinsha,decisive,pointingatZhaoHuajun,livingroom,
+265.她语气坚定 仿佛在宣判什么
+265.Yujinsha,firm,speaking,livingroom,
+266.男人却只是淡淡一笑 语气中带着几分无奈与讽刺  是什么给了你这种错觉
+266.Mingqi,sarcastic,smiling,livingroom,
+267.你觉得我会纠缠你
+267.Mingqi,indifferent,speaking,livingroom,
+268.他摇头  我有纠缠过你吗
+268.Mingqi,puzzled,shakinghead,livingroom,
+269.他脑海中迅速回顾了自己与俞金莎的每一次相处 确认自己从未有过任何越界的行为
+269.,,thinking,livingroom,
+270.他不禁怀疑 这个女人是不是脑子有问题
+270.Mingqi,suspicious,livingroom,
+271.金莎 我知道你和明奇以前确实是未婚夫妻 但你们还没结婚
+271.Mingqi,calm,speaking,livingroom,
+272.我跟你是真心相爱的 求求你成全我们吧
+272.ZhaoHuajun,emotional,crying,livingroom,
+273.赵华俊已经开始表演了 一个大男人哭哭啼啼的 像是受了天大的委屈
+273.Yujinsha,sympathetic,lookingatZhaoHuajun,livingroom,
+274.俞金莎看他这般模样 心疼得不行 立刻转头对着男人怒吼  明奇
+274.Yujinsha,angry,shoutingatMingqi,livingroom,
+275.你太过分了  男人一脸无辜地看着她  这又关我什么事
+275.Mingqi,innocent,lookingatYujinsha,livingroom,
+276.他叹了口气 语气中带着几分同情  妈的 我居然跟不上你们的脑回路 有病吧
+276.Mingqi,frustrated,sighing,livingroom,
+277.他摇头  精神病院已经关不下你们了吗
+277.Mingqi,sarcastic,shakinghead,livingroom,
+278.让你们跑到外面来撒野
+278.Mingqi,annoyed,speaking,livingroom,
+279.俞金莎愣了片刻 才回过神来 冷冷地回了一句  你才有病
+279.Yujinsha,confused,speaking,livingroom,
+280.她看着男人脸上毫无波澜的神情 开始怀疑他是否真的不喜欢自己
+280.Yujinsha,suspicious,lookingatMingqi,livingroom,
+281.但她很快又否定了这个念头——这里是俞家 不是明家
+281.Yujinsha,determined,speaking,livingroom,
+282.明奇若不是为了她 怎么会出现在这里
+282.Yujinsha,thinking,livingroom,
+283.他一定是在演戏 为了引起她的注意
+283.Yujinsha,suspicious,speaking,livingroom,
+284.她缓了缓语气 试图让事情看起来更合理  明奇 我有喜欢的人了 我们之间不可能有未来
+284.Yujinsha,calm,speaking,livingroom,
+285.你赶紧给我男朋友道歉 我们以后还能做朋友
+285.Yujinsha,firm,speaking,livingroom,
+286.谁要和你们这群人做朋友 脑残还带传染性的
+286.Mingqi,annoyed,speaking,livingroom,
+287.我正准备回怼几句 身后却传来俞飞飞的声音  怎么了
+287.,speaking,hearingYufei,livingroom,
+288.几人同时回头望去 只见她身穿一袭定制的黑色衬衫 完美勾勒出她曼妙的身材
+288.Yufei,elegant,standing,livingroom,
+289.她那张惊艳的脸庞 配以禁欲系的气质 一举一动都显得格外勾人
+289.Yufei,stunning,blackshirt,livingroom,
+290.赵华俊看得一愣一愣的 嘴巴张得老大 仿佛被电击了一般
+290.ZhaoHuajun,shocked,staring,livingroom,
+291.妈 我们回来了
+291.Yujinsha,speaking,livingroom,
+292.俞金莎迫不及待地朝俞飞飞问道  这个人为什么在这里
+292.Yujinsha,anxious,asking,livingroom,
+293.俞飞飞却懒得搭理她 只是对我挥了挥手  过来吃饭
+293.Yufei,dismissive,waving,livingroom,
+294.我正站在这三人中间 俞飞飞勾手的时候 赵华俊和俞金莎还以为她是在叫他们过去
+294.,standingbetween,livingroom,
+295.妈 你还特地给我们做了早餐
+295.Yujinsha,touched,speaking,livingroom,
+296.俞金莎感动得眼眶都红了 说完就想拉着赵华俊一起过去
+296.Yujinsha,emotional,crying,livingroom,
+297.可他们还没走到桌边 就被俞飞飞拦住了去路
+297.Yufei,blocking,livingroom,
+298.妈 你这是…… 俞金莎满脸疑惑 俞飞飞却再次朝我伸出了手
+298.Yujinsha,confused,speaking,livingroom,
+299.我毫不犹豫地飞奔上前 当着两人的面 直接握住了她的手
+299.,runningtoYufei,livingroom,
+300.回头看见俞金莎和赵华俊瞪大了眼睛 嘴巴张得能塞下鸡蛋 我忍不住露出灿烂的笑容
+300.,smiling,lookingatshockedfaces,livingroom,
+301.女儿 叫声爸来听听
+301.1girl,determined,shouting,diningroomtable,familyconflict,
+302.我挑衅地看着俞金莎和赵华俊 他们却愣在原地 嘴巴张得老大 半天说不出话
+302.1woman,1man,shocked,staring,livingroom,tenseatmosphere,
+303.俞飞飞也不理会他们 直接拉着我的手坐到了餐桌前  吃饭 凉了会伤胃
+303.1woman,1girl,sittingattable,holdinghands,familydinner,
+304.两人足足愣了两分钟才反应过来 俞金莎甚至忘了压低声音 满脸不可置信地喊道  什么
+304.1woman,surprised,shouting,livingroom,shockedreaction,
+305.你……你什么时候……怎么可能
+305.1woman,confused,questioning,livingroom,surprisedtone,
+306.就在你们结婚当天啊
+306.1woman,1man,shocked,weddingday,dramatic,
+307.我冷笑一声 看着刚才还自恋得意的俞金莎 如今嘴巴张得能塞鸡蛋
+307.1woman,smirking,watching,livingroom,satisfied,
+308.我心中说不出的畅快  哈哈哈 叫你自恋 打脸了吧
+308.1woman,happy,laughing,livingroom,sarcastic,
+309.妈 你怎么能跟他结婚呢
+309.1woman,angry,questioning,livingroom,upset,
+310.俞金莎忍不住质问道
+310.1woman,angry,accusing,livingroom,confrontation,
+311.我一脸得意地看着她 心中暗自揣测 她肯定是把一切归咎于恶意  他肯定是故意的 妈 他是故意的
+311.1woman,smug,watching,livingroom,confident,
+312.再说了 你们之间差了十几岁呢 怎么能在一起
+312.1woman,1girl,arguing,livingroom,agedifference,
+313.我承认 我最初选择俞飞飞确实带有些许报复的意味 但那只是很小一部分
+313.1woman,serious,explaining,livingroom,emotional,
+314.真正的原因 是我身为明家人 不能让明家在那么多人面前丢脸
+314.1woman,determined,explaining,livingroom,familyhonor,
+315.像我们这样的人 本就不奢望爱情
+315.1woman,resigned,speaking,livingroom,noromance,
+316.选择俞飞飞 是因为她的身份
+316.1woman,1girl,discussing,livingroom,strategicchoice,
+317.而且 俞飞飞确实是比俞金莎强太多 无论是脸 身材 还是脑子 都远远胜过她
+317.1woman,1girl,comparing,livingroom,confidence,
+318.差十几岁又如何 爱情从不分年龄
+318.1woman,confident,speaking,livingroom,romanticage,
+319.我挑起眉 当着俞金莎的面 直接亲了一口俞飞飞的侧脸  报复你 以结婚为代价
+319.1woman,1girl,kissing,livingroom,revenge,
+320.你配吗 快 好女儿 叫声爸
+320.1woman,smirking,commanding,livingroom,fatherfigure,
+321.我威胁道  不然我就让你妈换一个女儿
+321.1woman,threatening,warning,livingroom,familythreat,
+322.俞金莎气得指着我 满脸小人得志的得意  妈 你都不管管他
+322.1woman,angry,pointing,livingroom,upset,
+323.闻言 俞飞飞终于抬起头 赏了她一个眼神
+323.1girl,lookingup,stern,livingroom,calm,
+324.就在俞金莎以为俞飞飞终于要教训我的时候 俞飞飞却宠溺地揉了揉我的头  我哪里管得了他啊
+324.1girl,1woman,interacting,livingroom,unexpectedkindness,
+325.再说 我嫁给小奇 你理应喊他一声爸
+325.1girl,1woman,speaking,livingroom,familyrelationship,
+326.看俞飞飞也是站在我们这边 俞金莎气得憋屈得厉害 脸色铁青 却一句话也说不出来
+326.1woman,angry,silent,livingroom,defeated,
+327.她当了这么多年公主 何曾受过这般委屈
+327.1woman,frustrated,turningaway,livingroom,emotional,
+328.那一刻 她气得扭头就想走
+328.1woman,angry,leaving,livingroom,upset,
+329.可就在这时 她感觉到自己的手被人轻轻捏了一下——是赵华俊
+329.1woman,1man,touchinghands,livingroom,emotional,
+330.她低头看着他那张满是委屈的脸 心中顿时一软
+330.1woman,1man,lookingdown,livingroom,sad,
+331.算了 为了以后的美好生活 她咬紧牙关 强忍着怒意 只憋出来一个字  爸
+331.1woman,resigned,speaking,livingroom,forcedcompliance,
+332.哎呀 我女儿真乖 哈哈哈
+332.1woman,laughing,happy,livingroom,joyful,
+333.我笑得极为肆意 嘴角几乎绷不住了
+333.1woman,laughing,happy,livingroom,triumphant,
+334.明奇站在一旁 看着我笑得那么开心 竟半点不留情面 俞金莎的脸色愈发阴沉
+334.1man,watching,neutral,livingroom,cold,
+335.来 爸还特意给你准备了个红包
+335.1woman,handing,redenvelope,livingroom,playful,
+336.我毫不在意地乐呵呵走到她面前 从口袋里掏出几张钞票 放在她掌心
+336.1woman,handing,cash,livingroom,mocking,
+337.俞金莎都不想接 她一个千金小姐 怎么会缺这点钱呢
+337.1woman,rejecting,cash,livingroom,disdainful,
+338.拿好了 不准扔
+338.1woman,commanding,livingroom,strict,
+339.就在这时 俞飞飞淡淡地开口 语气不容置疑  我……我忍
+339.1girl,speaking,calm,livingroom,authoritative,
+340.俞金莎咬着牙接过红包 牙关几乎被自己咬断 强忍着怒火  谢谢爸
+340.1woman,angry,receiving,livingroom,forcedgratitude,
+341.不客气 不客气
+341.1woman,smiling,polite,livingroom,fake,
+342.我露出八颗白牙 笑得像个没事人
+342.1woman,smiling,livingroom,smug,
+343.解决了她 接下来就该轮到那个小白脸了
+343.1woman,planning,livingroom,nexttarget,
+344.呦 这位就是我未来的女婿
+344.1woman,1man,greeting,livingroom,sarcastic,
+345.我上上下下打量了赵华俊一番
+345.1woman,1man,looking,livingroom,critical,
+346.虽然之前在照片上见过 但真人站在面前 还真是——一样的不咋地
+346.1woman,1man,observing,livingroom,dismissive,
+347.俞金莎瞪了我一眼 显然不满我的评价
+347.1woman,angry,glaring,livingroom,upset,
+348.虽然赵华俊这张小白脸长得确实不错 白生生的 但那身板 怎么看都像是根竹竿
+348.1man,1woman,observing,livingroom,judgmental,
+349.他从进院子开始 眼神里就藏着贪婪 遮都遮不住
+349.1man,suspicious,livingroom,greedyeyes,
+350.这人绝对不是省油的灯 也就俞金莎这个自恋狂看不出来 还自以为他是真心爱她
+350.1woman,1man,speaking,livingroom,critical,
+351.你……你好 我叫赵华俊
+351.1man,nervous,greeting,diningroom,realistic,
+352.赵华俊强忍着 实在难以开口叫面前这个男人 爸
+352.1man,hesitant,avoidingeyecontact,diningroom,realistic,
+353.哦 赵华俊啊 不错不错
+353.1man,indifferent,seated,diningroom,realistic,
+354.我也不多说什么 留下一句便坐回餐桌前继续吃饭
+354.1man,dismissive,eating,diningroom,realistic,
+355.接下来 就该俞飞飞上场了
+355.1woman,composed,approaching,diningroom,realistic,
+356.她擦了擦嘴 慢悠悠地开口  你来有什么事
+356.1woman,calm,wipingmouth,diningroom,realistic,
+357.一提到正事 俞金莎立刻忘记了刚才的委屈 正色道  妈 我的卡为什么被冻住了
+357.1woman,anxious,questioning,diningroom,realistic,
+358.还有我名下的车和房子
+358.1woman,concerned,mentioningproperty,diningroom,realistic,
+359.一说起这个 她就想起出机场时的狼狈
+359.1woman,upset,recallingpast,airport,realistic,
+360.她原本想开自己的豪车来 结果车被冻结 只能一路打车过来 那辆车之前不知道拉过谁
+360.1woman,disgusted,intaxi,airport,realistic,
+361.车内臭味熏得她差点吐出来  为什么
+361.1woman,nauseous,intaxi,airport,realistic,
+362.俞飞飞语气一沉 眼神凌厉  你不清楚吗
+362.1woman,stern,questioning,diningroom,realistic,
+363.她的气势瞬间变得严厉 浑身上下都透着上位者的威压
+363.1woman,authoritative,confronting,diningroom,realistic,
+364.你突然逃婚 你知道会对明家和俞家造成什么影响吗
+364.1woman,angry,accusing,diningroom,realistic,
+365.后果你承担得起吗
+365.1woman,cold,warning,diningroom,realistic,
+366.俞金莎心惊胆战 几乎想跪下来求饶 但想到身边的赵华俊 为了维护自己的形象 她还是硬生生忍住了
+366.1woman,terrified,resisting,diningroom,realistic,
+367.我……我只是不喜欢他 想和我喜欢的人在一起 有什么错
+367.1woman,defiant,defendingherself,diningroom,realistic,
+368.看着女儿一副理直气壮的模样 我冷笑一声  别把事情说得这么简单
+368.1woman,amused,sarcastic,diningroom,realistic,
+369.你不喜欢我没错 但我们也不是第一天在一起了 婚礼也不是第一天筹备的
+369.1woman,bitter,reminding,diningroom,realistic,
+370.你要是不喜欢 大可以早点说
+370.1woman,cold,scolding,diningroom,realistic,
+371.结婚前一天不告而别 俞飞飞脸色铁青 怒斥道  你这是把我们明家的脸放在地上踩
+371.1woman,furious,insulting,diningroom,realistic,
+372.她语气森冷 目光如刀锋般扫过俞金莎 仿佛要把她刺穿
+372.1woman,cold,glaring,diningroom,realistic,
+373.你若和明家的公子结了婚 背后就多了一整个明家的支撑 这才是你被立为继承人的根本原因
+373.1woman,calculating,explaining,diningroom,realistic,
+374.否则 俞家孩子那么多 比你有能力 有头脑的比比皆是 你凭什么
+374.1woman,scornful,dismissing,diningroom,realistic,
+375.她语气中带着不屑和愤怒
+375.1woman,contemptuous,angry,diningroom,realistic,
+376.俞飞飞冷冷地望着俞金莎 目光里满是不屑与失望
+376.1woman,cold,disappointed,diningroom,realistic,
+377.俞金莎低着头 嘴唇微微颤抖 吞吞吐吐 再也说不出一句为自己辩解的话
+377.1woman,ashamed,silent,diningroom,realistic,
+378.其实 她就是个蠢人 从小顺风顺水 犯了再多的错 大家也只因她是俞家大少爷的妹妹 便事事纵容
+378.1woman,childish,arrogant,diningroom,realistic,
+379.久而久之 她便养成了任性妄为的性格 做什么事都不计后果 想做什么就直接去做
+379.1woman,spoiled,impulsive,diningroom,realistic,
+380.她低声说  我……我知道错了 以后再也不敢了   你还想有以后
+380.1woman,apologetic,trembling,diningroom,realistic,
+381.俞飞飞冷冷一笑 目光如冰 逼得俞金莎一阵心悸  你没有以后了
+381.1woman,icy,mocking,diningroom,realistic,
+382.你想跟他在一起
+382.1woman,serious,warning,diningroom,realistic,
+383.俞飞飞的声音低沉 语气里带着警告  他指的自然是赵华俊
+383.1woman,stern,mentioningname,diningroom,realistic,
+384.是 妈 我爱他 我无法想象以后不能跟他结婚的日子 我想嫁给他
+384.1woman,determined,declaringlove,diningroom,realistic,
+385.俞金莎忽然抬起头 眼里满是坚定与真情
+385.1woman,resolute,lookingup,diningroom,realistic,
+386.赵华俊也赶紧开口 语气中带着几分羞涩与恳切  俞阿姨 我和金莎是真心相爱的 我真的很爱她
+386.1man,shy,confessing,diningroom,realistic,
+387.他一边说着 一边用眼神温柔地望着俞飞飞 那眼神里藏着讨好与示好
+387.1man,pleading,eyecontact,diningroom,realistic,
+388.我冷笑一声 心中不屑 这赵华俊不过是个花心小人 一看就是个不靠谱的角色
+388.1man,critical,thinking,diningroom,realistic,
+389.不过现在不是我出手的时候 我也没有插嘴  可以
+389.1man,smirking,withholding,diningroom,realistic,
+390.俞飞飞淡淡开口 语气平静得让人不寒而栗  但你若真想跟他在一起
+390.1woman,cold,stating,diningroom,realistic,
+391.就必须放弃你俞家继承人的身份 同时 我赋予你的一切都将被收回
+391.1woman,firm,declaring,diningroom,realistic,
+392.我不会养着一个无用的人
+392.1woman,ruthless,dismissing,diningroom,realistic,
+393.她目光如炬 语气不容反驳
+393.1woman,authoritative,commanding,diningroom,realistic,
+394.无论赵华俊是什么样的人 俞家的继承人绝不可能嫁给一个普通的男人
+394.1woman,stern,refusing,diningroom,realistic,
+395.除非俞金莎拥有和俞飞飞一样的能力
+395.1woman,calculating,analyzing,diningroom,realistic,
+396.可现实是 俞金莎不过是个二十出头的姑娘 心智还像个小女孩一样单纯
+396.1woman,young,innocent,diningroom,realistic,
+397.她所拥有的一切 都是俞飞飞给予的 是俞家的恩赐  妈
+397.1woman,grateful,helpless,diningroom,realistic,
+398.俞金莎不可置信地看着她 眼中满是震惊与不甘  我只是想嫁给我爱的人
+398.1woman,shocked,pleading,diningroom,realistic,
+399.就为了这个 我就要付出这么大的代价吗   金莎
+399.1woman,desperate,questioning,diningroom,realistic,
+400.我听到俞飞飞那冷冰冰的话语 赵华俊也是一脸惊愕  这……这怎么行
+400.1man,surprised,shocked,diningroom,realistic,
+401.他心中自然不愿 他当初接近俞金莎 不过是为了能借她的身份 混入俞家 过上锦衣玉食的生活
+401.1man,regretful,calculating,luxuriousroom,dramatic,cinematic,
+402.如果俞金莎真的放弃了一切 他还能得到什么呢
+402.1man,despondent,contemplating,emptyroom,cold,desaturated,
+403.房子 车子 钱 统统都化为泡影 那还跟她在一起有什么意义
+403.1man,frustrated,thinking,emptyroom,dark,gloomy,
+404.他心中暗自懊悔 却还没等他开口劝阻 俞金莎已经深情地握住了他的手
+404.1man,regretful,holdinghand,grandhall,tense,emotional,
+405.语气坚定地说  你放心 我绝不会辜负你的
+405.1woman,determined,speaking,grandhall,confident,dramatic,
+406.可下一秒 她又转头看向俞飞飞 语气决然  好 我答应你 从今以后
+406.1woman,resolute,turninghead,grandhall,emotional,tense,
+407.我不再是您的女儿 不再是俞家的继承人
+407.1woman,solemn,speaking,grandhall,serious,dramatic,
+408.她的眼中有泪光闪动 却仍是一脸坚定  这样 我就可以嫁给赵华俊了吧   不
+408.1woman,teary,determined,grandhall,emotional,cinematic,
+409.赵华俊心中仿佛被刀割一般 痛得几乎窒息 脸上却只能强装出一副感动和心疼的模样
+409.1man,pained,fakesmile,grandhall,heartbroken,dramatic,
+410.金莎 你不用为我做到这个地步的
+410.1man,caring,speaking,grandhall,sincere,emotional,
+411.你本来就是俞家的千金 前途无量 你不用再劝我了
+411.1man,regretful,speaking,grandhall,heartbroken,cinematic,
+412.他声音颤抖 眼中满是不舍  我知道你做的这个决定代表着什么 我会等你 你一定会嫁给我
+412.1man,tearful,speaking,grandhall,desperate,emotional,
+413.你放心 以后我们一起打拼 一定能过上好日子
+413.1man,hopeful,speaking,grandhall,optimistic,cinematic,
+414.俞金莎一脸深情地看着赵华俊 语气里带着几分憧憬
+414.1woman,loving,gazing,grandhall,hopeful,softlighting,
+415.我坐在沙发上 冷眼看着她俩说话驴唇不对马嘴 心里那叫一个乐 脸上却还是笑容满面
+415.1man,smirking,watching,livingroom,amused,sarcastic,
+416.跟这么一个蠢货讲话 赵华俊估计都快气疯了 正好让他也尝尝刚才那种被敷衍的滋味
+416.1man,frustrated,speaking,livingroom,annoyed,dramatic,
+417.那就不留你们了 走吧
+417.1woman,commanding,speaking,livingroom,firm,intense,
+418.俞飞飞干脆利落地下逐客令 不等赵华俊劝下俞金莎 直接把人赶了出去
+418.1woman,firm,dismissing,grandhall,decisive,cold,
+419.走就走  俞金莎一向大小姐脾气 一气之下拽着赵华俊就走 连头都没回
+419.1woman,angry,dragging,grandhall,furious,dramatic,
+420.等两人走远 大门 砰 地关上 我才忍不住笑得直不起腰来 笑得肚子疼
+420.1man,laughing,shouting,grandhall,joyful,cinematic,
+421.一边笑一边叫  哎哟 哎哟 哈哈哈……这么开心啊
+421.1man,laughing,shouting,grandhall,amused,loud,
+422.俞飞飞无奈地走过来 轻轻揉着我的肚子 我抬起头 一脸骄傲地看着她
+422.1woman,comforting,speaking,livingroom,soft,caring,
+423.雄赳赳气昂昂的  当然开心 你看刚才俞金莎那脸色黑得跟乌云似的
+423.1man,smug,speaking,livingroom,proud,animated,
+424.我一把抓住她的手 眼睛亮晶晶地盯着她  你真的要把俞金莎赶出去
+424.1man,eager,grabbinghand,livingroom,excited,expressive,
+425.她好歹叫了你妈这么多年 你舍得吗
+425.1man,curious,speaking,livingroom,playful,animated,
+426.想喊我妈的不只她一个
+426.1woman,dismissive,speaking,livingroom,confident,soft,
+427.俞飞飞抬手揉了揉我的头 语气坚定  而且她太拎不清了 没有担当 又怎么配得上俞氏
+427.1woman,firm,speaking,livingroom,resolute,serious,
+428.就是 就该让她吃吃苦
+428.1man,agreeing,nodding,livingroom,enthusiastic,animated,
+429.我连连点头 一脸赞同  大小姐平时舒坦惯了 一点反对意见都听不进去
+429.1man,smug,speaking,livingroom,confident,expressive,
+430.又怎么可能担当得起俞氏集团
+430.1man,smug,speaking,livingroom,arrogant,dramatic,
+431.俞飞飞雷厉风行 话音刚落 她就立刻拿起电话 给俞家人下了死命令——任何人不准再帮助俞金莎 违者后果自负
+431.1woman,authoritative,speaking,office,commanding,intense,
+432.俞金莎的亲生父母对这个女儿也是失望透顶
+432.1woman,disappointed,thinking,house,sad,cold,
+433.当初拼尽全力把她送给俞飞飞认作干女儿 图的就是什么
+433.1woman,confused,thinking,house,regretful,emotional,
+434.结果她居然因为一个男人 连立场都变得模糊不清
+434.1woman,confused,speaking,house,conflicted,emotional,
+435.当她打电话向父母借钱时 两人毫不犹豫地挂了电话 一句解释都没有
+435.1woman,shocked,hangingup,house,disheartened,dark,
+436.要让这臭丫头吃吃苦头
+436.1pair,cold,thinking,house,angry,tense,
+437.他们心里想的就是这句话
+437.1pair,cold,thinking,house,angry,silent,
+438.而俞金莎这边 一脸懵地被挂断电话 赵华俊在一旁焦急地问  金莎 怎么样了
+438.1woman,confused,receivingcall,street,shocked,cinematic,
+439.爸妈答应了吗 没事 我还有朋友   谁要你帮忙
+439.1man,anxious,speaking,street,worried,emotional,
+440.俞金莎倔脾气一上来 立刻挨个给手机里的朋友打电话 结果借来的钱加起来也只凑了十几万
+440.1woman,stubborn,calling,street,angry,dramatic,
+441.听上去不少 但对她来说 不过是随手一挥的零头
+441.1woman,frustrated,thinking,street,disappointed,cinematic,
+442.她气得把手机狠狠往地上一摔 手机立刻碎成了渣
+442.1woman,angry,throwingphone,street,dramatic,cinematic,
+443.你放心 我不会让你再过以前的苦日子
+443.1woman,fakesmile,speaking,street,determined,soft,
+444.她强作镇定地对赵华俊安慰道  明天我就去找工作 我自己也能让你过上吃穿不愁的日子
+444.1woman,determined,speaking,street,hopeful,cinematic,
+445.赵华俊沉默地低着头 眼神中闪过一丝复杂的情绪——他想要的 可不只是吃穿不愁
+445.1man,contemplative,lookingdown,street,conflicted,cinematic,
+446.而不管俞金莎四处碰壁 一败涂地 我此时正和俞飞飞在三亚的度假屋里度蜜月
+446.1pair,happy,vacationing,beach,sunny,romantic,
+447.阳光洒在海面上 沙滩金黄柔软 我穿着泳装刚从屋里出来 不出所料
+447.1pair,smiling,beach,sunny,tropical,cinematic,
+448.俞飞飞惊艳得我目光无法移开 连眨都不敢眨
+448.1man,admiring,beach,sunny,tropical,cinematic,
+449.怎么样 好不好看
+449.1woman,smiling,rotating,beach,confident,bright,
+450.她得意地在我面前转了个圈 笑容明媚  走 出去玩
+450.1pair,joyful,walking,beach,happy,vibrant,
+451.她蹦蹦跳跳地朝门口走 我一把抓住她的胳膊  别急
+451.1woman,cheerful,runningtowarddoor,livingroom,dynamicmotion,
+452.我用力一拽 她整个人都被我拽入怀中
+452.1man,1woman,pulling,closeembrace,bedroomsetting,intenseemotion,
+453.你干什么  她愣住 睁大了眼睛
+453.1woman,surprised,wide-eyed,bedroom,confusedexpression,
+454.我看着夫人那副慵懒而迷人的模样 心中一阵悸动 便低声说道  夫人这般模样
+454.1man,1woman,admiring,seductivelook,bedroom,romanticlighting,
+455.真是美得让人移不开眼 今天就别出门了吧 我不想让别人看到你这么诱人
+455.1man,1woman,flirtatious,holdingeachother,bedroom,passionate,
+456.明奇 你真是个坏男人
+456.1woman,shy,lookinginmirror,bedroom,emotional,
+457.她低声嗔怪着 嘴角却带着笑意
+457.1woman,pouting,smiling,bedroom,playful,
+458.嘿嘿 男人不坏 女人不爱嘛
+458.1man,teasing,whispering,bedroom,seductive,
+459.我凑近她耳边 轻声说道 语气中带着几分暧昧
+459.1man,1woman,closeproximity,bedroom,intimate,
+460.第二天醒来 她站在镜子前 凝视着自己身上那些痕迹 脸上写满了羞涩与怀念
+460.1woman,shy,recallingmemories,bedroom,morninglight,
+461.三亚的海滩 那无边无际的海与天融为一体 美得令人窒息
+461.beach,sunset,sea,tropicalsky,serene,
+462.俞飞飞静静地坐在躺椅上 目光温柔地看着我 时不时提醒我时间到了
+462.1woman,watching,relaxed,beach,peaceful,
+463.要我去给她涂防晒霜 喂水果 递果汁
+463.1woman,beingpampered,receivingcare,beach,happy,
+464.那一刻 我觉得自己拥有了世间最美好的幸福
+464.1man,1woman,smiling,beach,romantic,
+465.而另一边的俞金莎却过得并不轻松
+465.1woman,stressed,alone,city,realistic,
+466.她习惯了挥霍无度的生活 即便从朋友那里借到了十几万 再加上自己的积蓄
+466.1woman,spending,financialissues,apartment,chaotic,
+467.勉强凑了二十多万 但在她不加节制的消费下 不到一个月便所剩无几
+467.1woman,broke,apartment,anxious,
+468.更糟糕的是 她一直没能找到合适的工作 反倒是赵华俊找到了一份服务员的工作 承担起了养家的重任
+468.1man,1woman,working,poorliving,realistic,
+469.赵华俊始终怀揣着一丝希望 认为俞家只是在做样子逼他离开 所以一直坚持在俞金莎面前扮演着好男友的角色
+469.1man,hopeful,comforting,apartment,emotional,
+470.而俞金莎也被他的坚持与温柔感动得心甘情愿地依赖着他 甚至把自己口袋里仅剩的几万块钱都交给了他保管
+470.1woman,trusting,leaning,apartment,emotionalbond,
+471.还听从他的建议 去了一家企业应聘
+471.1woman,listening,jobinterview,office,nervous,
+472.虽然俞金莎是名牌大学毕业的 但进了小公司后 她不过是个普通职员
+472.1woman,inoffice,ordinaryemployee,officebuilding,realistic,
+473.公司里的谁都能踩她一脚 她哪里忍得住
+473.1woman,angry,arguing,office,tense,
+474.短短三天 她就和上司打了一架 赔了数万元 最终被辞退
+474.1woman,fired,office,defeated,
+475.金莎 你真的要收敛一下你的性子了
+475.1man,worried,advising,apartment,emotional,
+476.赵华俊语气中带着焦急  再这么下去 我们以后可怎么办
+476.1man,anxious,pleading,apartment,emotional,
+477.我 我也不想的
+477.1woman,guilty,childlike,apartment,defensive,
+478.俞金莎低头嘟囔着 像是个做错事的孩子  谁让他一直使唤我干这干那的
+478.1woman,pouting,angry,apartment,emotional,
+479.经历了这些事 她也逐渐意识到 自己不再是那个可以随意挥霍的大小姐
+479.1woman,self-aware,determined,apartment,realistic,
+480.只有赵华俊依旧如初地对她好 她不能失去他
+480.1man,1woman,caring,apartment,emotional,
+481.金莎 我知道不是你的错 但我们没有钱 没有势 只有慢慢熬
+481.1man,1woman,sad,apartment,emotional,
+482.赵华俊低着头 语气哽咽  不如……不如你去求求俞阿姨吧 还有爸妈
+482.1man,emotional,begging,apartment,desperate,
+483.他们一软心 肯定会让你回去的
+483.1man,hopeful,pleading,apartment,emotional,
+484.你放心 我一定会尽我最大的努力
+484.1man,determined,apartment,realistic,
+485.俞金莎目光坚定 却没有答应赵华俊去俞家求助的请求
+485.1woman,resolute,apartment,proud,
+486.她有她的骄傲 答应了俞飞飞的事情 就一定要做到
+486.1woman,proud,apartment,realistic,
+487.她要靠自己过上好日子 而不是依附于别人
+487.1woman,independent,apartment,realistic,
+488.一个月后 我与俞飞飞度完蜜月归来 再次见到俞金莎时 我几乎不敢相信自己的眼睛——那还是之前那个桀骜不驯的大小姐吗
+488.1woman,1man,surprised,mansion,dramatic,
+489.头发凌乱蓬松 布满灰尘 身上的衣服皱巴巴的 沾着油污和泥点 远远看去
+489.1woman,messy,tired,citystreet,realistic,
+490.还真像是刚从工地搬完砖回来的工人
+490.1woman,disheveled,holdinggroceries,mansion,awkward,
+491.她手里拎着一箱牛奶和一盒糕点 站在那栋豪华气派的豪宅前 显得格外突兀
+491.1woman,nervous,holdinggifts,mansion,contrasting,
+492.我愣了一下 忍不住开口  你这是……
+492.1man,confused,mansion,questioning,
+493.俞金莎显然也意识到自己现在的模样和眼前的环境格格不入 脸颊微微泛红
+493.1woman,embarrassed,scratchinghead,mansion,shy,
+494.有些不好意思地挠了挠头 语气却依旧坚定  你放心 我不是来要钱的
+494.1woman,determined,mansion,realistic,
+495.我皱起眉头 一时没反应过来 只觉得她今天的举动很奇怪  什么意思
+495.1man,confused,mansion,questioning,
+496.我只是想过来谢谢你
+496.1woman,grateful,mansion,realistic,
+497.她把牛奶和糕点轻轻放在地上 小心翼翼 生怕身上的泥土会沾到我身上
+497.1woman,careful,placinggifts,mansion,respectful,
+498.然后 她站在几步之外 朝我深深地鞠了一躬
+498.1woman,bowing,mansion,respectful,
+499.我被这突如其来的动作吓了一跳 下意识地往后退了一步 连东西都不敢接  谢我
+499.1man,shocked,mansion,surprised,
+500.谢什么   谢谢你和俞飞飞一唱一和 把他赶出去 让我有机会重新开始
+500.1woman,1man,thanking,mansion,emotional,
+501.她语气平静 眼神却坚定  谢谢你跟我说的那些话
+501.1woman,determined,standing,modernlivingroom,softlighting,
+502.如果不是你 我可能一辈子都感受不到现在的快乐
+502.1woman,grateful,talking,modernlivingroom,softlighting,
+503.我看着她 心中有些复杂
+503.1man,contemplative,looking,modernlivingroom,neutraltone,
+504.她现在的样子 和曾经那个趾高气昂的千金大小姐判若两人 可她脸上的笑容却是实实在在的幸福
+504.1woman,happy,smiling,modernlivingroom,dramaticchange,
+505.我不由得想起这一个月以来 她经历了多少风风雨雨
+505.1man,thoughtful,recalling,modernlivingroom,introspective,
+506.曾经的她 万人追捧 生活奢华 如今却是颠沛流离 连饭都得靠自己挣
+506.1woman,luxurious,walking,mansionhallway,luxurioussetting,
+507.她怀孕了 赵华俊舍不得让她再出去工作 但她却坚持要出去赚钱
+507.1woman,pregnant,determined,walking,citystreet,realistic,
+508.眼看着银行卡里的钱越来越少 她咬了咬牙 硬是又去一家私企找了份工作
+508.1woman,worried,lookingatbankstatement,officeinterior,dimlighting,
+509.可那里的管理人员趾高气扬 让她难以忍受 去做服务生 刷盘子 工资又太少 根本不够养活两个人
+509.1woman,frustrated,working,privatecompanyoffice,stressful,
+510.于是 她最终决定去饭店洗盘子——是真的去洗盘子了
+510.1woman,exhausted,washingdishes,restaurantkitchen,realistic,
+511.每天一百块的工资 以前她喝一杯酒的价格都比这高十倍
+511.1woman,focused,working,restaurantkitchen,highcontrast,
+512.可如今 她为了这点钱 拼了命地干
+512.1woman,exhausted,working,restaurantkitchen,dramaticlighting,
+513.虽然累 虽然苦 但她却觉得前所未有的充实
+513.1woman,content,walking,citystreet,realistic,
+514.每天回家 看到热腾腾的饭菜和赵华俊温暖的笑容 她的心里暖暖的 仿佛终于找到了家的感觉
+514.1woman,happy,sittingattable,cozykitchen,warmlighting,
+515.我看着她脸上洋溢的笑容 心中也生出一丝感慨
+515.1man,contemplative,looking,cozykitchen,neutraltone,
+516.没想到赵华俊居然能坚持这么久 还能让她过得如此踏实
+516.1man,surprised,looking,citystreet,realistic,
+517.然而 接下来她的一句话 却让我再次震惊
+517.1woman,shocked,speaking,modernlivingroom,dramaticlighting,
+518.我这次来 也是想跟你们说一声……我怀孕了
+518.1woman,joyful,speaking,modernlivingroom,realistic,
+519.我们有孩子了 以后我会靠自己的努力 把他们养得很好
+519.1woman,determined,speaking,modernlivingroom,emotional,
+520.我心中一震 面上却不动声色地点头  你过得开心就好
+520.1man,calm,nodding,modernlivingroom,neutraltone,
+521.我和俞飞飞祝你们幸福
+521.1man,1woman,happy,standing,modernlivingroom,realistic,
+522.她等的就是这句话 脸上再次绽放出灿烂的笑容 然后快步离开了
+522.1woman,joyful,walkingaway,modernlivingroom,dynamiclighting,
+523.我望着她的背影 心中有些复杂 仿佛她真的像变了一个人 甚至像傻子一样 傻得让人心疼
+523.1man,contemplative,watching,modernlivingroom,emotional,
+524.回到别墅 我把俞金莎怀孕的事情告诉了俞飞飞 还提到她送来的牛奶和糕点 问他要不要尝尝
+524.1man,talking,modernvilla,realistic,
+525.俞飞飞听了也有些诧异 起身打了个电话
+525.1man,surprised,calling,modernvilla,realistic,
+526.两个小时后 一份新出炉的情报被送了过来
+526.1man,receivingfile,modernvilla,realistic,
+527.俞飞飞先扫了几眼 我忍不住凑过去问  怎么样 怎么样 你看看
+527.1man,1man,curious,looking,modernvilla,realistic,
+528.他没有立刻回答 只是把文件递给我
+528.1man,handingoverfile,modernvilla,realistic,
+529.我更好奇了 接过那叠文件 从上到下迅速扫了一眼 又绕着桌角走了一圈
+529.1man,readingfile,modernvilla,realistic,
+530.仔细查看 这竟是俞金莎这两个月来所有的经历记录
+530.1man,reading,modernvilla,realistic,
+531.怪不得她刚刚在门口说得那些话 看似疯言疯语 如今看来 全是真实经历
+531.1woman,speaking,modernvilla,realistic,
+532.以前她是俞家大小姐 走到哪儿都被人捧着 如今却尝尽人情冷暖 这转变
+532.1woman,transformed,walking,modernvilla,realistic,
+533.还真不错 看来她确实成长了不少
+533.1man,impressed,looking,modernvilla,realistic,
+534.不过 当我看到下一页时 我不由得挑了挑眉——再想想她当时那副满脸幸福的模样
+534.1man,curious,looking,modernvilla,realistic,
+535.啧 看来她还得再经历一次狠狠的打击
+535.1man,contemplative,looking,modernvilla,realistic,
+536.再等等吧 应该不会太久
+536.1man,thoughtful,looking,modernvilla,realistic,
+537.俞飞飞伸手抽走我手中的文件 指尖轻柔地在我头上揉了揉 语气带着几分宠溺  看来你也没有表面上那么不在乎俞金莎
+537.1man,1woman,affectionate,touching,modernvilla,realistic,
+538.这么快就把文件送到你面前了
+538.1man,speaking,modernvilla,realistic,
+539.这说明 之前俞飞飞就一直派人盯着俞金莎的一举一动
+539.1man,thoughtful,looking,modernvilla,realistic,
+540.她摇了摇头 语气简短  你想看戏 我就配合你
+540.1woman,calm,speaking,modernvilla,realistic,
+541.说罢 她笑嘻嘻地凑过来 在我脸上狠狠咬了一口 留下一圈清晰的牙印
+541.1woman,playful,biting,modernvilla,dramaticlighting,
+542.一定要用啃的吗 不行吗
+542.1man,annoyed,asking,modernvilla,realistic,
+543.我皱眉问  你整个人都是我的
+543.1man,frowning,speaking,modernvilla,realistic,
+544.她傲娇地回了一句  当然可以 这是我的荣幸
+544.1woman,proud,speaking,modernvilla,realistic,
+545.我顺势调侃道  不过 夫人 如果你不介意的话 也可以再啃几口
+545.1man,teasing,speaking,modernvilla,realistic,
+546.啊 不要  她立刻从我身上跳开 像只被惹恼的小猫 脸上却掩饰不住笑意
+546.1woman,playful,movingaway,modernvilla,dynamiclighting,
+547.事实正如俞飞飞所说 没过多久 一个月不到 赵华俊便卖了房子 带着全部积蓄不告而别
+547.1woman,shocked,speaking,modernvilla,realistic,
+548.俞金莎花钱一向大手大脚 赵华俊便提议 把所有的钱都交由她保管 她自然毫不犹豫地答应了
+548.1woman,trusting,handingmoney,modernvilla,realistic,
+549.而她打工赚来的钱 也全部交给了赵华俊 自己只留了几百块的零用
+549.1woman,givingmoney,modernvilla,realistic,
+550.赵华俊走得悄无声息 甚至连一点异常都没有留下
+550.1man,walkingaway,citystreet,realistic,
+551.俞金莎照常下班 回家时却发现家中已经换了人 新住户理所当然地住进了她的房子
+551.1woman,shocked,standingatdoorstep,newapartmentwithmovedfurniture,dramaticlighting,
+552.她焦急地追问 这才得知 原来的房主早已将房子卖了出去
+552.1woman,anxious,askingquestions,oldhousesold,suburbanhome,
+553.那一刻 她像被抽干了所有力气 失魂落魄地蜷缩在路口的长椅上 手里还紧紧攥着一条准备带给赵华俊的草莓
+553.1woman,defeated,sittingonparkbench,holdingstrawberry,rainyday,
+554.她喃喃自语 满眼疑惑与委屈  为什么啊
+554.1woman,confused,whispering,parkbench,coldwind,
+555.明明之前一切都好好的 赵华俊为什么要走
+555.1woman,questioning,thinking,citystreet,nighttime,
+556.是我做错了什么吗
+556.1woman,self-doubting,thinking,citystreet,
+557.她手里仅剩的几百块钱 在这座繁华大都市里 连一夜的住宿都负担不起
+557.1woman,desperate,holdingmoney,citystreet,
+558.没有被子 没有取暖的东西 她只能在公园的石椅上瑟瑟发抖 初冬的寒风刺骨入骨
+558.1woman,shivering,sittingonstonebench,parkinwinter,
+559.她整夜未眠 脑海中不断回放着这半年来发生的一切
+559.1woman,thinking,sittinginpark,stormyweather,
+560.终于 在那一刻 她彻底醒悟——她被骗了
+560.1woman,realization,sittingonparkbench,dramaticlighting,
+561.喉咙中传来一声像是笑又像是哭的呜咽 她低着头 咬着嘴唇 试图控制情绪
+561.1woman,crying,holdinglip,hospitalbed,
+562.终于熬到天亮 她迷迷糊糊地站起身 踉跄着朝公安局走去 她要找赵华俊讨个说法
+562.1woman,determined,walking,citystreettopolicestation,
+563.他骗她那么狠 她绝不会让他好过
+563.1woman,angry,walking,citystreet,
+564.然而 就在她离公安局只差一步之遥时 眼前一黑 整个人轰然倒地
+564.1woman,collapsing,citystreet,dramaticlighting,
+565.再醒来时 她发现自己躺在医院的病床上 她流产了
+565.1woman,lyingonhospitalbed,pale,sad,
+566.我坐在床边 刚起身给她倒了一杯温水 她虚弱地睁眼 看见我 惊讶得几乎说不出话来
+566.1man,1woman,sittingathospitalbed,concerned,
+567.喉咙沙哑地问道  你……你怎么在这里
+567.1woman,weak,asking,hospitalbed,
+568.你晕倒在公安局门口了 警察打电话通知我的
+568.1man,explaining,sittingbybed,calm,
+569.我轻声回应 语气平稳 却掩不住眼底的关切
+569.1man,speaking,hospitalroom,calmtone,
+570.我实话实说 俞飞飞她最近确实有些事情要忙 你也知道 公司这边的事情从来都不少
+570.1man,speaking,hospitalbed,calm,
+571.俞金莎喝了水之后 喉咙好了许多 她轻声道谢
+571.1woman,thanking,drinkingwater,hospitalbed,
+572.我摆摆手 语气随意  不用客气 举手之劳而已
+572.1man,wavinghand,hospitalbed,
+573.我顿了顿 又问道  接下来有什么打算
+573.1man,asking,hospitalbed,
+574.这句话一出 俞金莎沉默了 半晌都不曾开口
+574.1woman,silent,hospitalbed,
+575.我识趣地没有追问 只是淡淡地说了句  你也醒了 我任务就完成了 那我先走了
+575.1man,walkingaway,hospitalroom,
+576.我转身准备离开 可刚迈到门口 身后便传来一声迟疑的呼唤  等……等等
+576.1woman,calling,hospitalbed,
+577.我回头 只见她从床上跳下来 双膝一软 竟直接跪在了我面前
+577.1woman,kneeling,hospitalfloor,
+578.你这是要干吗  我挑眉 明知故问
+578.1man,raisingeyebrow,hospitalfloor,
+579.我……我想求您 之前是我不对 我眼瞎……请您大人有大量 帮帮我…
+579.1woman,pleading,hospitalfloor,
+580.… 她声音颤抖 眼中满是恳求
+580.1woman,tremblingvoice,hospitalfloor,
+581.能让这个一向骄傲的大小姐如此低声下气 确实难得
+581.,,,hospital,dramaticlighting,
+582.我心中畅快 爽快点头  好
+582.1man,smiling,hospitalfloor,
+583.真……真的  她似乎没料到我答应得如此干脆
+583.1woman,surprised,hospitalfloor,
+584.我不满地挑了挑眉  你那是什么眼神 我可是很心善的
+584.1man,frowning,hospitalfloor,
+585.说着 我从包里掏出一张纸 递给了她  喏 这就是你那小男友走的原因
+585.1man,handingpaper,hospitalbed,
+586.她迫不及待地接过 仔细翻看 连一个字都不愿放过
+586.1woman,reading,hospitalbed,
+587.纸上写着 赵华俊高中时便和一群小混混混在一起 心思全不在学习上 自然也未考上大学
+587.,,,paperwithtext,
+588.小小年纪就出来打工 却懒散惯了 哪里愿意老老实实干活
+588.,,,paperwithtext,
+589.每天就挣那几个辛苦钱
+589.,,,paperwithtext,
+590.他盯上了经常来酒店用餐的俞金莎 认为她自尊心强 养尊处优 正是最容易被忽悠的类型
+590.,,,paperwithtext,
+591.事实上 俞金莎确实被他忽悠了
+591.1woman,shocked,reading,hospitalbed,
+592.如果不是我这个不按常理出牌的人半路插了一脚 打乱了赵华俊的计划 他早就得手了
+592.1man,speaking,hospitalbed,smug,
+593.原来……原来是这样……哈哈哈……她真把我当小丑看啊…… 她声音哽咽 泪珠一颗颗滚落下来
+593.1woman,laughingandcrying,hospitalbed,
+594.她是真的喜欢赵华俊啊
+594.,,,hospitalbed,
+595.看着跪在地上的她哭得撕心裂肺 我叹了口气 摇头  唉 人绝对不能恋爱脑
+595.1man,sighing,hospitalbed,
+596.俞金莎哭得有多惨 振作得就有多快
+596.1woman,crying,hospitalbed,
+597.前一日还泪流满面 第二天便换上西装 直奔俞氏集团上班
+597.1woman,dressedinsuit,walking,citystreet,
+598.这自然是俞飞飞安排的
+598.,,,officebuilding,
+599.不过 这一次俞金莎再来公司 身份已不再是副总经理 而是一个普通的底层职员
+599.1woman,inoffice,determined,
+600.别想不劳而获 不做出点成绩 怎么证明你有这个能力
+600.,,,motivationalposter,corporateoffice,
+601.能爬多远 靠你自己  这是俞飞飞的话
+601.Yushifei,speaking,determined,officeorhomesetting,matureandserious,
+602.俞金莎毕竟也是名牌大学毕业的 虽然身份变低了 但在底层的位置上摸索得还算顺利
+602.Yujinsha,1woman,focused,workingatdesk,modernoffice,professional,
+603.在外磨炼了几个月后 她的性子明显稳重了许多 不管是大事小事 都能处理得井井有条
+603.Yujinsha,1woman,calm,organizingpapers,office,composed,
+604.俞飞飞一向挑剔 如今也难得露出满意神色
+604.Yushifei,1woman,satisfied,observing,office,approving,
+605.至于赵华俊 离开俞金莎后 日子也没想象中那么好过
+605.Zhaohuajun,1man,frustrated,walkingoutside,citystreet,sad,
+606.他找到了之前的情人 两人厮混在一起
+606.Zhaohuajun,1man,withwoman,intimate,hotelroom,messy,
+607.起初还有些积蓄可以挥霍 生活倒也还算和谐
+607.Zhaohuajun,1man,relaxed,lounging,hotelroom,careless,
+608.后来手里的钱挥霍光了 那个女人立刻卷走剩下的钱 头也不回地跑了
+608.Zhaohuajun,1man,shocked,watchingwomanleave,hotelcorridor,dramatic,
+609.我看着私家侦探发来的视频 嘴角不自觉地扬起一抹笑意 仿佛看一场荒诞的闹剧终于落幕
+609.1man,watchingvideo,amused,privatedetectiveoffice,darklighting,amusedexpression,
+610.我把赵华俊这几个月的行踪整理成资料 拿给俞金莎看时 她正埋头在一堆文件中
+610.1man,handingdocumentstoYujinsha,Yujinsha,1woman,working,office,exhausted,
+611.为一个大项目焦头烂额 已经连续两天两夜没合眼了
+611.Yujinsha,1woman,stressed,working,office,sleep-deprived,
+612.她曾经为了赵华俊 放弃俞家继承人的身份 如今就算重新回来 也不可能再回到那个位置了
+612.Yujinsha,1woman,pensive,lookingatdocuments,office,regretful,
+613.她要面对的是其他更优秀的少爷小姐们 谁有实力谁才能往上爬
+613.Yujinsha,1woman,determined,lookingatdocuments,office,focused,
+614.她从一堆文件中抬起头 看到纸上 赵华俊 三个字 眼神中闪过一丝恍惚
+614.Yujinsha,1woman,confused,readingname,office,thoughtful,
+615.仿佛回到过去某个遥远的时刻
+615.Yujinsha,1woman,nostalgic,remembering,flashbackscene,sentimental,
+616.当初刚发现被赵华俊欺骗时 那种想死的念头 现在回想起来 竟有些可笑
+616.Yujinsha,1woman,pained,thinking,flashback,emotional,
+617.那时的她太不成熟 太过天真
+617.Yujinsha,1woman,regretful,thinking,flashback,sad,
+618.但此刻看到赵华俊的下场 她心中却升起一抹幸灾乐祸——骗人感情的 倒霉八辈子
+618.Yujinsha,1woman,smirking,thinking,office,satisfied,
+619.不过她也得感谢赵华俊 如果不是这段经历 她这辈子都不会真正成长
+619.Yujinsha,1woman,grateful,thinking,office,mature,
+620.她轻轻一笑 释怀地说  谢谢爸 以后关于他的事 不用再拿给我看了
+620.Yujinsha,1woman,smiling,speaking,office,calm,
+621.我 已经不在乎了
+621.Yujinsha,1woman,indifferent,speaking,office,composed,
+622.我点头 笑着给她竖起一个大拇指 就冲她能叫我一声 爸  这大拇指 必须竖起来
+622.1man,smiling,givingthumbsup,office,cheerful,
+623.晚上洗漱完躺在床上 我忍不住把这件事当成笑话讲给俞飞飞听
+623.1man,lyinginbed,speaking,bedroom,relaxed,
+624.她听后不以为意 淡淡地说  能把俞金莎骗住 那是因为俞金莎更蠢  我连连点头
+624.Yushifei,1woman,indifferent,speaking,bedroom,cold,
+625.说起这个 俞金莎的反应倒是让我意外 她之前不是一直沉迷于那些情情爱爱的吗
+625.1man,speaking,bedroom,thoughtful,
+626.怎么转眼就放下了 我看她现在都快断情绝爱 要出家当尼姑了
+626.1man,speaking,bedroom,surprised,
+627.俞金莎能这么快抽身 确实出乎我的预料
+627.1man,speaking,bedroom,impressed,
+628.听着我喋喋不休地讲着这些事 俞飞飞终于忍无可忍 声音低哑地开口  既然老公这么闲
+628.Yushifei,1woman,annoyed,speaking,bedroom,lowvoice,
+629.不如我们做点更有趣的事吧
+629.Yushifei,1woman,suggesting,bedroom,seductive,
+630.我立刻闭嘴 笑嘻嘻地说  要不算了吧 我明天还要去公司呢
+630.1man,laughing,speaking,bedroom,playful,
+631.番外 总而言之 在这场未婚妻逃婚 她妈顶上的啼笑皆非事件中 我和俞飞飞意外地合拍 她也渐渐喜欢上了我
+631.1man,1woman,1girl,hugging,familyroom,happy,
+632.三年后 我们迎来了一个小宝贝 是个女儿
+632.1girl,baby,crying,crib,cute,
+633.女儿天生一副好皮相 继承了俞飞飞那张美得无可挑剔的脸蛋 这让本就爱美的俞飞飞在面对这张与自己相似的脸时
+633.1girl,baby,withYushifei'sface,cute,nursery,adorable,
+634.有些不知所措 却也无法否认她的可爱
+634.Yushifei,1woman,holdingbaby,overwhelmed,nursery,emotional,
+635.而我 倒是没有那么多顾虑 俞飞飞的脸长在女儿身上 怎么看怎么顺眼
+635.1man,holdingbaby,smiling,nursery,happy,
+636.俞飞飞平日里闷骚高冷 女儿却整天昂着小脑袋 萌萌哒地撒娇求抱抱
+636.Yushifei,1woman,holdingbaby,cold,nursery,sternyetaffectionate,
+637.啊啊啊 超可爱的 好吗
+637.1girl,baby,smiling,nursery,cute,
+638.等到女儿稍微大了一些 我给她买了一大堆小裙子 各式各样的公主裙
+638.1girl,baby,wearingdress,nursery,playful,
+639.卡哇伊的 帅气的 搞怪的 五花八门
+639.1girl,baby,wearingprincessdress,nursery,cute,
+640.只能说 时尚完成度靠脸 不管是什么样式的衣服穿在她身上 都恰到好处
+640.1girl,baby,wearingclothes,nursery,stylish,
+641.女儿也很喜欢这些漂亮衣服 每次我买新衣回来 她都会雀跃地凑过来 任我摆弄
+641.1girl,baby,happy,nursery,joyful,
+642.说真的 这感觉就像是在玩 奇迹棠棠
+642.1man,playingwithdoll,nursery,playful,
+643.俞飞飞对此只能无奈摇头 却也拦不住我的恶趣味
+643.Yushifei,1woman,watching,nursery,amused,
+644.我买了一整套亲子装 是那种可爱至极的恐龙图案睡衣 一家三口每人一件
+644.1man,1woman,1girl,wearingdinosaurpajamas,livingroom,funny,
+645.俞飞飞穿着那身滑稽的睡衣 动作变得笨手笨脚 连拿个杯子都要小心翼翼 生怕摔了
+645.Yushifei,1woman,clumsy,livingroom,awkward,
+646.我忍不住笑出声 笑得前仰后合 几乎喘不过气来
+646.1man,laughing,livingroom,amused,
+647.她无奈地瞪我一眼 说  别笑了
+647.Yushifei,1woman,annoyed,speaking,livingroom,angry,
+648.可回应她的 是我更加放肆的笑声 哈哈哈 哈哈哈 简直停不下来
+648.1man,laughing,livingroom,loud,
+649.明奇  她终于恼羞成怒 冲上前一把捂住我的嘴
+649.Yushifei,1woman,angry,approaching,livingroom,aggressive,
+650.我还在努力发出笑声 却被她死死封住嘴巴 只能在喉咙里发出呜呜的声音
+650.1man,muffled,beingheld,livingroom,laughing,
+651.我假装委屈地喊  你这是在耍赖
+651.1man,pouting,pretendingtobeupset,playfulroom,intimate,
+652.她嘴角一扬 眼神狡黠 却也不再松手
+652.1woman,smirking,notlettinggo,playfulroom,teasing,
+653.我们就这样你来我往地嬉闹着 气氛亲密又甜蜜 仿佛整个世界只剩下我们两个
+653.1man,1woman,laughing,playful,intimate,romantic,
+654.就在这时 一个奶声奶气的声音从旁边传来  我也要亲亲
+654.1child,cutevoice,askingforkiss,familyroom,childish,
+655.我俩同时低头 只见我们的小宝贝正站在地毯上 眼睛亮晶晶地望着我们
+655.1child,brighteyes,lookingup,familyroom,innocence,
+656.小手挥舞着 像是在示意我们抱她
+656.1child,wavingarms,wantingtobeheld,familyroom,playful,
+657.我跟俞飞飞的脸瞬间通红 羞得不知如何是好 而小家伙却一脸天真
+657.1man,1woman,blushing,awkward,childlookingatthem,
+658.完全不明白大人们为何会如此害羞
+658.,,,familyroom,confusedchild,
+659.她张开双臂 嘴里嘟囔着 抱抱
+659.1child,stretchingarms,askingforhug,familyroom,innocent,
+660.俞飞飞轻手轻脚地将她抱起 我与她对视一眼 心领神会
+660.1woman,gentlyholdingchild,lookingat1man,understanding,
+661.我们一左一右凑近女儿那张白嫩的小脸蛋 在她脸颊上轻轻亲了一下 留下两个温柔的吻 结婚当天 新娘逃婚了
+661.1man,1woman,kissingchild'scheek,familyroom,tender,
+662.我站在婚纱礼服的海洋中 听着宾客低声议论 目光扫过空荡荡的婚纱座椅 心中只余一片荒凉
+662.1man,inweddingsuit,standinginhall,weddingvenue,lonely,
+663.我转头 目光落在身旁那个女人的脸上——她是我今天真正的目标
+663.1man,lookingat1woman,determined,weddingvenue,emotional,
+664.我微微一笑 伸出手 握住了她冰凉的手指
+664.1man,1woman,holdinghands,weddingvenue,calm,
+665.做不了你的新郎 就做你的新爹
+665.1man,smiling,joking,weddingvenue,sarcastic,
+666.她回来时 见到我还在她的家里 以为我只是个死皮赖脸不愿走的纠缠者
+666.1man,sittingonsofa,holdingwine,homeinterior,calm,
+667.我坐在沙发上 神情自若 手中端着一杯红酒 嘴角挂着若有若无的笑意
+667.1man,sippingwine,smirking,homeinterior,confident,
+668.她从身后牵出一个清纯的小白脸 眼神中带着轻蔑和自信 直言那是她的真爱 让我不要痴心妄想
+668.1woman,withotherman,confident,homeinterior,dismissive,
+669.我微微一笑 没有争辩
+669.1man,smiling,notarguing,homeinterior,composed,
+670.我轻轻握住身旁女人的手 低声说  女儿 女婿 先叫声爸听听
+670.1man,1woman,holdinghand,homeinterior,affectionate,
+671.我是明氏集团的太子 今天的婚礼本该是明家与俞家的荣耀时刻
+671.1man,insuit,standinginhall,weddingvenue,formal,
+672.可谁也没想到 原本应该出现在婚礼上的新娘——俞金莎 竟然缺席了
+672.1man,inweddingsuit,lookingatemptyseat,weddingvenue,shocked,
+673.我站在礼堂中央 听着女仆颤抖的声音说  据说……她是逃婚了
+673.1man,inweddingsuit,listeningtoservant,weddingvenue,cold,
+674.我的声音冰冷 像是从地狱深处传来  你是说俞金莎逃婚了
+674.1man,coldexpression,holdingmicrophone,weddingvenue,angry,
+675.女仆点头 手抖得几乎握不住话筒
+675.1woman,shakinghands,holdingmicrophone,weddingvenue,nervous,
+676.我的父母也气愤不已 他们为了这场婚礼 早几个月就开始筹备
+676.1man,parents,upset,weddingvenue,familytension,
+677.京都的各大豪门都被邀请 媒体争相报道 整个明家的荣耀仿佛都寄托在这场婚礼上
+677.,,,weddingvenue,grand,withmedia,
+678.如果俞金莎有什么不满 她大可以提前说清楚 可偏偏在婚礼当天玩失踪
+678.1man,insuit,standinginhall,weddingvenue,furious,
+679.这简直是在当众打明家的脸
+679.1man,insuit,standinginhall,weddingvenue,humiliated,
+680.父母安抚了我几句 便匆匆离开 商量接下来的对策
+680.1man,insuit,cornered,weddingvenue,lonely,
+681.我一个人缩在角落里 看着满堂宾客 心中却空荡荡的
+681.1man,insuit,watchingcrowd,weddingvenue,dejected,
+682.就在这时 门口传来一阵骚动 人群纷纷回头
+682.,,crowdmovement,weddingvenue,commotion,
+683.我下意识抬头望去 只见一个身穿黑色西装的女人缓步走来
+683.1man,lookingatwoman,weddingvenue,curious,
+684.她的容貌惊艳 宛如从画中走出的女子 气质冷艳 却又带着一种不容忽视的威压
+684.1woman,inblacksuit,walkingin,weddingvenue,elegant,
+685.她就是俞家现任掌权人——俞飞飞 也是俞金莎名义上的母亲
+685.1woman,inblacksuit,walkingin,weddingvenue,powerful,
+686.三十五岁的她 看起来却像是二十出头的少女 容颜不老 气质如霜
+686.1woman,inblacksuit,youngappearance,weddingvenue,timeless,
+687.俞飞飞极少出现在大型场合 就连我 见过她的次数也屈指可数
+687.1woman,inblacksuit,enteringvenue,weddingvenue,rare,
+688.此刻 她缓缓走进礼堂 所有家族的人都争先恐后地围了上去 仿佛她的出现便是某种救赎
+688.1woman,inblacksuit,surroundedbypeople,weddingvenue,commanding,
+689.我望着她 脑海中突然浮现一个疯狂的念头
+689.1man,insuit,watchingher,weddingvenue,thinking,
+690.她礼貌地回绝着每一个靠近的人 步伐稳健地朝我走来
+690.1woman,politelyrejecting,walkingto1man,weddingvenue,composed,
+691.我露出礼貌的微笑 声音中却藏着一丝委屈
+691.1man,smilingpolitely,hintingsadness,weddingvenue,strained,
+692.她停下脚步 目光落在我身上 声音低沉如大提琴般悦耳  明公子 让您受委屈了
+692.1woman,lookingat1man,speaking,weddingvenue,calm,
+693.我已经派人去找她 抓到后任您处置
+693.1woman,speaking,weddingvenue,authoritative,
+694.我会向大家说明情况 婚礼延迟 所有损失由我俞氏承担
+694.1woman,speaking,weddingvenue,responsible,
+695.她的话确实是个完美的解决方案 但我已经有了更好的选择
+695.1woman,speaking,weddingvenue,calm,
+696.我微微一笑 语气轻缓却坚定  俞阿姨 我与俞家的婚约 原本是从小定下的
+696.1man,speaking,weddingvenue,calm,
+697.但结婚的对象 不一定非要选俞金莎吧
+697.1man,speaking,weddingvenue,determined,
+698.她微微一怔 显然没想到我会如此直白
+698.1woman,surprised,weddingvenue,thoughtful,
+699.她的眼神陡然变得幽深  你想选谁
+699.1woman,lookingat1man,weddingvenue,intense,
+700.我抬起头 露出甜甜的笑容 毫不犹豫地伸出手  你愿意成为我的新娘吗
+700.1man,smiling,holdingouthand,weddingvenue,sincere,
+701.俞飞飞虽是俞金莎名义上的母亲 却并非她的亲生母亲
+701.1woman,stern,standing,luxurioushome,mysteriousbackground,
+702.事实上 她至今未婚
+702.,,,elegantapartment,minimaliststyle,
+703.传言中 二十五岁那年 她从旁系过继了一个孩子 那便是俞金莎
+703.1girl,young,sitting,familyroom,traditionalstyle,
+704.她挑了挑眉 嘴角勾起一抹意味深长的笑容  你确定
+704.1woman,amused,raisingeyebrow,sitting,sophisticatedsetting,
+705.我毫不犹豫地点头  当然
+705.1man,confident,nodding,livingroom,calmexpression,
+706.比起俞金莎 俞飞飞这个 妈  可比她好看了不止一两倍
+706.1man,smug,comparingfaces,banquethall,dramaticlighting,
+707.每天看着她这张绝世容颜 心里也舒坦
+707.1man,admiring,gazing,mirror,romanticmood,
+708.总比被俞金莎这个丑八怪在背后戴绿帽子强
+708.1man,resentful,lookingaway,darkalley,dramaticshadows,
+709.俞飞飞定定地看着我 眼神清澈 带着一丝坚定
+709.1woman,serious,looking,elegantroom,calmexpression,
+710.她微凉 白嫩的手紧紧牵住我 我心中一震 仿佛被一股莫名的力量牵引着
+710.1woman,1man,holdinghands,weddingvenue,emotionalmoment,
+711.这场婚礼的主角 就这样在眨眼间换了人 甚至连婚纱都不用换
+711.1woman,1man,weddingceremony,grandhall,lastminutechange,
+712.那件雪白典雅的婚纱穿在俞飞飞身上 宛如量身定做 衬得她气质脱俗 宛如仙子
+712.1woman,elegant,wearingweddingdress,grandhall,angelicappearance,
+713.两人站在一起 登对得仿佛本就该是新郎新娘
+713.1woman,1man,standingtogether,weddingstage,perfectcouple,
+714.婚宴上的嘉宾皆是精明之人 俞金莎突然逃婚 没有刻意隐瞒 婚礼上的各位几乎都知道了内情
+714.1crowd,curious,seated,banquethall,gossiping,
+715.记者们更是嗅到八卦的味道 迫不及待地举起摄像机 对着台上 等着看京都两家权贵的闹剧
+715.1journalist,eager,holdingcamera,stagearea,dramaticatmosphere,
+716.看到我牵着俞飞飞走上红毯 多少人惊掉了大牙 目瞪口呆
+716.1crowd,shocked,watching,weddingaisle,dramaticmoment,
+717.对于这场临时换新娘的操作 他们虽震惊 却也表示很服气
+717.1crowd,impressed,clapping,banquethall,acceptingchange,
+718.司仪拿着新出炉的名单 十分敬业地介绍新郎新娘  请新郎新娘交换戒指
+718.1emcee,formal,readingscript,weddingstage,professional,
+719.俞飞飞拿出戒指给我戴上 我也拿出戒指给她戴上
+719.1woman,1man,exchangingrings,weddingstage,emotionalmoment,
+720.可当我将戒指给她戴上时 却发现尺寸不对 眼中不禁露出歉意
+720.1man,apologetic,placingring,weddingstage,nervousexpression,
+721.那枚戒指是俞金莎的尺寸 时间紧迫 根本来不及重新定制 只能勉强用着
+721.1ring,mismatchedsize,onfinger,weddingstage,lastminute,
+722.交换戒指之后 便是新郎亲吻新娘 我有些紧张
+722.1man,nervous,preparing,weddingstage,emotionaltension,
+723.俞飞飞在外的形象是洁身自好 连出席活动都极少带男伴 她会愿意吗
+723.1man,regretful,thinking,weddingstage,innerconflict,
+724.我有些后悔 因一时冲动将她卷入这场风波
+724.1man,guilty,lookingdown,weddingvenue,emotionalturmoil,
+725.就在我胡思乱想之际 忽然感觉嘴上传来一阵柔软的触感
+725.1man,shocked,feelingkiss,weddingstage,unexpectedmoment,
+726.我不可置信地睁开眼睛 映入眼帘的是俞飞飞那张找不到一丝瑕疵的容颜
+726.1man,surprised,openingeyes,weddingstage,emotionalshock,
+727.似乎察觉到我的震惊 她微微一笑 伸手托住我的后脑 加深了这个吻
+727.1woman,gentle,kissing,weddingstage,confident,
+728.我也缓缓闭上眼睛 耳边传来宾客们热烈的掌声
+728.1man,1woman,kissing,weddingstage,romantic,
+729.对于我突如其来的选择 爸妈事先并不知情
+729.1man,1parents,shocked,livingroom,suddenchange,
+730.面对众人的恭贺 他们也只能勉强应付 毕竟 总不能当众打自己儿子的脸吧
+730.1parents,forcedsmile,greeting,banquethall,awkward,
+731.敬酒过程中 妈妈拉着我的手进了屋 爸爸也在里面
+731.1woman,1man,1father,insidehouse,tensemoment,
+732.锁上门后 妈妈语气严厉  儿子 这怎么回事
+732.1woman,angry,lockingdoor,livingroom,questioning,
+733.你怎么突然就跟俞飞飞在一起了
+733.1woman,1man,1father,livingroom,confused,
+734.我一时语塞 不知如何解释
+734.1man,speechless,avoidingeyecontact,livingroom,nervous,
+735.因为 她长得好看
+735.1man,simple,answering,livingroom,confident,
+736.可我妈想想俞飞飞那张脸 似乎也确实挺好看
+736.1woman,thoughtful,nodding,livingroom,reconsidering,
+737.但她比你大了十几岁啊
+737.1woman,disapproving,frowning,livingroom,worried,
+738.她小学都快毕业了 你才刚出生   这有什么
+738.1man,smug,arguing,livingroom,confident,
+739.我厚着脸皮说道  都说成熟女人会疼人
+739.1man,cheeky,smiling,livingroom,persuasive,
+740.可我妈依旧眉头紧锁 满脸不悦
+740.1woman,angry,frowning,livingroom,disapproving,
+741.我正绞尽脑汁想办法糊弄过去 门外忽然传来敲门声——咚咚咚
+741.1man,nervous,hearingknock,livingroom,tense,
+742.我妈打开门 门口站着的是俞飞飞 不知道是刚来 还是站了一会儿
+742.1woman,calm,atdoor,livingroom,polite,
+743.我爸妈脸上迅速恢复了大方得体的笑容 仿佛刚才质疑人家的不是他们一样
+743.1parents,smiling,greeting,livingroom,polite,
+744.俞总 有什么事吗
+744.1woman,polite,entering,livingroom,confident,
+745.俞飞飞微微一笑 走进屋里 与爸妈不知道谈了些什么
+745.1woman,1parents,talking,livingroom,serious,
+746.短短一会儿 他们便不再反对这门亲事 反而十分看好俞飞飞——她有能力 有手段 有气质
+746.1woman,confident,standing,livingroom,powerful,
+747.我爸对俞飞飞的能力颇为认可 虽然她年纪稍长了些 但他认为 这种成熟稳重 懂得体贴人的女人 才配得上他的儿子
+747.1man,approving,nodding,livingroom,respectful,
+748.相比之下 俞金莎那种在关键时刻临阵脱逃的 根本不配拥有这份幸福
+748.1woman,disapproving,frowning,livingroom,judgmental,
+749.婚礼结束后 我便搬进了俞家那座豪华别墅——那是俞飞飞自己的住所 我也是第一次踏足
+749.1man,entering,luxuriousvilla,grandentrance,newlife,
+750.别墅内部的装修风格简约冷淡 几乎可以用 黑白灰 三个字来形容
+750.1interior,modern,minimalist,villa,elegant,
+751.毫无多余的装饰 却透着一种不容忽视的高级感
+751.,elegant,,minimalistbathroom,luxurious,cinematiclighting,
+752.一天的婚宴应酬下来 俞飞飞身上带着些许酒气和汗水的味道
+752.1woman,tired,,bathroomafterwedding,elegantbathrobe,subtlescent,
+753.她先去洗漱了 我则坐在沙发上稍作休息 耳边传来哗啦哗啦的水声
+753.1woman,focused,washing,bathroom,modern,softlight,
+754.透过浴室的磨砂玻璃 隐约能看见她沐浴的身影 轮廓若隐若现 让我一时有些局促 忍不住咽了口口水
+754.1man,nervous,lookingthroughfrostedglass,,,fromoutside,
+755.过了一会儿 水声戛然而止
+755.,,waterstops,bathroom,quiet,
+756.我下意识抬头望去 只见俞飞飞从浴室中走出 身披一件浴袍 领口敞开
+756.1woman,calm,exitingshower,bathrobe,,elegant,
+757.露出一截深邃的锁骨 修长白皙的双腿映入眼帘
+757.1woman,,revealingcollarbone,longlegs,,elegant,
+758.我不由得愣住 没想到她的身材竟保持得如此好
+758.1man,surprised,,,,observing,
+759.看着我直直地盯着她 她嘴角勾起一抹淡淡的笑意
+759.1woman,smirking,,,,confident,
+760.小奇 你也去洗个澡吧
+760.,,,,,softvoice,
+761.她声音低沉而富有磁性
+761.,,,,,deepvoice,
+762.我这才意识到自己竟看得入神 慌乱地躲进了浴室
+762.1man,embarrassed,enteringbathroom,,,hurried,
+763.脱下衣服 水温恰到好处地洒在身上 耳边还回响着她刚才那句 小奇
+763.1man,relaxed,showering,,,,
+764.我忽然意识到 原来她一直那么迷人 只是从前我未曾真正注意
+764.,,,,,realization,
+765.洗完澡后 我才发现自己没带替换的衣服 没办法 只能小心翼翼地把浴室门打开一条缝
+765.1man,embarrassed,openingbathroomdoor,,,,
+766.露出半张脸 试探性地喊道  俞 俞飞飞 我忘记拿衣服了……能不能麻烦你递给我一下
+766.1man,hesitant,callingout,,,nervous,
+767.就在沙发上的那个袋子里 你一起递给我就行
+767.,,,livingroom,quiet,
+768.外面沉默了一会儿 没有回应
+768.,,noresponse,,,silence,
+769.我有些疑惑 难道她已经出门了
+769.1man,confused,,,,thinking,
+770.正想再喊一次 忽然听见了一声回应 那声音柔和却带着一丝沙哑  好
+770.1man,abouttocall,,,,,
+771.紧接着 外面传来窸窸窣窣的走动声和袋子翻动的声音
+771.,,,,,softmovement,
+772.没多久 俞飞飞出现在浴室门口 轻声说  给你
+772.1woman,calm,atbathroomdoor,,,quiet,
+773.我小心翼翼地打开门缝 伸出一只手臂 接过她递来的衣物
+773.1man,cautious,reachingforclothes,,,,
+774.就在合上门的一刻 我不小心与她的目光对上
+774.1man,1woman,eyecontact,,,intenseemotion,
+775.她那双深邃的眼睛中仿佛燃烧着某种情绪 让我一时心跳加速
+775.1woman,intense,lookingintoeyes,,,emotional,
+776.低头看着手中的内裤 我整个人的脸都红透了
+776.1man,embarrassed,lookingatunderwear,,,blushing,
+777.啊啊啊 我明明是让把袋子一起递过来的……在浴室里磨蹭了许久 终究还是得出去
+777.,,,,,frustration,
+778.我深吸一口气 推开门走了出来
+778.1man,nervous,exitingbathroom,,,,
+779.这时 俞飞飞已经换好了睡衣 正坐在床边翻阅一份资料
+779.1woman,focused,reading,bedroom,,calm,
+780.看到我出来 她合上手中的文件 脸上并无一丝打趣的神情 我也松了口气
+780.1man,1woman,,bedroom,,neutral,
+781.正好 我还有些正事要问她  关于俞金莎的事 你打算怎么处理
+781.1man,serious,asking,,,tense,
+782.她似乎早有预料 从桌上拿起那份资料递给我
+782.1woman,calm,handingfile,,,composed,
+783.我走过去接过 翻开一看 里面详细记录了俞金莎与一个男人的相识过程
+783.,,,fileonaffair,,,
+784.像极了古早虐文中常见的桥段——富家千金与小白脸
+784.,,,romanticdrama,,,
+785.更贴心的是 资料上还附上了那个男人的照片 一看就是个典型的 绿茶男
+785.,,,manphoto,,,
+786.那两人在我不知情的情况下 经历了一轮又一轮的 和好—分手—再和好—再分手
+786.,,,breakupcycle,,,
+787.直到昨晚上 那个男人得知俞金莎要结婚的消息 竟哭哭啼啼地拨通了她的电话……我心疼了
+787.,,,phonecall,,emotional,
+788.后悔了 俞金莎竟然抛下了即将迎娶她的未婚夫 我 连夜和她那所谓的 小男友 私奔去了
+788.,,,elopement,,dramatic,
+789.若不是我就是那个即将被背叛的未婚夫 我或许还会为他们的逃离感到一丝羡慕 甚至想送上祝福
+789.,,,,,mixedemotion,
+790.可很不幸 我就是那个倒霉的未婚夫 心里满是不甘与愤怒
+790.1man,angry,,,,betrayed,
+791.妈的 他们早干什么去了
+791.,,shouting,,,anger,
+792.看资料上的时间线 两人竟然已经 虐恋 了整整两个月 比我婚礼的筹备时间还长
+792.1man,angry,readingtimeline,,,,
+793.如果俞金莎能透露出哪怕一点点苗头 我也不会被气成这样
+793.1man,angry,,,,betrayal,
+794.现在她已经带着那个男人飞往国外游玩 我派人去把她押回来
+794.1man,determined,,,,sendingmen,
+795.如果她愿意 我们之间的婚礼也可以一笔勾销
+795.,,,,,possibledivorce,
+796.俞飞飞察觉到了我压抑的怒火 误以为我后悔了 语气淡淡地说  反正我们也没领证 只是办了个婚礼而已
+796.1woman,calm,,bedroom,,neutraltone,
+797.可我怎么会后悔呢 丢了一个垃圾 捡了一个宝藏 这简直是天大的好运
+797.1man,confident,,,,relieved,
+798.我们结婚了 从今以后 我就是你的妻子  我非常认真地说
+798.1man,1woman,wedding,,,serious,
+799.俞飞飞察觉到我的话是发自内心的 也认真了起来 轻轻点头  好
+799.1woman,serious,nodding,,,,
+800.我接着说  你之前说俞金莎任由我处置 那还作数吧
+800.1man,determined,,,,,
+801.我突然露出一个顽劣的笑容 语气中带着一丝恶趣  随你 很好
+801.1man,mischievous,smirking,sittinginaluxuriousoffice,dramaticlighting,
+802.我要你冻结她的所有银行卡
+802.1man,determined,commanding,financialdocumentsinhand,corporatesetting,
+803.没有了资金 我看她还能怎么和那个男人舒舒服服地在海外度假
+803.1woman,distressed,noluggage,airportdeparturegate,tenseatmosphere,
+804.俞飞飞看出了我的恶趣味 非但没有阻止 反而煽风点火地接话  从今天起 我会收走她名下的一切
+804.1woman,cunning,smirking,sittinginacorporateoffice,powerdynamics,
+805.她嘴角轻扬 带着一丝戏谑地问道  小老公 你觉得怎么样
+805.1woman,teasing,smiling,sittingelegantly,romanticdinnersetting,
+806.小老公 这个词突然冒出来 让我愣了一下 但我很快回应  我觉得很好
+806.1man,surprised,thenresponding,sittinginabedroom,intimatemood,
+807.能让她过得更惨 我自然更高兴
+807.1man,gleeful,plotting,sittinginaluxurioussetting,darkmood,
+808.处理完这个渣女 便到了下一个环节
+808.1man,calm,speakingsoftly,bedroomatnight,romantictension,
+809.我轻声说  那我们休息吧
+809.1man,exhausted,lyinginbed,dimlylitroom,post-conflict,
+810.俞飞飞似乎是真的累了 抬手关了灯 房间瞬间陷入黑暗
+810.1woman,tired,turningofflights,darkbedroom,post-conflict,
+811.我僵硬地躺在床上 心跳如擂鼓 像第一次结婚的新郎 还有点不知所措
+811.1man,nervous,lyingstifflyinbed,bridalsuite,first-nightjitters,
+812.接下来应该怎么办 该不会是洞房花烛吧
+812.1man,curious,thinking,bedroomatnight,romantictension,
+813.正想着要不要主动一点时 我听见她轻声说  在你愿意之前 我不会动你的
+813.1woman,calm,whispering,lyingbesideman,romanticmood,
+814.这句话明明该由我来说才对 一个英俊帅气的大帅哥就在身边 她竟然能忍住
+814.1man,surprised,thinking,bedroomatnight,romantictension,
+815.我刚闭上眼 忽然感觉到身体上多了一道温热的重量 微凉的玉手轻轻搭在我的胸前
+815.1woman,intimate,touching,lyingonmaninbed,softlighting,
+816.温热的呼吸拂过我的耳畔  想试试
+816.1woman,tempting,whispering,closetoman'sear,romanticmood,
+817.事实证明 千万别惹一个禁欲多年的成熟女人 否则后果自负
+817.1man,regretful,thinking,bedroom,dramaticlighting,
+818.第二天我醒来时 太阳已经高高升起 身边是空的 俞飞飞不在
+818.1man,groggy,wakingup,sunlitbedroom,morningafter,
+819.也是 大总裁怎么可能一直陪着我
+819.1man,resigned,sittingonbed,emptyroom,morningafter,
+820.我饿得肚子咕咕叫 便下楼找东西吃
+820.1man,hungry,descendingstairs,homeinterior,morninglight,
+821.没想到 俞飞飞竟然坐在餐桌旁 手中翻看着一本杂志
+821.1woman,readingmagazine,sittingatdiningtable,morninglight,
+822.小老公起来了 昨晚休息得还好吗
+822.1woman,playful,smiling,diningtable,morningafter,
+823.她语气轻松 眼神中带着一丝狡黠
+823.1woman,sly,lookingatman,breakfasttable,romantictension,
+824.今天的她没有穿西装 上身是一件简洁的白色衬衫 领口微微敞开 隐约露出昨晚留下的痕迹
+824.1woman,elegant,wearingwhiteblouse,breakfasttable,intimatescene,
+825.我想起昨晚发生的一切 脸上再次泛起红晕 嘴上却不甘示弱地回道  休息得很好 飞飞
+825.1man,blushing,responding,breakfasttable,romantictension,
+826.听到这个称呼 俞飞飞嘴角的笑意顿时肆意了几分 像是得到了某种极好的确认
+826.1woman,satisfied,smirking,diningtable,post-conflict,
+827.她慵懒地靠在餐桌边 眼神中带着几分得意  看来小老公昨晚还挺满意的
+827.1woman,smug,leaning,diningtable,romanticmood,
+828.那我这颗心也总算放下了
+828.1woman,relieved,speaking,diningtable,post-conflict,
+829.干嘛非要在老公前面加个小 哪里小了
+829.1man,pouting,speaking,diningtable,post-conflict,
+830.我忍不住嘟囔了一句 语气中带着几分不情愿
+830.1man,reluctant,speaking,diningtable,post-conflict,
+831.你看你这样子 倒是急了
+831.1woman,amused,lookingatman,diningtable,romanticmood,
+832.她目光从上至下地扫过我 像是在看一件刚刚完成的作品  不小不小 刚刚好
+832.1woman,evaluating,smirking,diningtable,romanticmood,
+833.我哼哼唧唧地坐到了餐桌旁 肚子早就饿得咕咕叫了  你饿了
+833.1man,grumbling,sitting,diningtable,post-conflict,
+834.俞飞飞轻笑着 起身朝厨房走去 不一会儿端来了一盘温着的饭菜
+834.1woman,smiling,walkingtokitchen,modernhomeinterior,
+835.桌上的早点很简单 一碟包子 两碟精致的小菜 还有一碗热腾腾的白粥
+835.1woman,servingfood,diningtable,homekitchen,
+836.我不再客气 拿起一个包子咬了一口 瞬间眼睛亮了起来
+836.1man,surprised,eating,diningtable,morninglight,
+837.好吃欸 真的好吃了
+837.1man,happy,eating,diningtable,warmlighting,
+838.这个包子是谁包的啊  我忍不住夸赞道
+838.1man,curious,speaking,diningtable,post-conflict,
+839.俞飞飞只是笑而不语 神情中带着几分得逞的意味
+839.1woman,smirking,watchingman,diningtable,romanticmood,
+840.我脑中一转 突然冒出一个念头  该不会……是你包的吧
+840.1man,thinking,speaking,diningtable,post-conflict,
+841.她轻飘飘地说了一句 算是默认了
+841.1woman,nonchalant,speaking,diningtable,romanticmood,
+842.合老公的胃口就好
+842.1woman,satisfied,speaking,diningtable,post-conflict,
+843.我张了张嘴 原本想说几句打击的话 但那包子的味道实在太好 好到让我几乎说不出话来 人不能昧良心
+843.1man,conflicted,eating,diningtable,romanticmood,
+844.看着我吃得津津有味 俞飞飞也满意地笑了 那笑容里藏着些许得意——不枉费她特地去学的厨艺
+844.1woman,satisfied,smiling,diningtable,romanticmood,
+845.吃完饭 我磨蹭了一会儿 时间已经不早了
+845.1man,lingering,sitting,homeinterior,post-breakfast,
+846.我上楼换了身衣服 因为和俞飞飞结婚的决定太突然 根本没有提前准备
+846.1man,changingclothes,upstairsbedroom,morninglight,
+847.别墅里没有男士的衣服 我穿的还是从家里带回来的旧衣服
+847.1man,wearingoldclothes,standinginbedroom,post-conflict,
+848.俞飞飞看着我 眉头微微一皱 随即拿起手机出去打了个电话
+848.1woman,frowning,onphone,homeinterior,post-conflict,
+849.等她回来 我已经收拾妥当
+849.1man,ready,standing,homeinterior,morninglight,
+850.走吧 飞飞  我轻声唤她
+850.1man,speakingsoftly,standing,homeinterior,post-conflict,
+851.她今天穿着一件干净的白衬衫 搭配浅色牛仔裤 整个人看上去像是刚从大学校园走出来的青葱少年
+851.1woman,casual,wearingwhiteshirtandlightjeans,youthful,fresh,cinematic,
+852.我红着脸盯着她衬衫领口露出来的锁骨 以及那下面若隐若现的红色印记
+852.1man,blushing,staringatcollarandredmark,romantic,close-up,
+853.低声说道  你就这么去吗
+853.1man,serious,askingquestion,indoor,dramatic,
+854.不行吧  俞飞飞一脸不解地看着我
+854.Yushifei,confused,lookingatme,indoor,realistic,
+855.我只好上前 替她整理了一下领口 然后牵起她的手 牵着她往外走
+855.1man,1woman,fixingcollar,holdinghands,walking,livingroom,intimate,
+856.随着结婚证新鲜出炉 我与俞飞飞 从今往后 真的成了夫妻
+856.1man,1woman,holdingmarriagecertificate,married,emotional,
+857.告别单身生活 我还有些不习惯
+857.1man,awkward,leavingsinglelife,home,realistic,
+858.但看着结婚照上那对俊男靓女 我忍不住笑了出来  啧啧啧 真般配啊 我眼光真好
+858.1man,amused,lookingatweddingphoto,confident,humorous,
+859.俞金莎和那个小白脸出国旅游 结果她的卡被断了 没多少钱 在国外简直寸步难行
+859.Yujinsha,withman,travelingabroad,creditcardfrozen,stressful,
+860.她习惯了被捧在手心的生活 口袋里从来都没装过现金
+860.Yujinsha,spoiled,nocash,helpless,realistic,
+861.幸好有那个小白脸在身边 从和她在一起后就再也没有上过班 好在手上还有一些积蓄
+861.Yujinsha,withman,relyingonsavings,dependent,realistic,
+862.要不是有他 她估计都回不来了
+862.Yujinsha,withman,grateful,airport,emotional,
+863.那个小白脸 原名叫赵华俊
+863.1man,namedZhaohuajun,realistic,
+864.他假模假样地安慰着俞金莎  金莎 你别担心 可能是发生了什么事
+864.Zhaohuajun,fakecomforting,airport,worried,
+865.我们先买机票回去看看   老公 谢谢你
+865.Zhaohuajun,buyingplaneticket,Yujinsha,thankful,airport,
+866.赵华俊默默拿出自己多年的积蓄买的机票 俞金莎望着他 眼中满是感动
+866.Zhaohuajun,givingmoney,Yujinsha,emotional,airport,
+867.银行卡被冻结这件事 她心里已有猜测——她的卡是无限额的 银行方面绝不敢随便动手
+867.Yujinsha,thinking,creditcardissue,suspicious,realistic,
+868.必定是那个叫明奇的女人在背后说了些什么
+868.Yujinsha,suspectingMingqi,airport,tense,
+869.不过 婚礼已经结束 她也该回国了
+869.Yujinsha,returningtohome,airport,realistic,
+870.赵华俊陪在她身边这么久 他们之间的感情是真挚的 也该给他一个名分了
+870.Yujinsha,Zhaohuajun,truefeelings,airport,romantic,
+871.毕竟 她连第一次都给了他
+871.Yujinsha,thinking,emotional,airport,
+872.想到这里 俞金莎嘴角微微上扬 露出一抹幸福的笑容
+872.Yujinsha,smiling,happy,airport,
+873.等回国后 他们就结婚 到时候她从俞飞飞手中接过俞氏的权柄 从此再也不用看任何人脸色
+873.Yujinsha,planningfuture,confident,airport,
+874.她甚至已经能想象到自己未来的美好生活
+874.Yujinsha,imagininglife,luxurious,futuristic,
+875.于是 两人迫不及待地连夜登机 飞越了七个小时的航程 清晨抵达时已近八点
+875.Yujinsha,Zhaohuajun,flying,airport,exhausted,
+876.俞金莎知道俞飞飞通常不会住在老宅 便直接前往她那座豪华别墅
+876.Yujinsha,arrivingatvilla,suburban,elegant,
+877.此刻 我正懒洋洋地窝在客厅的沙发上 一边看电视一边等俞飞飞准备早餐
+877.1man,lazy,watchingTV,livingroom,relaxed,
+878.这几天和她朝夕相处 才渐渐发现 她表面的禁欲冷漠不过是伪装 实际上她是个天生媚骨的妖精 专门吸取男人的精气
+878.Yushifei,fakecold,seductive,livingroom,mysterious,
+879.为了享受二人世界 她还特地安排别墅的佣人们放假 只保留了偶尔来打扫卫生的阿姨
+879.Yushifei,managingstaff,luxuriousvilla,realistic,
+880.这样一来 一日三餐的重担就落在了她身上
+880.Yushifei,cooking,domestic,realistic,
+881.而她似乎乐在其中 每次我吃得满嘴油光 她都会恶作剧地戳我两下 惹得我不停抱怨
+881.Yushifei,playful,teasing,diningarea,cute,
+882.就在这时 耳边响起机械的提示音  主人 有人敲门
+882.1man,hearingdoorbell,villa,realistic,
+883.我趿拉着拖鞋走到监控前 看到风尘仆仆的俞金莎和赵华俊站在门口
+883.1man,lookingatmonitor,villa,observing,
+884.忍不住挑了挑眉  速度还挺快啊   你女儿回来了
+884.1man,amused,watchingYujinsha,villaentrance,realistic,
+885.我走进厨房 从后面搂住正煎蛋的俞飞飞 看着她动作娴熟地煎出一个完美的太阳蛋
+885.1man,huggingYushifei,kitchen,affectionate,
+886.不禁感叹  啧啧啧 人与人真是不能比
+886.1man,commenting,kitchen,proud,
+887.嗯 随你处置  俞飞飞头也不抬地应了一句
+887.Yushifei,indifferent,cooking,kitchen,realistic,
+888.我等的就是她这句话 于是把俞金莎和赵华俊晾在门外 慢悠悠地回房换了一身衣服 才重新打开大门
+888.1man,ignoringguests,changingclothes,bedroom,realistic,
+889.这座别墅不仅占地广阔 外面的庭院也如同小型庄园一般 平时客人都是乘车而来
+889.Villa,largecourtyard,suburban,luxurious,
+890.但很遗憾 司机也放假去了 我懒得亲自开车去接 只能让他们自己走进来
+890.Villa,nodriver,realistic,
+891.俞金莎和赵华俊下了飞机后一路赶来 连饭都没来得及吃 此刻又饿又渴 却只能站在门口干等
+891.Yujinsha,Zhaohuajun,hungry,waiting,villaentrance,
+892.好不容易等大门打开 却发现连车都没人接 只能靠自己的双腿走进去
+892.Yujinsha,Zhaohuajun,enteringvilla,tired,realistic,
+893.赵华俊望着眼前这片浩大的庄园 眼中闪过羡慕与嫉妒的神色
+893.Zhaohuajun,jealous,villacourtyard,realistic,
+894.等我们结婚了 我也给你买个这么大的
+894.Yujinsha,promisingfuture,villa,romantic,
+895.俞金莎豪气地说道  那一定很贵吧
+895.Yujinsha,jokingaboutmoney,villa,realistic,
+896.赵华俊略显犹豫地问  金莎 没有必要
+896.Zhaohuajun,hesitant,villa,realistic,
+897.不管住在哪儿 只要能和你在一起 我就已经很开心了
+897.Zhaohuajun,sincere,villa,romantic,
+898.赵华俊温柔地回答  这有什么
+898.Zhaohuajun,answering,villa,realistic,
+899.以后我给你买几座别墅 让你换着住
+899.Yujinsha,confident,villa,luxurious,
+900.俞金莎毫不在意地说
+900.Yujinsha,indifferent,villa,realistic,
+901.嘴上说得潇洒如意 可真正走到大门前 俞金莎的心却像被猫抓了一般 慌乱不安
+901.1girl,nervous,approachingdoor,mansionentrance,dramaticlighting,cinematic,
+902.她深吸一口气 指尖微微发凉 目光在门缝间来回游移
+902.1girl,anxious,takingdeepbreath,mansiondoor,coldatmosphere,close-up,
+903.对于那个名义上的母亲俞飞飞 她从小便敬而远之 甚至可以说是毫无畏惧
+903.1girl,indifferent,lookingaway,mansioncorridor,formalattire,neutraltone,
+904.然而 亲眼见过俞飞飞是如何让那些不听话的人噤若寒蝉后 她便学会了低头
+904.1girl,intimidated,avoidingeyecontact,mansionhallway,sternwoman,tensemood,
+905.随着年岁的增长 她对俞飞飞的手段了解得越多 敬畏也就越深
+905.1girl,fearful,thinking,mansioninterior,shadows,ominousatmosphere,
+906.只是俞飞飞极少过问家中的琐事 这让俞金莎误以为自己还有空隙可钻 所以才敢一意孤行地逃婚
+906.1girl,determined,planning,mansioncorridor,escapeplan,dramatic,
+907.毕竟 她是俞氏的继承人 俞飞飞不至于像对付那些小人物一样对付她
+907.1girl,confident,walking,mansioncorridor,heir,powerfulfamily,
+908.这个念头成了她最大的心理支撑
+908.1girl,self-encouraging,enteringroom,mansioninterior,quiet,suspenseful,
+909.她一边在心里给自己打气 一边缓缓推开门 门轴发出细微的吱呀声
+909.1girl,cautious,openingdoor,mansionroom,creakingsound,slowmotion,
+910.然而 映入眼帘的并不是她以为的那个人 而是一个让她措手不及的身影
+910.1girl,surprised,seeingunexpectedfigure,mansionhallway,shock,
+911.门外站着的那人朝她露出了一个和蔼的笑容 阳光洒在他脸上 竟显得几分温柔
+911.1man,smiling,facingsunlight,mansiondoorway,warmlight,gentleexpression,
+912.哈喽……你 你 你怎么会在这里
+912.1girl,startled,steppingback,mansionhallway,confused,
+913.俞金莎下意识往后退了一步 语气中带着一丝慌乱
+913.1girl,shocked,speaking,mansioncorridor,nervous,
+914.而站在她身后的 却正是赵华俊
+914.1man,behindgirl,hurt,mansionhallway,awkward,
+915.他因躲闪不及 被她硬生生踩了一脚 疼得皱眉 却不敢出声
+915.1man,grimacing,beingsteppedon,mansioncorridor,pain,
+916.听到赵华俊那带着哽咽的声音 俞金莎才反应过来 立刻转过身去 关切地问  没事吧
+916.1girl,concerned,turningback,mansioncorridor,sympathetic,
+917.依依 金莎你没事就好
+917.1man,pained,speaking,mansioncorridor,injured,
+918.赵华俊咬着牙 声音柔弱 像是受了天大的委屈
+918.1man,weak,speaking,mansioncorridor,emotional,
+919.俞金莎当着他的面 好一阵安抚 语气中满是心疼
+919.1girl,comforting,mansioncorridor,caring,
+920.她转头看向我 眉头紧皱 语气尖锐  明奇 我没想到你居然这么恶毒   我干什么了
+920.1girl,angry,confronting,mansioncorridor,hostile,
+921.我一脸无辜地摊手  莫名其妙 从开始到现在我可都站在原地没动过 别想碰瓷
+921.1man,innocent,shrugging,mansioncorridor,confused,
+922.俞金莎听了 也意识到自己刚才那句话有些无厘头 于是拐了个弯 换了个矛头
+922.1girl,realizingmistake,mansioncorridor,embarrassed,
+923.我没想到你居然这么无耻
+923.1girl,confrontational,mansioncorridor,accusatory,
+924.我们的婚礼都没办成 你怎么好意思住在这里
+924.1girl,angry,mansioncorridor,wedding,
+925.我——不喜欢你 我们是没有未来的
+925.1man,firm,speaking,mansioncorridor,calm,
+926.这才是我的男朋友赵华俊 我们马上就要结婚了
+926.1girl,excited,introducing,mansioncorridor,fiancé,
+927.我语气平静 反问她  是什么给了你这种错觉 我有纠缠你吗
+927.1man,calm,asking,mansioncorridor,neutral,
+928.她张口结舌 一时语塞 显然没想到我会这么直接地反问
+928.1girl,stunned,mansioncorridor,speechless,
+929.我心中暗自好笑 这孩子连当天的新闻报道都没看 竟然还自以为是地以为我会纠缠她
+929.1man,amused,mansioncorridor,thinking,
+930.不过 她为什么会这么想
+930.1man,questioning,mansioncorridor,confused,
+931.难道我真的给她留下了什么纠缠的印象
+931.1man,thinking,mansioncorridor,self-assured,
+932.我把和俞金莎的相处回忆了一遍 确定自己从未有过任何过分的举动
+932.1man,reviewing,mansioncorridor,introspective,
+933.她是不是脑子出问题了
+933.1man,doubting,mansioncorridor,thinking,
+934.我忍不住在心里嘀咕 俞金莎该不会是脑残吧
+934.1man,annoyed,mansioncorridor,sarcastic,
+935.赵华俊见状 立刻跳出来打圆场  兄弟 我知道你跟金莎之前确实是未婚夫妻 但你们还没结婚啊
+935.1man,tryingtomediate,mansioncorridor,pleading,
+936.而且我跟金莎是真心相爱的 求求你就成全我们吧
+936.1man,sincere,speaking,mansioncorridor,emotional,
+937.他一边说一边哭哭啼啼 像个受了天大委屈的人
+937.1man,tearful,speaking,mansioncorridor,dramatic,
+938.俞金莎心疼得紧 立刻转头朝我大吼  明奇
+938.1girl,angry,shouting,mansioncorridor,hostile,
+939.你太过分了   这又关我啥事
+939.1girl,frustrated,mansioncorridor,shouting,
+940.我一脸无辜地反问  妈的 我居然有些跟不上你们的脑回路 有病吧
+940.1man,confused,mansioncorridor,defensive,
+941.我语气中带着一丝同情 忍不住感叹  精神病院已经关不下你们了吗
+941.1man,sarcastic,mansioncorridor,mocking,
+942.让你们跑到外面来撒野
+942.1man,mocking,mansioncorridor,dramatic,
+943.俞金莎半天才反应过来 冷冷地回我一句  你才有病
+943.1girl,cold,mansioncorridor,defensive,
+944.她看着我脸上毫无波澜的神情 开始怀疑我是不是真的不喜欢她
+944.1girl,doubting,mansioncorridor,calculating,
+945.可转念一想 这里是俞家 不是明家
+945.1girl,suspicious,mansioncorridor,thinking,
+946.明奇要不是为了她 怎么会出现在这里
+946.1girl,reasoning,mansioncorridor,logical,
+947.他一定是在演戏 为了引起她的注意
+947.1girl,suspicious,mansioncorridor,calculating,
+948.她缓了缓语气 语气中带着几分恳求  明奇 我有喜欢的人了
+948.1girl,pleading,mansioncorridor,sincere,
+949.我们是没有以后的 你赶紧给我男朋友道歉 我们以后还能做朋友
+949.1girl,firm,mansioncorridor,rejecting,
+950.谁和你们做朋友 脑残是会传染的
+950.1man,annoyed,mansioncorridor,sarcastic,
+951.正当我准备回怼时 身后传来俞飞飞的声音  怎么了
+951.1woman,calm,speaking,diningroom,familygathering,
+952.几人同时回头看去 只见俞飞飞穿着一身定制的黑色衬衫 勾勒出她完美的身材
+952.1woman,elegant,wearingblackcustomshirt,showingperfectfigure,livingroom,moderndecor,
+953.再配上她那张惊艳的脸 禁欲的气质 一举一动都格外勾人
+953.1woman,stunning,elegantposture,homeinterior,dramaticlighting,
+954.赵华俊看得都有些呆了
+954.1man,stunned,lookingatwoman,livingroom,
+955.妈 我们回来了
+955.1woman,cheerful,returninghome,familyhomeentrance,
+956.我忍不住开口  这个人为什么在这里
+956.1man,curious,askingquestion,diningroom,
+957.俞金莎迫不及待地朝俞飞飞问道
+957.1woman,eager,askingquestion,diningroom,
+958.俞飞飞没有搭理她 而是朝我挥了挥手  过来吃饭
+958.1woman,ignoring,wavinghand,diningtable,familysetting,
+959.因为我跟俞金莎和赵华俊站在一起 俞飞飞勾手的时候 两人还以为她是跟他们说话
+959.1woman,beckoning,diningroom,familygroup,
+960.妈 你还特地给我们做了早餐
+960.1woman,emotional,expressinggratitude,diningroom,
+961.俞金莎十分感动 说完就想拉着赵华俊过去 结果两人还没碰到桌子 就被俞飞飞拦下
+961.1woman,emotional,reachingout,diningroom,
+962.妈 你这是…… 俞金莎疑惑地问
+962.1woman,confused,questioning,diningroom,
+963.俞飞飞却再次对着我伸出了手  亲爱的
+963.1woman,calling,reachingout,diningroom,
+964.我立马飞奔上前 当着两人的面直接握住俞飞飞的手
+964.1man,excited,holdinghand,diningroom,romanticgesture,
+965.回头看见俞金莎和赵华俊瞪大的眼睛 张大的嘴巴 我露出无比灿烂的笑容
+965.1man,smirking,showingoff,diningroom,
+966.女儿 叫声爸来听听  我故意挑衅道
+966.1man,taunting,familysetting,
+967.俞金莎和赵华俊呆愣在原地 嘴巴张得老大
+967.1couple,shocked,frozen,diningroom,
+968.俞飞飞可不管他们 直接拉着我的手坐在了餐桌上  吃饭 凉了伤胃
+968.1woman,ignoring,pullinghand,diningtable,
+969.站着的两人愣了足足两分钟才反应过来 俞金莎甚至忘了压低声音 满脸不可置信地喊道  什么
+969.1woman,shocked,shouting,diningroom,
+970.你……你什么时候 怎么可能
+970.1woman,confused,questioning,diningroom,
+971.就在结婚当天啊
+971.1woman,speaking,weddingdayreference,diningroom,
+972.看着刚才还臭屁自恋的俞金莎 如今嘴巴张得都能塞鸡蛋了 我就开心
+972.1man,smirking,showingsatisfaction,diningroom,
+973.哈哈哈 叫你自恋 打脸了吧
+973.1man,laughing,teasing,diningroom,
+974.妈 你……你怎么能跟他结婚呢  俞金莎忍不住道
+974.1woman,upset,questioning,diningroom,
+975.看着我满脸嘚瑟的样子 她以最深的恶意揣测  他肯定是故意的
+975.1woman,suspicious,accusing,diningroom,
+976.妈 他是故意的 再说了 你们之间差了十几岁呢 怎么能在一起
+976.1man,admitting,explaining,diningroom,
+977.我承认 一开始选择俞飞飞确实有点报复的意味 但只是有点
+977.1man,explaining,familyduty,diningroom,
+978.更大一部分原因是我身为明家人 不能让明家在那么多人面前丢脸
+978.1man,speaking,familypride,diningroom,
+979.像我们这样的人 本就不奢望爱情
+979.1man,speaking,emotional,diningroom,
+980.选择俞飞飞 是因为她的身份
+980.1man,speaking,strategicchoice,diningroom,
+981.况且 俞飞飞是真的比俞金莎强多了 不管是脸 身材 还是脑子等等的一切
+981.1man,speaking,comparingwomen,diningroom,
+982.差十几岁怎么了 爱情不分年龄
+982.1man,arguing,ageirrelevant,diningroom,
+983.我挑起眉 然后当着俞金莎的面 直接亲了一口俞飞飞的侧脸  报复你 以结婚为代价
+983.1man,smirking,kissingwoman,diningroom,
+984.你配吗 快 好女儿 叫爸 不然我就让你妈换一个女儿  我威胁道
+984.1man,threatening,familysetting,
+985.俞金莎指着我小人得志的样子 愤愤道  妈 你都不管管他
+985.1woman,angry,pointing,diningroom,
+986.闻言 俞飞飞终于舍得抬头赏她个眼神
+986.1woman,acknowledging,lookingat,diningroom,
+987.正当俞金莎以为俞飞飞终于要教训我的时候 俞飞飞宠溺地揉了揉我的头  我哪里管得了他啊
+987.1woman,expectingscolding,diningroom,
+988.再说了 我嫁给小奇 你理应喊他一声爸
+988.1woman,affectionate,touchinghead,diningroom,
+989.听闻此言 俞金莎憋屈得厉害 脸上的表情几乎要扭曲成一团
+989.1woman,frustrated,expressioncontorted,diningroom,
+990.她从小到大都是万千宠爱于一身的公主 哪里受过这般羞辱
+990.1woman,rememberingpast,emotional,diningroom,
+991.心口一阵闷痛 她强忍着泪水 扭头就想离开
+991.1woman,hurting,turningaway,diningroom,
+992.然而 赵华俊的手却轻轻捏了她一下 动作微小却让她心乱如麻
+992.1woman,beingtouched,emotional,diningroom,
+993.她低头看着他那张满是委屈的小脸 心里一软 终究还是把那句 我不干了 咽了回去
+993.1woman,conflicted,lookingatman,diningroom,
+994.为了他 为了他们的未来 她只能忍
+994.1woman,resigned,acceptingfate,diningroom,
+995.她深吸一口气 强撑着挤出一个字  爸……  哎呀 我女儿真乖 哈哈哈
+995.1woman,reluctant,calling,diningroom,
+996.我笑得肆意 嘴角的笑意藏都藏不住 连明奇也站在一旁看着 脸上毫无怜悯之意 俞金莎的脸色愈发难看
+996.1man,laughing,showingnomercy,diningroom,
+997.来 爸还特意给你准备了个红包
+997.1man,handingmoney,diningroom,
+998.我毫不在意地走到她面前 从口袋里掏出几张钞票 轻轻放在她的掌心
+998.1man,givingmoney,diningroom,
+999.俞金莎几乎不想接——她是什么人
+999.1woman,rejecting,diningroom,
+1000.千金小姐 怎么会缺这点钱
+1000.1woman,proud,diningroom,
+1001.可这时 俞飞飞淡淡开口  拿好了 不准扔  语气不容置疑
+1001.1womanYushifei,calm,speaking,diningroom,familyconfrontation,
+1002.我…… 俞金莎咬牙 几乎咬断了自己的牙根 才低声说道  谢谢爸
+1002.1womanYushinsha,angry,grittingteeth,diningroom,familyconfrontation,
+1003.不客气 不客气
+1003.1womanYushifei,indifferent,responding,diningroom,familyconfrontation,
+1004.我咧开嘴 露出八颗白牙 笑得像个没事人
+1004.1man,smiling,showingteeth,diningroom,familyconfrontation,
+1005.解决了女儿 接下来就该轮到这个 小白花 了
+1005.1man,smirking,plotting,diningroom,familyconfrontation,
+1006.呦 这位就是我未来的女婿
+1006.1man,sarcastic,addressingZhaoHuajun,diningroom,familyconfrontation,
+1007.我上下打量着赵华俊 虽然早就在照片上见过 可真人站在面前 还是让我忍不住皱眉
+1007.1man,frowning,examiningZhaoHuajun,diningroom,familyconfrontation,
+1008.赵华俊这小子长得倒是白白净净 可那身段 细得像根竹竿
+1008.1manZhaoHuajun,pale,thin,diningroom,familyconfrontation,
+1009.他从进院子开始 眼神就藏不住贪婪 我瞧他一眼 便知此人绝非善类
+1009.1manZhaoHuajun,greedyeyes,standing,diningroom,familyconfrontation,
+1010.也就俞金莎这傻姑娘 自恋又盲目 还觉得人家是真的爱她
+1010.1womanYushinsha,naive,self-centered,diningroom,familyconfrontation,
+1011.你好 我叫赵华俊
+1011.1manZhaoHuajun,polite,introducinghimself,diningroom,familyconfrontation,
+1012.赵华俊强忍着 实在没办法叫面前这个年纪相仿的男人一声 爸
+1012.1manZhaoHuajun,reluctant,addressing,diningroom,familyconfrontation,
+1013.哦 赵华俊啊 不错不错
+1013.1man,indifferent,wavinghand,diningroom,familyconfrontation,
+1014.我摆摆手 毫不在意 转身坐回餐桌旁继续吃饭
+1014.1man,uninterested,sitting,diningroom,familyconfrontation,
+1015.眼见我没了兴趣 俞飞飞便心领神会地上前去了
+1015.1womanYushifei,understanding,approaching,diningroom,familyconfrontation,
+1016.她擦了擦嘴 开口  你来是有什么事
+1016.1womanYushifei,wipingmouth,questioning,diningroom,familyconfrontation,
+1017.一听到 任务 二字 俞金莎立刻将刚才的屈辱抛诸脑后 急切地问道
+1017.1womanYushinsha,anxious,asking,diningroom,familyconfrontation,
+1018.妈 我的卡为什么被冻结了
+1018.1womanYushinsha,angry,questioning,diningroom,familyconfrontation,
+1019.还有我名下的车和房子呢
+1019.1womanYushinsha,frustrated,mentioningproperty,diningroom,familyconfrontation,
+1020.说起这事 她就气不打一处来
+1020.1womanYushinsha,furious,talking,diningroom,familyconfrontation,
+1021.她原本打算开自己的豪车来 结果车子莫名其妙被扣 她只能一路打车过来
+1021.1womanYushinsha,disappointed,arrivingbytaxi,outsidehouse,familyconfrontation,
+1022.那辆车之前拉过什么人 她不知道 可那股子臭味让她差点吐出来 脸色都绿了
+1022.1womanYushinsha,disgusted,smellingbad,taxi,familyconfrontation,
+1023.为什么  俞飞飞语气一冷 眼神凌厉  你不清楚吗
+1023.1womanYushifei,cold,stern,diningroom,familyconfrontation,
+1024.她气势一变 整个人都透出上位者的威压 俞金莎顿时心惊胆战 差点想跪下求饶
+1024.1womanYushifei,authoritative,intimidating,diningroom,familyconfrontation,
+1025.可想到身边的赵华俊 为了不丢人 她硬是咬牙挺住了
+1025.1womanYushinsha,determined,holdingback,diningroom,familyconfrontation,
+1026.我……我就是不喜欢他 想跟我喜欢的人在一起 有什么错
+1026.1womanYushinsha,defiant,speaking,diningroom,familyconfrontation,
+1027.她鼓起勇气 一副理直气壮的模样
+1027.1womanYushinsha,confident,standingup,diningroom,familyconfrontation,
+1028.呵—— 我冷笑一声 看着她那副天真模样 只觉得可笑  不喜欢他
+1028.1man,mocking,lookingatYushinsha,diningroom,familyconfrontation,
+1029.你没错 可我们又不是第一天在一起了 婚礼也不是第一天筹备的
+1029.1man,speaking,weddingpreparations,diningroom,familyconfrontation,
+1030.你要是不喜欢他 大可以早说
+1030.1man,scolding,weddingday,diningroom,familyconfrontation,
+1031.结婚前一天 她竟然不告而别地逃婚了 明家的脸面被她踩在了地上
+1031.1womanYushinsha,fleeing,wedding,diningroom,familyconfrontation,
+1032.明家唯一的公子 那可是整个家族的荣耀与希望 而她俞金莎若能与他联姻
+1032.1woman,wedding,Mingfamily,diningroom,familyconfrontation,
+1033.便能获得明家的庇护与支持 从而坐稳俞家继承人的位置
+1033.1womanYushinsha,marriage,inheritance,diningroom,familyconfrontation,
+1034.否则 俞家孩子众多 真正有能力 有头脑的也不在少数 她凭什么能脱颖而出
+1034.1man,familypolitics,inheritance,diningroom,familyconfrontation,
+1035.我话音刚落 俞飞飞的目光便落在俞金莎身上 缓缓问道  你听懂了吗
+1035.1womanYushifei,questioning,diningroom,familyconfrontation,
+1036.俞金莎嘴唇颤抖 满眼委屈 却一句话都说不出 其实她根本就是个愚蠢的人
+1036.1womanYushinsha,trembling,guilty,diningroom,familyconfrontation,
+1037.从小顺风顺水 无论犯什么错 大家都会因为她是俞家大少爷的妹妹而宽容她
+1037.1womanYushinsha,spoiled,family,diningroom,familyconfrontation,
+1038.久而久之 她便养成了不计后果 随心所欲的性格
+1038.1womanYushinsha,reckless,spoiled,diningroom,familyconfrontation,
+1039.她低着头 小声说道  我……我知道错了 以后再也不敢了
+1039.1womanYushinsha,apologetic,bowing,diningroom,familyconfrontation,
+1040.你还想有以后  俞飞飞冰冷的声音像一把刀 刺入她的心脏
+1040.1womanYushifei,cold,cutting,diningroom,familyconfrontation,
+1041.俞金莎这才反应过来 自己已经没有了未来
+1041.1womanYushinsha,defeated,realization,diningroom,familyconfrontation,
+1042.你想跟他在一起
+1042.1womanYushifei,stern,askingZhaoHuajun,diningroom,familyconfrontation,
+1043.俞飞飞语气一沉 她指的是赵华俊  是 妈 我爱他 我不能想象以后没有他的日子 我想嫁给他
+1043.1womanYushinsha,determined,declaringlove,diningroom,familyconfrontation,
+1044.俞金莎抬起头 眼神坚定 语气中满是真情实意
+1044.1womanYushinsha,passionate,lookingup,diningroom,familyconfrontation,
+1045.赵华俊也在一旁附和道  俞阿姨 我和金莎是真心相爱的 我真的非常爱她
+1045.1manZhaoHuajun,flirty,speaking,diningroom,familyconfrontation,
+1046.他说着 还故意装出一副羞涩的模样 深情地看着俞飞飞
+1046.1manZhaoHuajun,actingshy,looking,diningroom,familyconfrontation,
+1047.我忍不住在心里冷笑 这小白脸 可不是什么好东西
+1047.1man,cynical,thinking,diningroom,familyconfrontation,
+1048.不过 现在不是我出头的时候 我也不打算多言
+1048.1man,indifferent,holdingback,diningroom,familyconfrontation,
+1049.可以 但你若想跟他在一起 就得放弃你俞家继承人的身份 我赋予你的一切都将收回
+1049.1man,stern,givingultimatum,diningroom,familyconfrontation,
+1050.我不会养着一个无用的人
+1050.1man,cold,dismissing,diningroom,familyconfrontation,
+1051.俞飞飞淡淡地说 语气中没有一丝犹豫
+1051.1woman,calm,speaking,luxuriousoffice,corporatestyle,
+1052.不论赵华俊是何等人物 俞家的继承人 绝不能娶一个普通人 除非俞金莎有与她母亲一样的能力
+1052.1woman,determined,speaking,俞家,familyinheritance,
+1053.可她不过二十多岁 心思却还像十岁小孩一样天真
+1053.1woman,naive,thinking,modernlivingroom,
+1054.她所拥有的一切 都是俞飞飞给的 是俞家给的
+1054.1woman,grateful,reflecting,俞家mansion,
+1055.妈  俞金莎惊呼 满脸不可置信
+1055.俞金莎,shocked,calling,俞家livingroom,
+1056.她只是想嫁给自己喜欢的人 难道就要付出这么大的代价吗
+1056.俞金莎,emotional,questioning,俞家livingroom,
+1057.我听到俞飞飞的话 赵华俊也是一愣 心里暗叫不妙
+1057.narrator,listening,observing,俞家livingroom,
+1058.他当初接近俞金莎 故意在她面前装模作样 无非是想借她的身份进入俞家 过上富贵的生活
+1058.赵华俊,scheming,pretending,俞家,
+1059.如果她真的放弃继承人身份 那他还有什么可图的
+1059.赵华俊,calculating,thinking,俞家,
+1060.房子 车子 金钱全都无从谈起 那他跟俞金莎在一起还有什么意义
+1060.赵华俊,frustrated,thinking,俞家,
+1061.还不如让她留在俞家 只要他能掌控住她 到时候想要什么就有什么
+1061.赵华俊,calculating,planning,俞家,
+1062.可还没等他开口劝说 俞金莎已经深情地握住了他的手 坚定地说道
+1062.俞金莎,affectionate,holdinghand,俞家livingroom,
+1063.你放心 我绝不会辜负你的
+1063.俞金莎,sincere,promising,俞家livingroom,
+1064.下一秒 她转身面对俞飞飞 语气坚定地回答  好 我答应你 从今以后我不再是您的女儿 不再是俞家的继承人
+1064.俞金莎,resolute,declaring,俞家livingroom,
+1065.这样 我就可以嫁给赵华俊了吧
+1065.俞金莎,hopeful,asking,俞家livingroom,
+1066.赵华俊心中虽痛 却也只能强作感动地应道  金莎 你不用为我做到这个地步的
+1066.赵华俊,conflicted,responding,俞家livingroom,
+1067.你本来就是俞家的千金 未来前途无量
+1067.赵华俊,sincere,speaking,俞家livingroom,
+1068.你不用劝我 我知道我做的这个决定代表着什么
+1068.俞金莎,determined,speaking,俞家livingroom,
+1069.我答应会嫁给你 就一定会嫁给你
+1069.俞金莎,sincere,promising,俞家livingroom,
+1070.你放心 以后我们一起打拼 一定能过上好日子
+1070.俞金莎,hopeful,speaking,俞家livingroom,
+1071.俞金莎一副深情款款的样子 语气中满是承诺的真诚
+1071.俞金莎,affectionate,promising,俞家livingroom,
+1072.我坐在桌子边 看着他们两人驴唇不对马嘴地聊着 脸上却忍不住露出藏不住的笑容
+1072.narrator,amused,watching,俞家livingroom,
+1073.跟这么一个蠢货说话 赵华俊心里恐怕气得快要爆炸了 正好让他也尝尝刚才那种懵逼的感觉
+1073.赵华俊,frustrated,thinking,俞家livingroom,
+1074.那就不留你们了 走吧
+1074.俞飞飞,dismissive,speaking,俞家livingroom,
+1075.不等赵华俊把俞金莎劝回头 俞飞飞已经下了逐客令
+1075.俞飞飞,commanding,dismissing,俞家livingroom,
+1076.走就走 俞金莎大小姐的脾气一上来 直接拽着赵华俊就往外走
+1076.俞金莎,angry,dragging,俞家entrance,
+1077.等他们两人一离开 大门关上 我才终于忍不住笑出声来 笑得肚子都疼了
+1077.narrator,laughing,celebrating,俞家entrance,
+1078.哎哟哎哟 哈哈哈 这么开心
+1078.narrator,cheerful,laughing,俞家entrance,
+1079.俞飞飞无奈地走上前来 轻轻给我揉着肚子 我仰起头 雄赳赳气昂昂地说
+1079.俞飞飞,gentle,comforting,俞家entrance,
+1080.当然开心啊 你看看刚才俞金莎那个脸色有多黑
+1080.narrator,happy,talking,俞家entrance,
+1081.不过我一把抓住俞飞飞的手 眼睛亮晶晶地看着她  你真的要把俞金莎逐出去啊
+1081.narrator,curious,asking,俞家entrance,
+1082.她好歹叫你妈这么多年 你舍得呀
+1082.narrator,teasing,questioning,俞家entrance,
+1083.想喊我妈的不只她一个
+1083.俞飞飞,firm,speaking,俞家entrance,
+1084.俞飞飞抬手揉了揉我的头  而且她太拎不清了 没有担当 又怎么能承担起俞氏
+1084.俞飞飞,firm,touching,俞家entrance,
+1085.就是 就该让她吃吃苦
+1085.narrator,agreeing,happy,俞家entrance,
+1086.我点点头 十分赞同
+1086.narrator,nodding,approving,俞家entrance,
+1087.这位大小姐平日里过得太舒坦了 一点反对意见都听不进去 又如何能担当得起俞氏集团
+1087.俞金莎,spoiled,thinking,俞家mansion,
+1088.俞飞飞雷厉风行 话音刚落 她就立刻拿起电话 给俞家人下了命令
+1088.俞飞飞,decisive,calling,俞家mansion,
+1089.任何人不准帮助俞金莎 违者后果自负
+1089.俞飞飞,commanding,calling,俞家mansion,
+1090.俞金莎的亲生父母对这个女儿也是恨铁不成钢
+1090.俞金莎'sparents,disappointed,thinking,俞家mansion,
+1091.当初拼尽全力把她送给俞飞飞当女儿 是为了什么
+1091.俞金莎'sparents,regretful,thinking,俞家mansion,
+1092.结果她却因为一个男人变得拎不清
+1092.俞金莎'sparents,angry,thinking,俞家mansion,
+1093.当俞金莎打电话向父母借钱时 两人毫不犹豫地拒绝了 说  要让这臭丫头吃吃苦头
+1093.俞金莎,confused,calling,俞家mansion,
+1094.俞金莎这边一脸懵逼地被父母挂断了电话 旁边的赵华俊还在焦急地催促着  金莎 怎么样了
+1094.俞金莎,shocked,hangingup,俞家mansion,
+1095.爸妈答应了吗 没事 我还有朋友
+1095.俞金莎,determined,calling,俞家mansion,
+1096.俞金莎倔脾气也上来了 挨个给手机上的朋友都打了电话 结果最后借来的钱却只有十几万块
+1096.俞金莎,frustrated,calling,俞家mansion,
+1097.听上去似乎不少 但以前她随手一挥的钱都不止这些了
+1097.俞金莎,disappointed,thinking,俞家mansion,
+1098.这些捧高踩低的人 让她气得把手机狠狠往地上一摔 手机当场支离破碎
+1098.俞金莎,angry,throwingphone,俞家mansion,
+1099.她转头安慰赵华俊道  你放心 我不会让你再去过以前的苦日子的
+1099.俞金莎,reassuring,speaking,俞家mansion,
+1100.我明天就去找工作 我自己也能让你过上吃穿不愁的日子
+1100.俞金莎,determined,planning,俞家mansion,
+1101.赵华俊沉默地低着头 眼睛里闪过一丝什么 他想要的可不只是吃穿不愁
+1101.1man,contemplative,lookingdown,none,serioustone,
+1102.不管俞金莎的四处碰壁 我这会儿已经跟俞飞飞去三亚度蜜月了
+1102.1man,indifferent,traveling,Sanyabeachresort,romantic,
+1103.阳光 沙滩 我来啦
+1103.,,,sunnybeach,cheerful,
+1104.换上泳装我走出屋子 不出所料 俞飞飞美得让我目不转睛 眼睛都不舍得眨一下
+1104.1woman,beautiful,wearingswimsuit,beachhouse,glamorous,
+1105.怎么样 好不好看
+1105.,proud,turningaround,none,casual,
+1106.她非常得意地在我面前转了个圈  走 出去玩
+1106.1woman,proud,turningaround,none,cheerful,
+1107.正在她蹦蹦跳跳准备开门出去的时候 我一把抓住她的胳膊 用力一拽 她便被我拉入怀中  你干吗
+1107.1man,determined,pullingwoman,hotelroom,intense,
+1108.我总觉得夫人这副模样格外动人 于是今日便劝她不要外出 我不想让旁人看到她这般风情万种的样子
+1108.1man,affectionate,holdingwoman,beach,romantic,
+1109.她抬眸望着我 眸色深沉如夜 声音带着几分挑逗  那你想干什么
+1109.1woman,seductive,lookingup,none,intimate,
+1110.我嘴角勾起一抹坏笑 轻声在她耳边低语 气息温热 几乎要融化她的心
+1110.1man,mischievous,whispering,none,sensual,
+1111.醒来时已是第二天清晨 她独自站在镜前 看着自己身上那一道道痕迹
+1111.1woman,pensive,lookinginmirror,hotelroom,morninglight,
+1112.轻轻喃喃  明奇 你真是个坏男人
+1112.,,,none,softvoice,
+1113.我笑着回应  嘿嘿 男人不坏 女人不爱嘛
+1113.1man,smiling,joking,none,humorous,
+1114.我们正身在三亚的海滩 那无边无际的大海与蔚蓝的天空融为一体 美得令人窒息
+1114.,,,Sanyabeach,breathtaking,
+1115.俞飞飞静静地坐在躺椅上 看着我忙碌地为她涂抹防晒霜 递水果 喂果汁 心中满是满足与甜蜜
+1115.1woman,relaxed,sitting,beach,content,
+1116.对她而言 这便是人生最幸福的时光
+1116.,,,,blissful,
+1117.然而 俞金莎的境况却截然不同
+1117.,,,none,contrastingtone,
+1118.她一向花钱如流水 虽从朋友那里借了十几万 再加上自己的积蓄 勉强凑了二十多万
+1118.1woman,careless,countingmoney,none,anxious,
+1119.可在她毫无节制的挥霍下 不到一个月就所剩无几
+1119.,extravagant,spendingmoney,none,chaotic,
+1120.更糟糕的是 她始终没有找到一份称心的工作 倒是赵华俊找到了一份服务员的差事 承担起了养家的责任
+1120.1woman,frustrated,jobhunting,none,desperate,
+1121.赵华俊始终心存希望 他相信俞家只是做做样子 逼他离开 于是便在俞金莎面前扮演着一个好男友的角色
+1121.1man,hopeful,pretendingtobesupportive,none,sincere,
+1122.而俞金莎也被他的执着与温柔深深感动 对他掏心掏肺 甚至将口袋里仅剩的几万元全交给他保管
+1122.1woman,trusting,handingmoney,none,emotional,
+1123.并在赵华俊的介绍下进了一家企业上班
+1123.1woman,determined,enteringoffice,none,professional,
+1124.虽说俞金莎毕业于名牌大学 找工作对她而言本不算难 可她性格高傲
+1124.1woman,proud,walkingintooffice,none,arrogant,
+1125.进了公司后只是一名普通职员 谁都能踩她一脚 她哪里能忍得了
+1125.1woman,angry,arguing,office,tense,
+1126.仅仅三天后 她便因与上司发生冲突 赔了一大笔钱 最终被辞退
+1126.1woman,defeated,beingfired,office,sad,
+1127.金莎 你真的该收敛一下性子了 再这样下去 我们以后怎么办
+1127.1man,frustrated,lecturing,none,worried,
+1128.赵华俊心中烦躁 却只能强压怒火 耐心地劝导她
+1128.1man,patient,speaking,none,emotional,
+1129.我……我也不是故意的 谁让他整天使唤我干这干那的…… 俞金莎低着头
+1129.1woman,guilty,muttering,none,childlike,
+1130.嘴里嘟囔着 像个做错事的孩子
+1130.,,,none,childish,
+1131.经历了这些日子的打击 她终于意识到 自己不再是那个受宠的俞家大小姐
+1131.1woman,reflective,thinking,none,sad,
+1132.没人再会把她当作天之骄女
+1132.,,,none,resigned,
+1133.唯有赵华俊 还像从前那样对她好 她不想再失去他
+1133.1woman,determined,thinking,none,loyal,
+1134.金莎 我知道不是你的错 但我们没有钱 没有势 只能慢慢熬
+1134.1man,emotional,speaking,none,heartfelt,
+1135.赵华俊低头轻声说 语气哽咽  不如……不如你去求求俞阿姨 还有你爸妈
+1135.1man,emotional,speaking,none,pleading,
+1136.他们一软心 肯定会让你回去的
+1136.,,,none,hopeful,
+1137.你放心 我一定会尽我最大的努力
+1137.,,,none,determined,
+1138.俞金莎目光坚定 却并未答应赵华俊去俞家求助的提议
+1138.1woman,resolute,refusing,none,proud,
+1139.她心中有傲骨 答应了俞飞飞的事情 就必须做到
+1139.,,,none,determined,
+1140.她要靠自己闯出一片天地 而不是永远寄人篱下
+1140.1woman,independent,walking,none,strong,
+1141.一个月后 我和俞飞飞从蜜月归来 再次见到俞金莎时 我不禁愣住——这还是那个曾经桀骜不驯的大小姐吗
+1141.1man,shocked,seeingwoman,none,surprised,
+1142.她头发凌乱 像是许久未打理 灰尘在发丝间斑驳地附着着 身上那件衣服皱巴巴的
+1142.1woman,disheveled,lookinginmirror,none,tired,
+1143.还沾着泥点 整个人看起来像是从工地刚下来
+1143.,,,none,messy,
+1144.她手里拎着一箱牛奶和一盒糕点 神情有些局促
+1144.1woman,nervous,holdinggroceries,none,humble,
+1145.我一愣 忍不住开口  你这是…… 俞金莎看了看我 又低头看了看自己
+1145.1man,surprised,speaking,none,questioning,
+1146.嘴角微微一抽 脸上浮现出一丝罕见的羞涩
+1146.1woman,embarrassed,smiling,none,shy,
+1147.她下意识地挠了挠后脑勺 语气却坚定地说  你放心 我不是来要钱的
+1147.1woman,confident,speaking,none,determined,
+1148.我皱了皱眉头 一时没回过神来 疑惑地看着她
+1148.1man,confused,looking,none,puzzled,
+1149.我只是想过来谢谢你
+1149.1woman,sincere,speaking,none,grateful,
+1150.她说着 把牛奶和糕点轻轻放在地上 像是怕身上的脏东西会沾到我身上
+1150.1woman,careful,placingitems,none,humble,
+1151.接着 她隔着几步远 朝我深深鞠了一躬
+1151.1woman,respectful,bowingdeeply,fewstepsawayfrom1man,cinematic,dramatic,
+1152.我被这一举动吓了一跳 下意识地往后退了一步 连东西都不敢接  谢我 谢什么  我疑惑地问
+1152.1man,startled,steppingback,holdingnothing,tenseatmosphere,
+1153.谢谢你跟我 还有俞飞飞 一唱一和把他赶出去 让我能开始新的生活
+1153.1woman,sincere,thanking1manand1woman,newbeginning,
+1154.她说得认真 眼神中透着真诚
+1154.1woman,earnest,speaking,genuineeyes,
+1155.我愣住了 她不会是疯了吧  对的 谢谢你
+1155.1man,confused,stunned,maybecrazy,
+1156.她继续说道  如果不是你跟我说的那些话 我可能一辈子都不会感受到现在的快乐
+1156.1woman,grateful,speaking,findinghappiness,
+1157.我虽然不像以前那么有钱了 但能和赵华俊在一起 我每天都很幸福
+1157.1woman,happy,with1man,lesswealthybutcontent,
+1158.她脸上的笑容是发自内心的 那是真正的幸福
+1158.1woman,joyful,smiling,truehappiness,
+1159.这一个月以来 俞金莎经历的事情太多太多
+1159.1woman,overwhelmed,manyevents,
+1160.从前半辈子被万人捧着 活得风光无限 如今却一落千丈 落魄到连饭都得自己挣
+1160.1woman,oncewealthy,nowpoor,
+1161.她怀了孕 赵华俊自然心疼她 不愿意让她再出去工作 但她不同意
+1161.1woman,pregnant,1mancaring,butsherefusestostopworking,
+1162.眼看着手里的积蓄一天天见底 她咬了咬牙 还是硬着头皮去找了一份工作
+1162.1woman,determined,findingajob,
+1163.在一家私企里上班 但她实在忍受不了那些趾高气扬的管理人员 于是又换了一份服务生的工作
+1163.1woman,workinginprivatecompany,thenasawaitress,
+1164.可工资低得可怜 根本养不起赵华俊和肚子里的孩子
+1164.1woman,unhappy,lowwage,
+1165.最终 她一咬牙 去饭店洗盘子了
+1165.1woman,workingasadishwasher,
+1166.是真的去洗盘子 每天一百块钱
+1166.1woman,washingdishes,lowsalary,
+1167.以前她喝一杯酒的价格都比这翻了十倍 如今却为了这点钱拼了命地干活
+1167.1woman,usedtoluxury,nowworkinghard,
+1168.这一段日子 她终于知道了底层员工有多辛苦 这是她以前从未了解过的
+1168.1woman,tired,learningabouthardship,
+1169.虽然现在很苦很累 但每当她看到银行卡上新增的工资 心中便充满了一种从未有过的踏实感
+1169.1woman,tiredbutcontent,seeingsalary,
+1170.每天回到家 看到赵华俊做好的饭菜和他那温暖的笑容 她心里便暖暖的 仿佛这才是家的感觉
+1170.1woman,happy,seeing1man'scookingandsmile,
+1171.我看着她脸上那发自内心的喜悦 心中也不禁感慨 没想到赵华俊居然能撑这么久
+1171.1man,thoughtful,watching1woman'sjoy,
+1172.然而 接下来的一句话 却像一颗炸弹在我心里轰然炸开
+1172.1man,shocked,bomb-likenews,
+1173.我这次来 也是想跟你们说一声 我怀孕了
+1173.1woman,announcing,pregnant,
+1174.我心中一震 但面上并未显出异样 只是淡淡地说  你过得开心就好 我和俞飞飞祝你们幸福
+1174.1man,shockedbutcalm,polite,
+1175.俞金莎等的就是这句话 她满意地笑了 然后开开心心地离开了
+1175.1woman,satisfied,smiling,leavinghappily,
+1176.我看着她的背影 心中却有些复杂 仿佛她像个二傻子一样 单纯得让人难以理解
+1176.1man,watching,complexemotions,
+1177.回到别墅 我把俞金莎怀孕的事情告诉了俞飞飞 还有她送来的一箱牛奶和一盒糕点
+1177.1man,atvilla,informing1womanaboutpregnancy,
+1178.我问她要不要尝尝 俞飞飞听了也有些诧异 站起身来 打了个电话
+1178.1man,asking,1womancallingsomeone,
+1179.两个小时后 一份新出炉的情报被送了过来
+1179.1woman,receivingfile,twohourslater,
+1180.俞飞飞先翻开扫了两眼 我好奇地凑过去问  怎么样
+1180.1woman,scanningfile,1mancurious,
+1181.怎么样 你快说说
+1181.1man,asking,impatient,
+1182.她没有直接回答 只是把文件递给我 示意我自己看
+1182.1woman,silent,handingoverfile,
+1183.我更好奇了 接过那叠文件 从上到下仔细扫了一遍 又翻来覆去地看了几圈
+1183.1man,curious,readingfilerepeatedly,
+1184.这才发现这是俞金莎这两个月的全部经历
+1184.1man,discovering,俞金莎'sfullstory,
+1185.怪不得刚才在门口她说了那么多莫名其妙的话 原来是真的经历了这么多事
+1185.1man,realizing,俞金莎'spastandgrowth,
+1186.以前是俞家大小姐 人人都捧着她 如今尝到人情冷暖 倒也让她成长了不少
+1186.1woman,oncerich,nowhumble,
+1187.不错不错 有进步 不过 当我看到下一行内容时 忍不住挑了挑眉
+1187.1man,approving,butskeptical,
+1188.再想想她当时满脸幸福的样子 啧 看来她还得再经历一次狠狠的打击
+1188.1man,thinking,俞金莎willfacemorepain,
+1189.再等等吧 应该快了
+1189.1man,waiting,expectingmore,
+1190.俞飞飞抽走我手中的文件 一边宠溺地揉了揉我的头 一边轻笑道  看来你也没有之前表现得那样不在乎俞金莎啊
+1190.1woman,takingfile,affectionate,teasing,
+1191.这么快就把文件送上门来了
+1191.1woman,quickdelivery,
+1192.这证明 之前她就一直派人跟着俞金莎
+1192.1woman,showingshewaswatching俞金莎,
+1193.我摇了摇头 她简短地说  你想看戏
+1193.1man,shakinghead,wantingtoseedrama,
+1194.所以她特地派人盯着俞金莎和赵华俊 确保我能第一时间知道真相
+1194.1woman,watching俞金莎and1man,ensuringtruth,
+1195.她笑嘻嘻地在我脸上啃了一口 留下一圈牙印
+1195.1woman,playful,biting,leavingtoothmarks,
+1196.一定要用啃的吗 不行吗
+1196.1man,annoyed,questioningbite,
+1197.我皱了皱眉  你整个人都是我的
+1197.1man,frowning,possessive,
+1198.她傲娇地说道  当然可以 这是我的荣幸
+1198.1woman,proud,owninguptobiting,
+1199.不过 夫人 如果你不介意的话 也可以再啃几口
+1199.1man,teasing,askingformorebites,
+1200.我调侃道  啊 不要
+1200.1man,rejecting,sayingno,
+1201.她嗖的一下从我身上跳起来 像是被我吓到了
+1201.1woman,startled,jumpingup,man'sbody,dramaticmotion,
+1202.事实正如俞飞飞所说 不用等太久 一个月后 赵华俊就卖了房子 带着所有钱跑了
+1202.1man,sneaky,sellinghouse,cityapartment,deceitful,
+1203.俞金莎花钱大手大脚 赵华俊便提议把所有的钱都交由她保管 俞金莎毫不犹豫地答应了
+1203.1woman,careless,handingmoney,richbelongings,luxurious,
+1204.而打工赚来的钱 也全部交给了赵华俊 她自己只有几百块的零用钱
+1204.1woman,resigned,givingmoney,poorconditions,contrast,
+1205.赵华俊的离开猝不及防 俞金莎甚至没有察觉任何异常 照常下班 回到家却发现房子里已经住进了另一伙人
+1205.1man,sudden,leavinghome,newoccupants,mysterious,
+1206.她焦急地追问 才得知原来的房主已经将房子卖给了他们
+1206.1woman,anxious,questioning,newhome,distressed,
+1207.俞金莎失魂落魄地蜷缩在路口 手里还握着她在路上为赵华俊准备的草莓  为什么啊
+1207.1woman,heartbroken,holdingstrawberry,streetcorner,tearful,
+1208.她喃喃自语 不明白明明之前一切都好 赵华俊为什么要离开 是不是自己做错了什么
+1208.1woman,confused,whispering,citystreet,sad,
+1209.她手里只有几百块钱 在这繁华的大城市里 连住一夜都不够
+1209.1woman,desperate,holdingfewcoins,bigcity,lonely,
+1210.没有被子 甚至连一点取暖的东西都没有
+1210.1woman,cold,noblanket,winternight,freezing,
+1211.她只能蜷缩在公园的躺椅上 初冬的夜晚冷得她瑟瑟发抖
+1211.1woman,shivering,sittingonparkbench,winter,isolated,
+1212.晚上被冻得怎么都睡不着 脑海里不停回忆着这半年来发生的一切 直到那一刻 她才终于相信自己被骗了
+1212.1woman,sleepless,recallingmemories,parkbench,haunted,
+1213.她喉咙里传来一声像是笑又像是哭的呜咽 好容易熬到天亮 她迷迷糊糊地站起来
+1213.1woman,teary,standingup,morninglight,exhausted,
+1214.就往公安局走去 一定要把赵华俊抓出来 让他也尝尝被欺骗的滋味
+1214.1woman,determined,headingtopolicestation,angry,
+1215.可就在距离公安局只有一步之遥的地方 她双眼一黑 晕了过去
+1215.1woman,fainting,nearpolicestation,suddencollapse,
+1216.再醒来时 映入眼帘的是病房 她流产了
+1216.1woman,inhospitalbed,miscarriage,pale,tragic,
+1217.我起身走到床边 倒了一杯水递给她
+1217.1man,calm,handingwater,hospitalroom,kind,
+1218.她睁开眼 声音嘶哑地问  你……你怎么在这里
+1218.1woman,confused,askingquestion,hospital,weakvoice,
+1219.她看见我的那一刻 明显愣住了
+1219.1woman,shocked,seeingman,hospital,surprised,
+1220.你晕倒在公安局门口了 警察打电话通知的
+1220.1man,explaining,calmtone,hospital,concerned,
+1221.我轻声说道 看着她苍白的面容 心中一紧
+1221.1man,speakinghonestly,lookingatwoman,hospital,empathetic,
+1222.我实话实说 俞飞飞最近确实有些事情要忙 你也知道公司事务繁杂 她分身乏术
+1222.1man,talkingbusiness,businessdocuments,corporate,
+1223.喝完水后 俞金莎的喉咙舒服了许多 她微微点头表示感谢
+1223.1woman,grateful,nodding,hospital,recovering,
+1224.我笑着摆摆手 说不用客气 不过是举手之劳罢了
+1224.1man,wavinghand,dismissive,hospital,casual,
+1225.我语气轻松 仿佛这件事根本不值一提
+1225.1man,joking,relaxedtone,hospital,smug,
+1226.接下来有什么打算  我随口问道
+1226.1man,askingquestion,hospital,idlecuriosity,
+1227.话音刚落 俞金莎却沉默了 久久不语
+1227.1woman,silent,thinking,hospital,deepemotion,
+1228.见状 我识趣地不再追问 转而说道  你醒了 我任务也完成了 那我就先走了
+1228.1man,walkingaway,hospitalcorridor,polite,
+1229.我转身朝门口走去 脚步刚迈出去 身后却传来一声急促的喊声  等——等等
+1229.1woman,callingout,hospital,desperate,
+1230.我诧异地回头 只见她从病床上猛地跳下来 双膝一弯 竟直接跪在了我面前
+1230.1woman,kneeling,hospitalfloor,sudden,
+1231.我挑起眉毛 语气玩味地问  你这是要干吗
+1231.1man,raisingeyebrow,hospital,teasing,
+1232.她眼眶通红 声音颤抖  我……我想求你
+1232.1woman,tearful,pleading,hospital,trembling,
+1233.之前是我不对 我眼瞎了 请您大人有大量 帮帮我
+1233.1woman,apologetic,begging,hospital,humble,
+1234.她一向骄傲 是那种从小到大都被人捧在手心里的大小姐 如今却肯低声下气地向我求情 实在难得
+1234.1woman,proud,kneeling,hospital,rare,
+1235.我心中舒坦 爽快地点点头  好 真 真的
+1235.1man,satisfied,nodding,hospital,smug,
+1236.她似乎没料到我这么快就答应 神色有些错愕
+1236.1woman,surprised,hospital,confused,
+1237.我不满地挑挑眉 故意说道  你那是什么眼神 我可是心善的
+1237.1man,annoyed,hospital,playful,
+1238.说着 我从随身的包中取出一张纸 递给俞金莎  喏 这就是你那小男友走的原因
+1238.1man,handingpaper,hospital,serious,
+1239.她迫不及待地接过来 仔细地读着 连一个字都不肯放过
+1239.1woman,reading,paper,hospital,focused,
+1240.纸上写着赵华俊的过往 他在高中时就和一群小混混混在一起 心思不在学习上
+1240.1man,pasthistory,criminal,highschool,
+1241.自然也没考上大学 小小年纪就出来打工
+1241.1man,lazy,droppingout,youngage,
+1242.他懒散惯了 哪里愿意老老实实工作 每天就挣那几个辛苦钱
+1242.1man,unmotivated,workinghard,poor,
+1243.赵华俊盯上了经常来酒店吃饭的俞金莎 她出身富贵 自尊心强 养尊处优 这种女人最容易被忽悠了
+1243.1man,scheming,targetingrichwoman,hotel,
+1244.事实上 俞金莎也确实被他骗了
+1244.1woman,deceived,trusting,heartbroken,
+1245.如果不是半路杀出个不按常理出牌的我 打乱了赵华俊的计划 他早就得逞了
+1245.1man,interruptingplan,unexpected,clever,
+1246.原来 原来是这样……哈哈哈 她真把我当小丑看啊
+1246.1woman,laughing-crying,realization,hospital,emotional,
+1247.泪水一颗颗滚落下来 她是真的喜欢赵华俊
+1247.1woman,crying,heartbroken,hospital,love,
+1248.我看着跪在地上哭得撕心裂肺的她 摇头轻叹  唉 人绝对不能恋爱脑
+1248.1man,sighing,watchingwoman,hospital,advising,
+1249.她哭得越惨 第二天振作得就越快
+1249.1woman,crying,hospital,emotionalrebound,
+1250.前一天还在哭得稀里哗啦的她 第二天就换上西装 去俞氏集团上班了
+1250.1woman,insuit,walking,corporatebuilding,determined,
+1251.这自然是俞飞飞安排的
+1251.1woman(Yushifei),smirking,scheming,corporateoffice,authoritative,
+1252.不过 这次俞金莎再来俞氏集团 就不是副总经理的身份了 而是一个底层的小职员
+1252.1woman(Yujinsha),determined,startingasjunioremployee,corporateoffice,newbeginning,
+1253.按照俞飞飞的话来说  别想不劳而获 不做出点成绩 怎么证明你的能力
+1253.1woman(Yushifei),serious,lecturing,corporateoffice,stern,
+1254.能爬多远 靠你自己
+1254.1woman(Yujinsha),resolute,striving,corporateoffice,self-reliant,
+1255.俞金莎好歹是名牌大学毕业的 虽然起点低 但摸索得还算顺利
+1255.1woman(Yujinsha),focused,working,corporateoffice,ambitious,
+1256.在外面磨炼了几个月后 她的性子明显稳重了许多 不管是大事还是小事 都能处理得井井有条
+1256.1woman(Yujinsha),calm,handlingtasks,office,mature,
+1257.俞飞飞这个一向挑剔的人 也难得露出了满意的笑容
+1257.1woman(Yushifei),impressed,nodding,corporateoffice,raresatisfaction,
+1258.而赵华俊离开俞金莎之后 日子却没有想象中的那么好
+1258.1man(Zhaohuajun),worried,leaving,citystreets,defeated,
+1259.他找到了自己以前的情人 再次厮混在一起
+1259.1man(Zhaohuajun),reckless,withex-lover,citybar,chaotic,
+1260.刚开始时还有些积蓄可以挥霍 两人关系还算和谐 但好景不长 很快便露出了破绽
+1260.1man(Zhaohuajun),extravagant,withwoman,city,lavish,
+1261.后来手里的钱挥霍光了 那个女人立刻卷走了剩下的积蓄 头也不回地逃之夭夭
+1261.1man(Zhaohuajun),empty-handed,chasedaway,city,betrayed,
+1262.我看着私家侦探发来的视频 嘴角忍不住扬起一抹笑意 仿佛在看一场荒诞的闹剧
+1262.1man,amused,watchingvideo,home,amusedbychaos,
+1263.我把赵华俊近几个月的行踪整理成资料 递给俞金莎时 她正埋头于一个项目
+1263.1man,focused,handingdocuments,office,serious,
+1264.已经连续两天两夜没合眼了
+1264.1woman(Yujinsha),exhausted,working,office,sleep-deprived,
+1265.桌上堆满了合同与策划案 她揉了揉发红的眼睛 看到我递来的纸张上写着 赵华俊 三个字
+1265.1woman(Yujinsha),tired,readingpaper,office,red-eyed,
+1266.眼神忽然有些恍惚 像是从某个遥远的梦境中惊醒
+1266.1woman(Yujinsha),dazed,remembering,office,hauntedbypast,
+1267.她曾为了赵华俊 放弃俞家继承人的身份 如今就算重新回到这里 也不可能再回到原来的位置
+1267.1woman(Yujinsha),regretful,reflecting,corporateoffice,lostidentity,
+1268.她要和其他的少爷小姐们竞争 谁有能力谁才能坐上高位
+1268.1woman(Yujinsha),determined,competing,corporateoffice,ambitious,
+1269.她抬起头 目光落在那张纸上 神情复杂
+1269.1woman(Yujinsha),contemplative,holdingdocument,office,conflicted,
+1270.曾经被赵华俊欺骗时 那种几乎绝望的痛楚 现在回想起来 竟显得可笑又幼稚
+1270.1woman(Yujinsha),relieved,rememberingbetrayal,office,wiser,
+1271.那时的她太年轻 太不成熟 如今看到赵华俊的下场 心中反而生出一丝快意
+1271.1woman(Yujinsha),satisfied,reflecting,office,mature,
+1272.骗人感情的人 注定倒霉一辈子
+1272.1man(Zhaohuajun),cursed,walkingaway,city,doomed,
+1273.但她也明白 若不是经历了这一切 她或许永远不会成长
+1273.1woman(Yujinsha),reflective,sitting,office,transformed,
+1274.她轻轻一笑 语气平静  谢谢爸 以后有关他的事 不用再拿给我看了
+1274.1woman(Yujinsha),calm,smiling,office,detached,
+1275.我已经不在乎了   说的对
+1275.1man,approving,givingthumbsup,office,proud,
+1276.我笑着给她竖了个大拇指 就冲她能称呼我一声 爸  这拇指也值得竖
+1276.1man,proud,givingthumbsup,office,satisfied,
+1277.晚上洗漱完躺在床上 我翻来覆去 忍不住想起这件事 当成笑话讲给俞飞飞听
+1277.1man,thinking,lyinginbed,bedroom,amused,
+1278.她翻了个白眼 不以为然地说  能把俞金莎骗住 那是因为俞金莎更蠢
+1278.1woman(Yushifei),sarcastic,rollingeyes,bedroom,disinterested,
+1279.我表示赞同  我点头如捣蒜 接着又感慨  说起这个 俞金莎的反应倒是让我没想到
+1279.1man,agreeing,nodding,bedroom,amused,
+1280.他之前不是一直想着什么情情爱爱吗 怎么变得这么快
+1280.1man,surprised,commenting,bedroom,shocked,
+1281.我看她现在都快要断情绝爱 皈依佛门了
+1281.1man,joking,laughing,bedroom,amused,
+1282.听着我喋喋不休地讲着俞金莎的事 俞飞飞终于忍无可忍 声音低哑  既然老公这么闲
+1282.1woman(Yushifei),annoyed,speaking,bedroom,sarcastic,
+1283.不如我们做一些好玩的事情吧
+1283.1man,mischievous,smiling,bedroom,playful,
+1284.我立刻闭嘴 脸上却忍不住浮现出笑意
+1284.1man,silenced,smirking,bedroom,amused,
+1285.三年后 我和俞飞飞拥有了一个小宝贝 是个女儿
+1285.1woman(Yushifei),1man,1babygirl,joyful,holdingbaby,home,family,
+1286.她继承了俞飞飞那张美到让人窒息的脸蛋 这让平时挑剔的俞飞飞看着女儿的脸也有些不知所措
+1286.1babygirl,beautiful,smiling,babycrib,angelic,
+1287.不过我可没那么多顾虑 毕竟那张脸长在女儿脸上 怎么看都顺眼
+1287.1man,proud,admiringbaby,home,affectionate,
+1288.俞飞飞平时高冷闷骚 女儿却整天昂着小脸 萌萌哒地撒娇求抱抱 让人看了就想抱起来亲一口——啊啊啊 超可爱的好吗
+1288.1babygirl,cute,smiling,babycrib,adorable,
+1289.等到女儿稍微长大一点 我给她买了一大堆小裙子 各式各样的公主裙 卡哇伊的 帅气的 甚至还有搞怪风格的
+1289.1babygirl,playful,wearingdress,home,stylish,
+1290.只能说 时尚完成度全靠脸 不管是什么风格 穿在她身上都恰到好处
+1290.1babygirl,stylish,wearingclothes,home,fashion-forward,
+1291.每次我买新衣服回来 她都会兴奋地凑过来 任我摆弄 那种感觉 就像在玩一个名叫 奇迹棠棠 的游戏
+1291.1babygirl,happy,playingwithclothes,home,playful,
+1292.俞飞飞对此无奈至极 却也无法阻止我这股恶趣味
+1292.1woman(Yushifei),exasperated,watching,home,resigned,
+1293.我还买了不少亲子装 都是那种可可爱爱的恐龙图案睡衣 一家三口每个人都有一套
+1293.1man,1woman(Yushifei),1babygirl,wearingsleepwear,home,funny,
+1294.晚上换上后 看着俞飞飞穿着恐龙睡衣 不管做什么都笨手笨脚的 活像只走路不稳的小恐龙 我忍不住笑出声来
+1294.1woman(Yushifei),clumsy,wearingdinosaursuit,home,awkward,
+1295.要是让公司里那些同事看到她这副模样 估计一个个笑得在地上打滚都顾不上工作了
+1295.1man,laughing,imagining,home,amused,
+1296.我憋不住了 笑得前仰后合 哈哈哈 实在忍不住
+1296.1man,laughingoutloud,lyingback,home,uncontrollable,
+1297.俞飞飞无奈地瞪我一眼 说  别笑了
+1297.1woman(Yushifei),annoyed,glaring,home,exasperated,
+1298.我却笑得更猖狂了 哈哈哈 哈哈哈
+1298.1man,laughing,bed,ridiculous,
+1299.她气得咬牙切齿 突然冲上来一把捂住我的嘴
+1299.1woman(Yushifei),angry,coveringmouth,home,furious,
+1300.我还在笑 嘴巴被堵住却发不出声音 只能用力挣扎着 笑得浑身发抖
+1300.1man,laughing,beingsilenced,home,hilarious,
+1301.我假装生气地喊  明奇 你耍赖
+1301.1man,angry,shouting,livingroom,casual,
+1302.她不为所动 继续捂着我的嘴 直到我笑得差不多了才松开手
+1302.1man,1woman,playful,coveringmouth,livingroom,intimate,
+1303.就在我们两个笑闹得亲昵忘我的时候 耳边忽然传来一个奶声奶气的声音  我也要亲亲
+1303.1man,1woman,laughing,playful,livingroom,joyful,
+1304.我俩同时低头 原来是我们那小宝贝不知什么时候爬了过来 一脸天真地仰着头
+1304.1man,1woman,1baby,lookingdown,curious,livingroom,cute,
+1305.我和俞飞飞瞬间双脸通红 羞得不知所措 女儿却一脸疑惑地看着我们 举着小手要抱抱
+1305.1man,1woman,embarrassed,1baby,lookingup,livingroom,awkward,
+1306.俞飞飞赶紧把小宝贝抱起来 我则和她默契地对视一眼 我们一左一右凑近女儿那白嫩的小脸蛋
+1306.1man,1woman,1baby,hugging,holdingbaby,livingroom,tender,
+1307.轻轻亲了一下 留下两个浅浅的吻痕
+1307.1man,1woman,1baby,kissing,cheeks,livingroom,gentle,

@@ -18,8 +18,8 @@ import re
 import requests, json
 import textwrap, tiktoken
 
-ai_max_length = 1000
-batch_size = 30
+ai_max_length = 5000
+batch_size = 50
 num_ctx = 8000
 overlap = 10
 temperature = 0.5
@@ -219,7 +219,9 @@ def write_text_to_file(text, file_path):
     with open(file_path, 'a', encoding='utf-8') as output_file:
         # now = datetime.now()
         # output_file.write(now.strftime('%Y%m%d%H%M%S') + "    " + text)
-        output_file.write(text)
+        for line in text:
+            if len(line.strip()) > 0:
+                output_file.write(line.strip() + '\n')
     print(f"Extraction completed, saved to: {file_path}")
 
 def split_article(text):
@@ -372,7 +374,7 @@ def ollama_with_requests(ai_addr, ollama_api_model, ollama_api_addr, prompt, str
         }
         data = {
             'model': ollama_api_model,
-            'prompt': prompt,
+            'prompt': prompt + " /nothing /no_thinking /no thinking",
             "stream": stream,
             'options': options if options else {
                 "num_ctx": num_ctx,
@@ -390,7 +392,7 @@ def ollama_with_requests(ai_addr, ollama_api_model, ollama_api_addr, prompt, str
         url = ai_addr + ollama_api_addr
         data = {
             'model': ollama_api_model,
-            'prompt': prompt,
+            'prompt': prompt + " /nothing /no_thinking /no thinking",
             "stream": stream,
             'options': {
                 "num_ctx": num_ctx,
@@ -467,11 +469,11 @@ def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, p
                 messages=[
                     {
                         "role": "system",
-                        "content": prompt
+                        "content": prompt + " /nothing /no_thinking /no thinking"
                     },
                     {
                         "role": "user",
-                        "content": chunk
+                        "content": chunk + " /nothing /no_thinking /no thinking"
                     }
                 ],
                 options={
@@ -500,8 +502,11 @@ def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, p
                     sys.stdout.flush()
                     if request.get('done'):
                         break
+                sys.stdout.write('\n')
+                sys.stdout.flush()
                 rewritten_text = re.sub(r'<think>.*?</think>\s*', '', rewritten_text, flags=re.DOTALL).strip()
                 rewritten_text = re.sub(r'Thinking\.\.\..*?\.\.\.done thinking\.', '', rewritten_text, flags=re.DOTALL).strip()
+                rewritten_text += '\n'
                 # if ollama_api_addr == '/api/chat':
                 #     content = response.message.content.strip()
                 #     content = re.sub(r'<think>.*?</think>\s*', '', content, flags=re.DOTALL).strip()
@@ -549,11 +554,11 @@ def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, p
             messages=[
                 {
                     "role": "system",
-                    "content": prompt
+                    "content": prompt + " /nothing /no_thinking /no thinking"
                 },
                 {
                     "role": "user",
-                    "content": chunks
+                    "content": chunks + " /nothing /no_thinking /no thinking"
                 }
             ],
             options={

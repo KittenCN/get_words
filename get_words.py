@@ -156,9 +156,15 @@ while(True):
                     index = 0
                     response = split_by_line_number(response)
                     for line in response.split("\n"):
+                        if index >= batch_size:
+                            continue
                         if "." in line:
                             idx, modified_text = line.split(".", 1)
                             idx = int(idx.strip())
+                            idx_cn, _ = numbered_batch[index].split(".", 1)
+                            idx_cn = int(idx_cn.strip())
+                            if idx != idx_cn:
+                                continue
                             batched_output.append((idx, modified_text.strip()))
                             tmp_output.append(numbered_batch[index])
                             tmp_output.append(line.strip())
@@ -181,7 +187,7 @@ while(True):
                             dict_to_csv(sutui, drafts_path + content_name + extent + '.csv')
                         current_times = 0
                         sutui = []
-                        sleep(5)
+                        sleep(0.5)
                 pbar.close()
 
                 if len(sutui) > 0:
