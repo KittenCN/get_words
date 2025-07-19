@@ -48,6 +48,7 @@ while(True):
             if check_ai(ai_switch) == False:
                 continue
             # base_name = os.path.splitext(html_file_path)[0]   
+            mod_file_path = "_ollama.txt"
             if ai_switch == 0:
                 mod_file_path = base_name + '_gpt.txt'
             elif ai_switch == 1:

@@ -2,21 +2,19 @@ from bs4 import BeautifulSoup
 from openai import OpenAI
 from ollama import Client
 from tqdm import tqdm
-from datetime import datetime
 from config import write_config
 # from transformers import LlamaTokenizer
 import google.generativeai as genai
 import httpx
-import re
 import glob
 import os
 import sqlite3
-import shutil
 import csv
 import sys
 import re
 import requests, json
-import textwrap, tiktoken
+import tiktoken
+import chardet
 
 ai_max_length = 5000
 batch_size = 50
@@ -148,8 +146,11 @@ if not os.path.exists('config.ini'):
     write_config()
 # read config.ini file
 last_ver = 0
-with open('config.ini', 'r', encoding='utf-8') as file:
-    lines = file.readlines()
+with open('config.ini', 'rb') as file:
+    raw = file.read()
+    result = chardet.detect(raw)
+    encoding = result['encoding'] if result['encoding'] else 'utf-8'
+    lines = raw.decode(encoding).splitlines()
     for line in lines:
         for parameter in parameter_list:
             if line.startswith(parameter):
@@ -219,7 +220,7 @@ def write_text_to_file(text, file_path):
     with open(file_path, 'a', encoding='utf-8') as output_file:
         # now = datetime.now()
         # output_file.write(now.strftime('%Y%m%d%H%M%S') + "    " + text)
-        for line in text:
+        for line in text.split('\n'):
             if len(line.strip()) > 0:
                 output_file.write(line.strip() + '\n')
     print(f"Extraction completed, saved to: {file_path}")
@@ -427,6 +428,7 @@ def rewrite_text_with_Ollama(text, ai_addr, ollama_api_addr, ollama_api_model, p
         host = ai_addr,
         headers={'x-some-header': 'some-value'},
     )
+    client = clients.chat
     if ollama_api_addr == '/api/chat':
         client = clients.chat
     elif ollama_api_addr == '/api/generate':
@@ -674,9 +676,9 @@ def merge_lines_without_punctuation(text):
     chinese_chars_and_punctuation = re.compile(r'[\u4e00-\u9fa5。，、；：？！“”‘’《》（）【】]')
 
     for line in lines:
-        line = line.rstrip()
+        line = line.rstrip() + ' '
         if chinese_chars_and_punctuation.search(line) and not line.endswith(tuple('。，、；：？！“”‘’《》（）【】')):
-            if len(current_line) > 12 and len(line) > 12:
+            if len(current_line) > 12:
                 merged_lines.append(current_line)
                 current_line = line
             else:
@@ -727,7 +729,7 @@ def extract_chinese_and_punctuation_from_html(html_file_path):
         if element.parent.name not in ['script', 'style']:
             matches = chinese_punctuation_regex.findall(element)
             if matches:
-                extracted_texts.append(''.join(matches))
+                extracted_texts.append(' \n'.join(matches) + ' \n')
 
     output_text = ""
     for text in extracted_texts:
